@@ -3,29 +3,40 @@ aside {
     transition: width 0.3s ease;
     background-color: #3A2D6E;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-   
+    align-items: center;
 }
 aside img{
     width: 24px;
     height: auto;
-   
 }
 aside ul{
     list-style: none;
-    padding: 0;
     margin: 0;
     width: 100%;
 }
 aside ul li {
     display: flex;
-    justify-content: center; /* Centra el contenido dentro de cada li */
+    justify-content: flex-start; 
     align-items: center; /* Asegura que los íconos estén alineados en el centro verticalmente */
     padding: 15px 0; /* Añade espacio entre los íconos */
 }
-ul span{
+aside ul span{
     display: none;
     font-family: "Nunito", sans-serif;
+    margin-left: 10px;
+}
+aside.open ul span {
+    display: inline; /* Muestra los spans cuando el aside está abierto */
+    color: #FFFFFF;
+    font-weight: bold;
+    letter-spacing: 4%;
+    margin-left: 12%;
+}
+aside.open{
+    width: 200px;
+    
 }
 
 
