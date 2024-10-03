@@ -214,5 +214,140 @@ footer .footer-redes img {
     margin-left: 7px;
     margin-right:7px;
 }
+
+/*Parte vinculada al registro html*/
+.registro-header{
+    background-color: #A48EFF;
+    height: 140px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.registro-header img{
+    width: 289px;
+    height: 134px;
+}
+.tituloHeaderRegistro{
+    display: flex;
+    flex-direction: column;
+    font-family: "nunito",sans-serif;
+    color: #DCEEFC;
+    margin-top: 40px;
+}
+.tituloHeaderRegistro h2 {
+    margin: 0; 
+    padding: 0; 
+}
+
+form{
+    background-color: #3A2D6E;
+    width: 820px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto; 
+    margin-left: 350px;
+    color:#DCEEFC;
+    border-radius: 10px;
+    font-family: "nunito",sans-serif;
+    text-align: left;
+}
+form img{
+    width: 45px;
+    height: auto;
+    margin: 0;
+}
+form div{
+    display: flex;
+    width: 600px;
+    align-items: center;
+}
+.logoForm{
+    flex-direction: column;
+    justify-content: center;
+}
+
+form div div{
+    flex-direction: column; 
+}
+form input{
+    border-radius: 10px;
+}
+.datosPersonales  input{
+    width: 70%;
+}
+.clave input{
+    width: 70%;
+}
+.datosPersonales, .datosPersonales1, .clave , .captcha{
+    margin: 5px;;
+    height: 50px;
+}
+#edad{
+    width: 40%;
+}
+.captcha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DCEEFC;
+    width: 30%;
+    margin: 5px;
+    color: #000000;
+    border-radius: 10px;
+}
+.captcha img{
+    width: 60px;
+    height: 60px;
+}
+#lname, .tituloCrearCuenta{
+    margin: 0;
+}
+.submit, .logAgain{
+    justify-content: center;
+}
+.buttonCrear{
+    width: 322px;
+    height: 44px;
+    border-radius: 24px;
+    background-color: #71AEE0;
+    font-weight: bold;
+    font: size 14px;
+    color: #DCEEFC;
+}
+.logAgain{
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+    height: 40px;
+    
+}
+.logAgain a{
+    text-decoration: none;
+    color: #71AEE0;
+    padding-left: 5px;
+}
+.edad{
+    width: 40%;
+}
+.datosPersonales label{
+    width: 200px;
+}
+.clave label{
+    width: 200px;
+}
+.etiqueta-apodo, .etiqueta-mail{
+    width: 150px;
+}
+.camposObligatorios{
+    margin-left: 10%;
+}
+.camposObligatorios p, label span {
+    margin:0;
+    color:#FD8A76;
+}
+
+/*Hasta aca llega registro html*/
   
   
