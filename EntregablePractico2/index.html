@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
-
 </head>
 
 <body>
@@ -35,12 +34,51 @@
         </div>
 
         <div class="header-right">
-            <div class="shopping-cart">
+            <div class="shopping-cart" id="pop-bolsa">
                 <i class="fas fa-shopping-cart"></i>
             </div>
-            <div class="user-info">
+            <div id="popup-compras" class="">
+                <div class="cerrar-popup">
+                    <button id="btn-cerrar-popup-compras" class="btn-cerrar-popup">X</button>
+                </div>
+                <div class="encabezado-popup">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h2>Mis Compras</h2>
+                </div>
+                <div class="contenido-popup">
+                    <div class="juego-precio">
+                        <p>Jurassic Park</p>
+                        <p>$15</p>
+                    </div>
+                    <p>--------------------</p>
+                    <div class="total-compras">
+                        <p>Total</p>
+                        <p>$25</p>
+                    </div>
+                    <button class="btn-pagar-compras">PAGAR</button>
+                </div>
+            </div>
+
+            <div class="user-info" id="usuario">
                 <span>guest</span>
                 <img src="assets/user-removebg.png" alt="User Image" class="user-img">
+            </div>
+            <div id="popup-login" class="">
+                <div class="cerrar-popup">
+                    <button id="btn-cerrar-popup-login" class="btn-cerrar-popup">X</button>
+                </div>
+                <div class="encabezado-popup">
+                    <img src="assets/user-removebg.png" alt="user image">
+                    <h2>Mi perfil</h2>
+                </div>
+                <div class="contenido-popup">
+                    <p>Mi perfil</p>
+                    <p>Editar perfil</p>
+                    <p>Preferencias de notificación</p>
+                    <p>Preferencias de privacidad</p>
+                    <p>Configuración de cuenta</p>
+                    <p>Cerrar sesión</p>
+                </div>
             </div>
         </div>
     </header>
@@ -224,5 +262,10 @@
             <p>Si tenes problemas con el juego comunicate con la linea 6969 de ayuda al ludopata</p>
         </div>
     </footer>
+
+    <!-- Scripts JS -->
     <script type="text/javascript" src="js/menu-hamburguesa.js"></script>
+    <script type="text/javascript" src="js/pop-up.js"></script>
 </body>
+
+</html>
