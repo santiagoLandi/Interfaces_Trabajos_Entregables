@@ -360,12 +360,12 @@ div .contenedor-inicio-sesion {
 }
 
 .contenedor-imagenlogo-botones-inicio-sesion{
-    background-color: #3A2D6E;
+    background-color: var(--primario800-sombra);
     border-radius: 20px;
 }
 
 .imagen-logo-inicio-sesion {
-    width: 388px;
+    width: 400px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -373,19 +373,19 @@ div .contenedor-inicio-sesion {
 .contenedor-botones-inicio-sesion {
     display: flex;
     flex-direction: column;
-    padding: 40px;
-    width: 348px;
+    padding: 25px;
+    width: 350px;
 }
 
 .contenedor-principal-inicio-sesion {
-    margin-top: 104px;
+    margin-top: 200px;
     margin-bottom: 105px;
     display: flex;
     justify-content: center;
 }
 
-.btn-iniciar-sesion , .btn-iniciar-sesion-google, .btn-iniciar-sesion-facebook, .btn-iniciar-sesion-registrate {
-    font-family: "Nunito",sans-serif;
+.btn-iniciar-sesion2 ,.btn-iniciar-sesion , .btn-iniciar-sesion-google, .btn-iniciar-sesion-facebook, .btn-iniciar-sesion-registrate {
+    font-family: var(--letraGeneral,--letraBody);
     font-weight: 900;
     font-size: 14px;
     letter-spacing: 0.7px;
@@ -402,22 +402,25 @@ div .contenedor-inicio-sesion {
 }
 
 .btn-iniciar-sesion {
-    background-color: #5E3EE2;
-    color:#F9F9F9;
+    background-color: var(--primario700-sombra);
+    color: var(--neutro300);
     margin-top: 30px;
     margin-bottom: 2.5px;
-    border-color: #F9F9F9;
+    border-color: var(--neutro300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-iniciar-sesion-facebook {
-    background-color: #3374DC;
-    color: #F9F9F9;
+    background-color: var(--neutro600);
+    color: var(--neutro300);
 }
 
 .btn-iniciar-sesion-registrate {
     margin-top: 2.5px;
-    background-color: #71AEE0;
-    color: #F9F9F9;
+    background-color: var(--secundario700-sombra);
+    color: var(--neutro300);
 }
 
 .logo-google-btn , .logo-facebook-btn {
@@ -427,5 +430,46 @@ div .contenedor-inicio-sesion {
 }
 
 .divisor-login{
-    color: #F9F9F9;
+    color: var(--neutro300);
+}
+
+/* ARRANCA INICIO SESION CUENTA */
+
+.form-inicio-sesion-cuenta{
+    width: 400px;
+    height: 400px;
+}
+
+form .contenedor-inicio-sesion-cuenta {
+    margin-top: 104px;
+}
+
+form .contenedor-inputs-inicio-sesion{
+    font-size: 14px;
+    color: var(--neutro300);
+    flex-direction: column;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.form-p-inicio-sesion-cuenta{
+    text-align: center;
+    color: var(--neutro300);
+}
+
+.btn-iniciar-sesion2 {
+    background-color: var(--primario700-sombra);
+    color: var(--neutro300);
+    width: 340px;
+    margin-top: 20px;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.input-inicio-sesion-cuenta {
+    width: 332px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid;
+    margin-bottom: 10px;
 }
