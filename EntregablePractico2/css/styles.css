@@ -215,4 +215,78 @@ footer .footer-redes img {
     margin-right:7px;
 }
   
-  
+/*Arranca inicio sesion*/
+div .contenedor-inicio-sesion {
+    display: flex;
+}
+
+.contenedor-imagenlogo-botones-inicio-sesion{
+    background-color: #3A2D6E;
+    border-radius: 20px;
+}
+
+.imagen-logo-inicio-sesion {
+    width: 388px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.contenedor-botones-inicio-sesion {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 348px;
+}
+
+.contenedor-principal-inicio-sesion {
+    margin-top: 104px;
+    margin-bottom: 105px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-iniciar-sesion , .btn-iniciar-sesion-google, .btn-iniciar-sesion-facebook, .btn-iniciar-sesion-registrate {
+    font-family: "Nunito",sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    border-radius: 24px;
+    border: 2px solid;
+    height: 40px;
+}
+.btn-iniciar-sesion-google, .btn-iniciar-sesion-facebook {
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-iniciar-sesion {
+    background-color: #5E3EE2;
+    color:#F9F9F9;
+    margin-top: 30px;
+    margin-bottom: 2.5px;
+    border-color: #F9F9F9;
+}
+
+.btn-iniciar-sesion-facebook {
+    background-color: #3374DC;
+    color: #F9F9F9;
+}
+
+.btn-iniciar-sesion-registrate {
+    margin-top: 2.5px;
+    background-color: #71AEE0;
+    color: #F9F9F9;
+}
+
+.logo-google-btn , .logo-facebook-btn {
+    padding-left: 5px;
+    width: 24px;
+    height: 24px;
+}
+
+.divisor-login{
+    color: #F9F9F9;
+}
