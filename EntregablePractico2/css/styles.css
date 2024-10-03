@@ -147,5 +147,72 @@ aside.open{
     width: 200px;
     
 }
+/*Aca arrancan el footer*/
+footer {
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 455px;
+    background-color: #3A2D6E;
+    color: #A48EFF;
+    font-size: 16px;
+}
 
+footer ul li {
+    font-family: "Nunito", sans-serif;
+}
 
+footer div div div {
+    width: 24%;
+}
+
+footer h3 {
+    font-size: 18px;
+    font-family: "nunito",sans-serif;
+    color: #DCEEFC;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0%;
+}
+
+.footer-arriba , .footer-abajo {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a {
+    color: #A48EFF;
+}
+
+footer p{
+    text-align: center;
+}
+
+footer .footer-iconos {
+    width: 100%;
+    padding-top: 0%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .logo-footer {
+    width: 95px;
+    margin-top: -35px;
+    margin-right: 18px;
+}  
+
+footer .footer-redes {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-redes img {
+    width: 27px; 
+    height:27px;
+    margin-left: 7px;
+    margin-right:7px;
+}
+  
+  
