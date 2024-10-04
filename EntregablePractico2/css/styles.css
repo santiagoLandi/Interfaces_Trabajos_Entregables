@@ -378,7 +378,7 @@ footer .footer-redes img {
     padding: 0; 
 }
 
-.registroFormulario{
+form{
     background-color: #3A2D6E;
     width: 820px;
     height: 400px;
@@ -392,12 +392,12 @@ footer .footer-redes img {
     font-family: "nunito",sans-serif;
     text-align: left;
 }
-.registroFormulario img{
+form img{
     width: 45px;
     height: auto;
     margin: 0;
 }
-.registroFormulario div{
+form div{
     display: flex;
     width: 600px;
     align-items: center;
@@ -407,10 +407,10 @@ footer .footer-redes img {
     justify-content: center;
 }
 
-.registroFormulario div div{
+form div div{
     flex-direction: column; 
 }
-.registroFormulario input{
+form input{
     border-radius: 10px;
 }
 .datosPersonales  input{
@@ -575,11 +575,11 @@ div .contenedor-inicio-sesion {
     height: 400px;
 }
 
-form .contenedor-inicio-sesion-cuenta {
+ .contenedor-inicio-sesion-cuenta {
     margin-top: 104px;
 }
 
-form .contenedor-inputs-inicio-sesion{
+ .contenedor-inputs-inicio-sesion{
     font-size: 14px;
     color: var(--neutro300);
     flex-direction: column;
