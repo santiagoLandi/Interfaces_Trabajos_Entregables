@@ -357,7 +357,9 @@ main {
     align-items: center;
     overflow: hidden;
     width: 100%;
-}.carousel-container {
+}
+
+.carousel-container {
     position: relative;
     display: flex;
     align-items: center;
@@ -381,11 +383,14 @@ main {
     text-align: center;
     background-color: var(--neutro300);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 20px; /* Redondea solo las esquinas inferiores */
-    overflow: hidden; /* Asegura que el contenido no sobresalga de la card */
+    border-radius: 20px;
+    /* Redondea solo las esquinas inferiores */
+    overflow: hidden;
+    /* Asegura que el contenido no sobresalga de la card */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Alinea los elementos horizontalmente al centro */
+    align-items: center;
+    /* Alinea los elementos horizontalmente al centro */
 }
 
 .card img {
@@ -483,18 +488,184 @@ footer .footer-redes img {
     margin-right: 7px;
 }
 
+/*Parte vinculada al registro html*/
+.registro-header {
+    background-color: #A48EFF;
+    height: 140px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.registro-header img {
+    width: 289px;
+    height: 134px;
+}
+
+.tituloHeaderRegistro {
+    display: flex;
+    flex-direction: column;
+    font-family: "nunito", sans-serif;
+    color: #DCEEFC;
+    margin-top: 40px;
+}
+
+.tituloHeaderRegistro h2 {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    background-color: #3A2D6E;
+    width: 820px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+    margin-left: 350px;
+    color: #DCEEFC;
+    border-radius: 10px;
+    font-family: "nunito", sans-serif;
+    text-align: left;
+}
+
+form img {
+    width: 45px;
+    height: auto;
+    margin: 0;
+}
+
+form div {
+    display: flex;
+    width: 600px;
+    align-items: center;
+}
+
+.logoForm {
+    flex-direction: column;
+    justify-content: center;
+}
+
+form div div {
+    flex-direction: column;
+}
+
+form input {
+    border-radius: 10px;
+}
+
+.datosPersonales input {
+    width: 70%;
+}
+
+.clave input {
+    width: 70%;
+}
+
+.datosPersonales,
+.datosPersonales1,
+.clave,
+.captcha {
+    margin: 5px;
+    ;
+    height: 50px;
+}
+
+#edad {
+    width: 40%;
+}
+
+.captcha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DCEEFC;
+    width: 30%;
+    margin: 5px;
+    color: #000000;
+    border-radius: 10px;
+}
+
+.captcha img {
+    width: 60px;
+    height: 60px;
+}
+
+#lname,
+.tituloCrearCuenta {
+    margin: 0;
+}
+
+.submit,
+.logAgain {
+    justify-content: center;
+}
+
+.buttonCrear {
+    width: 322px;
+    height: 44px;
+    border-radius: 24px;
+    background-color: #71AEE0;
+    font-weight: bold;
+    font: size 14px;
+    color: #DCEEFC;
+}
+
+.logAgain {
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+    height: 40px;
+
+}
+
+.logAgain a {
+    text-decoration: none;
+    color: #71AEE0;
+    padding-left: 5px;
+}
+
+.edad {
+    width: 40%;
+}
+
+.datosPersonales label {
+    width: 200px;
+}
+
+.clave label {
+    width: 200px;
+}
+
+.etiqueta-apodo,
+.etiqueta-mail {
+    width: 150px;
+}
+
+.camposObligatorios {
+    margin-left: 10%;
+}
+
+.camposObligatorios p,
+label span {
+    margin: 0;
+    color: #FD8A76;
+}
+
+/*Hasta aca llega registro html*/
+
 /*Arranca inicio sesion*/
 div .contenedor-inicio-sesion {
     display: flex;
 }
 
 .contenedor-imagenlogo-botones-inicio-sesion {
-    background-color: #3A2D6E;
+    background-color: var(--primario800-sombra);
     border-radius: 20px;
 }
 
 .imagen-logo-inicio-sesion {
-    width: 388px;
+    width: 400px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -502,22 +673,23 @@ div .contenedor-inicio-sesion {
 .contenedor-botones-inicio-sesion {
     display: flex;
     flex-direction: column;
-    padding: 40px;
-    width: 348px;
+    padding: 25px;
+    width: 350px;
 }
 
 .contenedor-principal-inicio-sesion {
-    margin-top: 104px;
+    margin-top: 200px;
     margin-bottom: 105px;
     display: flex;
     justify-content: center;
 }
 
+.btn-iniciar-sesion2,
 .btn-iniciar-sesion,
 .btn-iniciar-sesion-google,
 .btn-iniciar-sesion-facebook,
 .btn-iniciar-sesion-registrate {
-    font-family: "Nunito", sans-serif;
+    font-family: var(--letraGeneral, --letraBody);
     font-weight: 900;
     font-size: 14px;
     letter-spacing: 0.7px;
@@ -536,22 +708,25 @@ div .contenedor-inicio-sesion {
 }
 
 .btn-iniciar-sesion {
-    background-color: #5E3EE2;
-    color: #F9F9F9;
+    background-color: var(--primario700-sombra);
+    color: var(--neutro300);
     margin-top: 30px;
     margin-bottom: 2.5px;
-    border-color: #F9F9F9;
+    border-color: var(--neutro300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-iniciar-sesion-facebook {
-    background-color: #3374DC;
-    color: #F9F9F9;
+    background-color: var(--neutro600);
+    color: var(--neutro300);
 }
 
 .btn-iniciar-sesion-registrate {
     margin-top: 2.5px;
-    background-color: #71AEE0;
-    color: #F9F9F9;
+    background-color: var(--secundario700-sombra);
+    color: var(--neutro300);
 }
 
 .logo-google-btn,
@@ -562,5 +737,46 @@ div .contenedor-inicio-sesion {
 }
 
 .divisor-login {
-    color: #F9F9F9;
+    color: var(--neutro300);
+}
+
+/* ARRANCA INICIO SESION CUENTA */
+
+.form-inicio-sesion-cuenta {
+    width: 400px;
+    height: 400px;
+}
+
+form .contenedor-inicio-sesion-cuenta {
+    margin-top: 104px;
+}
+
+form .contenedor-inputs-inicio-sesion {
+    font-size: 14px;
+    color: var(--neutro300);
+    flex-direction: column;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.form-p-inicio-sesion-cuenta {
+    text-align: center;
+    color: var(--neutro300);
+}
+
+.btn-iniciar-sesion2 {
+    background-color: var(--primario700-sombra);
+    color: var(--neutro300);
+    width: 340px;
+    margin-top: 20px;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.input-inicio-sesion-cuenta {
+    width: 332px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid;
+    margin-bottom: 10px;
 }

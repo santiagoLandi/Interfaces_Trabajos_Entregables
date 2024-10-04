@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Registro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Fuentes e íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header class="registro-header">
+        <div>
+            <img src="assets/logoYnombre.png" alt="logoMG">
+        </div>
+        <div class="tituloHeaderRegistro">
+            <h2>Bienvenido a la aventura definitiva de Many Games</h2>
+            <h2>Preparate para divertirte y desafiar tus habilidades</h2>
+        </div>
+    </header>
+    <main>
+        <form action="" method="post">
+            <div class="logoForm">
+                <img src="assets/logo-removebg.png" alt="logoManyGames">
+                <h3 class="tituloCrearCuenta">Crear Cuenta</h3>
+            </div>
+            <div class="camposObligatorios">
+                <p>* Indica que el campo es obligatorio</p>
+            </div>
+            <div class="datosPersonales">
+                <div>
+                  <label for="fname">Nombre<span>*</span></label>
+                  <input type="text" id="fname" name="fname">
+                </div>
+                <div>
+                  <label for="lname">Apellido<span>*</span></label>
+                  <input type="text" id="lname" name="lname">
+                </div>
+            </div>
+            <div class="datosPersonales1">
+                <div class="apodo">
+                  <label for="apodo" class="etiqueta-apodo">Apodo</label>
+                  <input type="text" id="apodo" name="apodo">
+                </div>
+                <div class="edad">
+                  <label for="edad">Edad<span>*</span></label>
+                  <input type="number" id="edad" name="edad" >
+                </div>
+                <div class="email">
+                  <label for="email" class="etiqueta-mail">E-mail<span>*</span></label>
+                  <input type="email" id="email" name="email">
+                </div>  
+            </div>
+            <div class="clave">
+                <div>
+                  <label for="pwd">Contrase&ntilde;a<span>*</span></label>
+                  <input type="password" id="pwd" name="pwd">
+                </div>
+                <div>
+                  <label for="pwd">Repetir Contrase&ntilde;a<span>*</span></label>
+                  <input type="password" id="pwd" name="pwd">
+                </div>
+            </div>
+            <div class="captcha">
+                <input type="checkbox" id="checkHuman" name="checkHuman" value="Bike">
+                <label for="checkHuman"> No soy un robot</label>
+                <img src="assets/captchaImagen.png" alt="captcha">
+            </div>
+            <div class="submit">
+                <button class="buttonCrear" type="submit">Crear Cuenta</button>
+            </div>
+            <div class="logAgain">
+                <p>¿Tienes una cuenta de ManyGames?</p>
+                <a href="">Iniciar Sesion</a>
+            </div>
+
+        </form>
+    </main>
+    <footer>
+        <div>
+            <div class="footer-arriba">
+                <div class="fotter-links">
+                    <h3>Mapa del sitio</h3>
+                    <ul>
+                        <li><a href="#">Pagina principal</a></li>
+                        <li><a href="#">Mi cuenta</a></li>
+                        <li><a href="#">Mi carrito</a></li>
+                        <li><a href="#">Iniciar sesion</a></li>
+                    </ul>
+                </div>
+                <div class="fotter-links">
+                    <h3>Recomendaciones</h3>
+                    <ul>
+                        <li><a href="#">Nuestros recomendados</a></li>
+                        <li><a href="#">Mejores de la semana</a></li>
+                        <li><a href="#">Mas jugados</a></li>
+                        <li><a href="#">Ofertas del mes</a></li>
+                    </ul>
+                </div>
+                <div class="fotter-links">
+                    <h3>Novedades</h3>
+                    <ul>
+                        <li><a href="#">Eventos Especiales</a></li>
+                        <li><a href="#">Proximos Lanzamientos</a></li>
+                        <li><a href="#">Juegos en preventa</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-abajo">
+                <div class="fotter-links">
+                    <h3>Sobre nosotros</h3>
+                    <ul>
+                        <li><a href="#">Quienes somos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Mapa del sitio</a></li>
+                    </ul>
+                </div>
+                <div class="fotter-links">
+                    <h3>Ayuda</h3>
+                    <ul>
+                        <li><a href="#">Terminos y condiciones</a></li>
+                        <li><a href="#">Politicas de privacidad</a></li>
+                        <li><a href="#">Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="fotter-links">
+                    <h3>Seguinos</h3>
+                    <div class="footer-iconos">
+                        <div class="footer-redes">
+                            <img src="assets/LogoFacebook.png" alt="Logo faceboook">
+                            <img src="assets/LogoInstragram.png" alt="Logo instagram">
+                            <img src="assets/LogoTwitter.png" alt="Logo twitter">
+                        </div>
+                        <img src="assets/logo-removebg.png" class="logo-footer" alt="Logo pagina">
+                    </div>
+                    <ul>
+                        <li><a href="#"></a>Copyright © 2024 Many Games.</li>
+                        <li><a href="#"></a>Todos los derechos reservados.</li>
+                    </ul>
+                </div>
+            </div>
+            <p>Si tenes problemas con el juego comunicate con la linea 6969 de ayuda al ludopata</p>
+        </div>
+    </footer>
+</body>
+</html>
