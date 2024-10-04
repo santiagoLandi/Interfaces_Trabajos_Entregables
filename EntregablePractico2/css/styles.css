@@ -474,13 +474,15 @@ footer .footer-redes img {
     padding: 0; 
 }
 
-form{
+
+.registroFormulario{
     background-color: #3A2D6E;
     width: 820px;
-    height: 400px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: 40px auto; 
     margin-left: 350px;
     color:#DCEEFC;
@@ -488,56 +490,90 @@ form{
     font-family: "nunito",sans-serif;
     text-align: left;
 }
-form img{
+.registroFormulario img{
     width: 45px;
     height: auto;
     margin: 0;
 }
-form div{
+
+.logoForm, .captcha, .submit, .logAgain{
     display: flex;
     width: 600px;
     align-items: center;
+    justify-content: center;
+   
+}
+.camposObligatorios{
+    width: 600px;
 }
 .logoForm{
+    display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-form div div{
-    flex-direction: column; 
-}
-form input{
-    border-radius: 10px;
-}
-.datosPersonales  input{
-    width: 70%;
-}
-.clave input{
-    width: 70%;
-}
-.datosPersonales, .datosPersonales1, .clave , .captcha{
-    margin: 5px;;
-    height: 50px;
-}
-#edad{
-    width: 40%;
-}
-.captcha{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #DCEEFC;
-    width: 30%;
-    margin: 5px;
-    color: #000000;
-    border-radius: 10px;
-}
-.captcha img{
-    width: 60px;
-    height: 60px;
-}
-#lname, .tituloCrearCuenta{
     margin: 0;
+    height: 90px;
+}
+.registroFormulario h3 {
+    margin:0;
+}
+.datosPersonales{
+    width: 600px;
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-areas: 
+                        "nombre . apellido"
+                        "apodo edad email"
+                        "clave1 . clave2"
+ 
+}
+.nombre{
+    grid-area: nombre;
+    display: flex;
+    flex-flow: column;
+}
+.apellido{
+    grid-area: apellido;
+    display: flex;
+    flex-flow: column;
+}
+.apodo{
+    grid-area: apodo;
+    display: flex;
+    flex-flow: column;
+}
+.edad{
+    grid-area: edad;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.email{
+    grid-area: email;
+    display: flex;
+    flex-flow: column;
+}
+.clave1{
+    grid-area: clave1;
+    display: flex;
+    flex-flow: column;
+}
+.clave2{
+    grid-area: clave2; 
+    display: flex;
+    flex-flow: column;
+    
+}
+.datosPersonales input{
+    border-radius: 10px;
+}
+.edad input{
+    width: 80px;
+}
+.logAgain a{
+    text-decoration: none;
+    color: #71AEE0;
+    padding-left: 5px;
 }
 .submit, .logAgain{
     justify-content: center;
@@ -551,32 +587,36 @@ form input{
     font: size 14px;
     color: #DCEEFC;
 }
-.logAgain{
-    flex-direction: row;
-    align-items: center;
-    margin: 5px;
-    height: 40px;
+.captcha img{
+    width: 60px;
+    height: 60px;
+}
+.logoForm{
+    flex-direction: column;
+    justify-content: center;
+}
+.logoForm{
+    flex-direction: column;
+    justify-content: center;
+}
+.captcha{
+    background-color: #DCEEFC;
+    width: 230px;
+    height: 50px;
+    color: #000000;
+    margin: 10px;
+    border-radius: 10px;
     
 }
-.logAgain a{
-    text-decoration: none;
-    color: #71AEE0;
-    padding-left: 5px;
+.captcha div{
+    display: flex;
+    justify-content: center; /* Para centrar horizontalmente */
+    align-items: center;     /* Para centrar verticalmente */
+    gap: 10px; 
+   
 }
-.edad{
-    width: 40%;
-}
-.datosPersonales label{
-    width: 200px;
-}
-.clave label{
-    width: 200px;
-}
-.etiqueta-apodo, .etiqueta-mail{
-    width: 150px;
-}
-.camposObligatorios{
-    margin-left: 10%;
+.registroFormulario label{
+    text-align: left;
 }
 .camposObligatorios p, label span {
     margin:0;
