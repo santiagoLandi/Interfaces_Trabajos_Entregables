@@ -378,7 +378,7 @@ footer .footer-redes img {
     padding: 0; 
 }
 
-form{
+.registroFormulario{
     background-color: #3A2D6E;
     width: 820px;
     height: 400px;
@@ -392,25 +392,37 @@ form{
     font-family: "nunito",sans-serif;
     text-align: left;
 }
-form img{
+.registroFormulario img{
     width: 45px;
     height: auto;
     margin: 0;
 }
-form div{
+.captcha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DCEEFC;
+    width: 200px;
+    margin: 5px;
+    color: #000000;
+    border-radius: 10px;
+}
+.registroFormulario div{
     display: flex;
     width: 600px;
     align-items: center;
 }
+
 .logoForm{
     flex-direction: column;
     justify-content: center;
 }
 
-form div div{
+.registroFormulario div div{
     flex-direction: column; 
 }
-form input{
+ 
+.registroFormulario input{
     border-radius: 10px;
 }
 .datosPersonales  input{
@@ -426,16 +438,7 @@ form input{
 #edad{
     width: 40%;
 }
-.captcha{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #DCEEFC;
-    width: 30%;
-    margin: 5px;
-    color: #000000;
-    border-radius: 10px;
-}
+
 .captcha img{
     width: 60px;
     height: 60px;
