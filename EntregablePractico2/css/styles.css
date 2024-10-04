@@ -237,6 +237,8 @@ body {
 
 /*    HASTA ACA EL HEADER */
 aside {
+    position: absolute;
+    left: 0;
     width: 60px;
     transition: width 0.3s ease;
     background-color: var(--primario800-sombra);
@@ -704,4 +706,234 @@ form input{
     border-radius: 5px;
     border: 1px solid;
     margin-bottom: 10px;
+}
+
+/* Arranca la pagina del juego */
+
+/*Arranca ventana del juego */
+.contenedor-principal-4-en-linea {
+    height: 2000px;
+    width: 1000px;
+    margin-left: 120px;
+    margin-right:60px;
+    margin-top: 80px;
+}
+
+.contenedor-juego-4-en-linea{
+    height: 500px;
+    background-color: var(--primario800-sombra);
+    border-radius: 5px;
+    display: flex;
+}
+
+.contenedor-titulo-btn-volver{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--neutro500);
+}
+
+.btn-volver , .btn-jugar-4-en-linea{
+    width: 160px;
+    height: 50px;
+    font-family: var(--letraGeneral,--letraBody);
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 0.7px;
+    border-radius: 24px;
+    border: 2px solid;
+    background-color: var(--secundario700-sombra);
+    color: var(--neutro300);
+}
+
+.contenedor-juego-4-en-linea-izq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    
+}
+.contenedor-juego-4-en-linea-der {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+
+.img-4-en-linea {
+    width:520px;
+}
+
+.contenedor-img-personajes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.img-personaje-juego {
+    margin: 10px;
+}
+
+.vs-personajes{
+    color:var(--acento300-luz);
+}
+
+.titulo-personajes-vs {
+    font-size: 25px;
+    text-align: center;
+    font-family: var(--letraGeneral);
+    color:var(--neutro300);
+   text-shadow:  -1px -1px 0 var(--neutro700),   /* Sombra arriba a la izquierda */
+    1px -1px 0 var(--neutro700),    /* Sombra arriba a la derecha */
+    -1px 1px 0 var(--neutro700),    /* Sombra abajo a la izquierda */
+    1px 1px 0 var(--neutro700),     /* Sombra abajo a la derecha */
+    1px 0px 0 var(--neutro700),     /* Sombra derecha */
+    -1px 0px 0 var(--neutro700),    /* Sombra izquierda */
+    0px 1px 0 var(--neutro700),     /* Sombra abajo */
+    0px -1px 0 var(--neutro700);    /* Sombra arriba */
+}
+
+.p-descripcion-juego {
+    text-align: center;
+    color: var(--primario200-luz);
+    font-family: var(--letraGeneral);
+    font-size: 20px;
+}
+.contenedor-iconos-redes {
+    display: flex;
+    justify-content: center; 
+}
+.contenedor-iconos-redes img{
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+       
+}
+
+.icono-no-me-gusta {
+    transform: rotate(180deg);
+}
+.contenedor-btn-jugar-4-en-linea {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-jugar-4-en-linea{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono-play-jugar{
+    width: 0;
+    height: 0;
+    border-left: 17px solid var(--neutro300);
+    border-top: 8.5px solid transparent;
+    border-bottom: 8.5px solid transparent;
+    margin-left: 10px;
+}
+
+/*termina ventana del juego */
+
+/*Arranca venta de instrucciones */
+
+.contenedor-instrucciones-4-en-linea{
+    margin-top: 40px;
+    height: 340px;
+    background-color: var(--secundario300-luz);
+    border-radius: 5px;
+    display: flex;
+    border: 2px solid var(--secundario300-luz);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra con desplazamiento y transparencia */
+}
+
+.contenedor-instrucciones-4-en-linea-izq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.contenedor-instrucciones-4-en-linea-der {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+/*
+.contenedor-img-instrucciones{
+   
+
+}
+*/
+.contenedor-btn-pasos-4-en-linea {
+    width: 380px;
+    background-color: var(--secundario500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-izq-instrucciones, .btn-der-instrucciones {
+    background-color: transparent;
+    border: transparent;
+}
+
+.icono-btn-izq-instrucciones , .icono-btn-der-instrucciones{
+    width: 0;
+    height: 0;
+    border-left: 17px solid var(--neutro500);
+    border-top: 8.5px solid transparent;
+    border-bottom: 8.5px solid transparent;
+    margin-left: 10px;
+    
+}
+
+.icono-btn-izq-instrucciones {
+    transform: rotate(180deg);
+}
+
+.circulo-paso1, .circulo-paso2, .circulo-paso3, .circulo-paso4 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 5px;
+    border: 1px solid;
+}
+.con-relleno{
+    background-color: var(--neutro500);
+    border: 1px solid var(--neutro500);
+}
+
+.sin-relleno{
+    background-color: transparent;   
+}
+
+.titulos-instrucciones {
+    font-size: 20px;
+    color:var(--neutro700);
+    font-family: var(--letraGeneral,--letraBody);
+    letter-spacing: 0.13%;
+    margin-bottom: 5px;
+}
+
+.parrafo-instrucciones {
+    margin-top: 0;
+    color: var(--neutro500);
+    font-family: var(--letraBody,--letraGeneral);
+    font-size: 16px;
+}
+
+.titulos-instrucciones , .parrafo-instrucciones {
+    margin-left: 40px;
+}
+
+.imagen-pasos {
+    width: 380px;
+    height: 250px;
+    margin-top: 25px;
 }
