@@ -1,28 +1,28 @@
 /* Variables de colores y fuentes */
 :root {
-    --primario200-luz: #ECE8FF;
-    --primario300-luz: #AF9DF9;
-    --primario400-luz: #A48EFF;
-    --primario600-sombra: #7F63F2;
-    --primario700-sombra: #5E3EE2;
-    --primario800-sombra: #3A2D6E;
-    --secundario500: #D1DCE5;
-    --secundario300-luz: #DCEEFC;
-    --secundario600-sombra: #A3C5E2;
-    --secundario700-sombra: #71AEE0;
-    --secundario800-sombra: #3C8CCD;
-    --neutro300: #F9F9F9;
-    --neutro400: #F5F7FA;
-    --neutro500: #49454F;
-    --neutro600: #3374DC;
-    --neutro700: #000000;
-    --acento200-luz: #F0F1F2;
+    --primario200-luz : #ECE8FF;
+    --primario300-luz : #AF9DF9;
+    --primario400-luz : #A48EFF;
+    --primario600-sombra : #7F63F2;
+    --primario700-sombra : #5E3EE2;
+    --primario800-sombra : #3A2D6E;
+    --secundario500 : #D1DCE5;
+    --secundario300-luz : #DCEEFC;
+    --secundario600-sombra : #A3C5E2;
+    --secundario700-sombra : #71AEE0;
+    --secundario800-sombra : #3C8CCD;
+    --neutro300 : #F9F9F9;
+    --neutro400 : #F5F7FA;
+    --neutro500 : #49454F;
+    --neutro600 : #3374DC;
+    --neutro700 : #000000;
+    --acento200-luz : #F0F1F2;
     --acento300-luz: #FD8A76;
-    --acento500: #FF4F17;
-    --acento700-sombra: #71AEE0;
+    --acento500 : #FF4F17;
+    --acento700-sombra : #71AEE0;
 
-    --letraGeneral: 'Nunito';
-    --letraBody: 'Nunito-Sans';
+    --letraGeneral : 'Nunito';
+    --letraBody : 'Nunito Sans';
 }
 
 /* Estilos generales para el body */
@@ -30,7 +30,6 @@ body {
     text-decoration: none;
     margin: 0;
     padding: 0;
-    font-family: var(--letraGeneral);
 }
 
 /* Estilos para el header */
@@ -39,11 +38,9 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: var(--primario400-luz);
-    font-family: var(--letraGeneral);
-    font-weight: bold;
     padding: 10px 20px;
+    color: white;
 }
-
 
 /* Estilos para el div izquierdo (hamburguesa y logo) */
 .header-left {
@@ -54,7 +51,6 @@ body {
 .hamburger-menu {
     font-size: 24px;
     margin-right: 15px;
-    cursor: pointer;
 }
 
 .logo-img {
@@ -119,7 +115,8 @@ body {
     align-items: center;
 }
 
-.shopping-cart img {
+.shopping-cart {
+    font-size: 24px;
     margin-right: 20px;
     cursor: pointer;
 }
@@ -127,11 +124,10 @@ body {
 .user-info {
     display: flex;
     align-items: center;
-    cursor: pointer;
 }
 
 .user-info span {
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .user-img {
@@ -150,7 +146,7 @@ body {
     z-index: 25;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    width: 350px;
+    width: 300px;
 }
 
 #popup-compras {
@@ -158,34 +154,20 @@ body {
     background-color: var(--primario400-luz);
     position: absolute;
     top: 60px;
-    right: 120px;
+    right: 70px;
     z-index: 25;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     width: 300px;
+    line-height: 35px;
 }
 
 .cerrar-popup {
     position: absolute;
     padding: 0;
-    margin: 10px;
     width: 10px;
     right: 8px;
     top: 1px;
-}
-
-#popup-login .encabezado-popup {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-}
-
-#popup-login .encabezado-popup h3 {
-    margin: 10px 0;
-    /* Espacio entre el nombre y el email */
 }
 
 .encabezado-popup {
@@ -196,23 +178,22 @@ body {
     font-size: 16px;
 }
 
-.encabezado-popup img {
-    color: var(--neutro300);
-    height: 50px;
-    width: 50px;
+.encabezado-popup img,
+.encabezado-popup i {
     font-size: 24px;
+    margin-right: 15px;
 }
 
 .btn-cerrar-popup {
     border: none;
     cursor: pointer;
     padding: 0;
-    color: var(--neutro300);
+    color:var(--neutro300);
 }
 
 #btn-cerrar-popup-login,
 #btn-cerrar-popup-compras {
-    background-color: var(--primario400-luz);
+    background-color: var(--primario800-sombra);
 }
 
 .juego-precio {
@@ -225,7 +206,6 @@ body {
 }
 
 .contenido-popup {
-    font-family: var(--letraGeneral);
     text-align: left;
     margin-bottom: 25px;
     line-height: 15px;
@@ -240,24 +220,7 @@ body {
 }
 
 .contenido-popup p {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    /* Ajusta el margen según lo necesario */
     padding-top: 15px;
-}
-
-.encabezado-popup h3 {
-    font-family: var(--letraGeneral);
-}
-
-.contenido-popup img {
-    width: 20px;
-    /* Ajusta el tamaño del ícono */
-    height: 20px;
-    /* Ajusta el tamaño del ícono */
-    margin-right: 10px;
-    /* Espacio entre el ícono y el texto */
 }
 
 .btn-pagar-compras {
@@ -273,12 +236,7 @@ body {
 }
 
 /*    HASTA ACA EL HEADER */
-
 aside {
-    position: absolute;
-    /* Fija el aside al costado izquierdo */
-    top: 65px;
-    left: 0;
     width: 60px;
     transition: width 0.3s ease;
     background-color: var(--primario800-sombra);
@@ -286,7 +244,6 @@ aside {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 10;
 }
 
 aside img {
@@ -296,6 +253,7 @@ aside img {
 
 aside ul {
     list-style: none;
+    margin: 0;
     width: 100%;
 }
 
@@ -304,7 +262,7 @@ aside ul li {
     justify-content: flex-start;
     align-items: center;
     /* Asegura que los íconos estén alineados en el centro verticalmente */
-    padding: 20px 0;
+    padding: 15px 0;
     /* Añade espacio entre los íconos */
 }
 
@@ -486,96 +444,82 @@ footer .footer-redes img {
     width: 27px;
     height: 27px;
     margin-left: 7px;
-    margin-right: 7px;
+    margin-right:7px;
 }
 
 /*Parte vinculada al registro html*/
-.registro-header {
+.registro-header{
     background-color: #A48EFF;
     height: 140px;
     display: flex;
     justify-content: space-around;
 }
 
-.registro-header img {
+.registro-header img{
     width: 289px;
     height: 134px;
 }
-
-.tituloHeaderRegistro {
+.tituloHeaderRegistro{
     display: flex;
     flex-direction: column;
-    font-family: "nunito", sans-serif;
+    font-family: "nunito",sans-serif;
     color: #DCEEFC;
     margin-top: 40px;
 }
-
 .tituloHeaderRegistro h2 {
-    margin: 0;
-    padding: 0;
+    margin: 0; 
+    padding: 0; 
 }
 
-form {
+form{
     background-color: #3A2D6E;
     width: 820px;
     height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px auto;
+    margin: 40px auto; 
     margin-left: 350px;
-    color: #DCEEFC;
+    color:#DCEEFC;
     border-radius: 10px;
-    font-family: "nunito", sans-serif;
+    font-family: "nunito",sans-serif;
     text-align: left;
 }
-
-form img {
+form img{
     width: 45px;
     height: auto;
     margin: 0;
 }
-
-form div {
+form div{
     display: flex;
     width: 600px;
     align-items: center;
 }
-
-.logoForm {
+.logoForm{
     flex-direction: column;
     justify-content: center;
 }
 
-form div div {
-    flex-direction: column;
+form div div{
+    flex-direction: column; 
 }
-
-form input {
+form input{
     border-radius: 10px;
 }
-
-.datosPersonales input {
+.datosPersonales  input{
     width: 70%;
 }
-
-.clave input {
+.clave input{
     width: 70%;
 }
-
-.datosPersonales,
-.datosPersonales1,
-.clave,
-.captcha {
-    margin: 5px;
+.datosPersonales, .datosPersonales1, .clave , .captcha{
+    margin: 5px;;
     height: 50px;
 }
-
-#edad {
+#edad{
     width: 40%;
 }
-
-.captcha {
+.captcha{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -585,23 +529,17 @@ form input {
     color: #000000;
     border-radius: 10px;
 }
-
-.captcha img {
+.captcha img{
     width: 60px;
     height: 60px;
 }
-
-#lname,
-.tituloCrearCuenta {
+#lname, .tituloCrearCuenta{
     margin: 0;
 }
-
-.submit,
-.logAgain {
+.submit, .logAgain{
     justify-content: center;
 }
-
-.buttonCrear {
+.buttonCrear{
     width: 322px;
     height: 44px;
     border-radius: 24px;
@@ -610,56 +548,46 @@ form input {
     font: size 14px;
     color: #DCEEFC;
 }
-
-.logAgain {
+.logAgain{
     flex-direction: row;
     align-items: center;
     margin: 5px;
     height: 40px;
-
+    
 }
-
-.logAgain a {
+.logAgain a{
     text-decoration: none;
     color: #71AEE0;
     padding-left: 5px;
 }
-
-.edad {
+.edad{
     width: 40%;
 }
-
-.datosPersonales label {
+.datosPersonales label{
     width: 200px;
 }
-
-.clave label {
+.clave label{
     width: 200px;
 }
-
-.etiqueta-apodo,
-.etiqueta-mail {
+.etiqueta-apodo, .etiqueta-mail{
     width: 150px;
 }
-
-.camposObligatorios {
+.camposObligatorios{
     margin-left: 10%;
 }
-
-.camposObligatorios p,
-label span {
-    margin: 0;
-    color: #FD8A76;
+.camposObligatorios p, label span {
+    margin:0;
+    color:#FD8A76;
 }
 
 /*Hasta aca llega registro html*/
-
+  
 /*Arranca inicio sesion*/
 div .contenedor-inicio-sesion {
     display: flex;
 }
 
-.contenedor-imagenlogo-botones-inicio-sesion {
+.contenedor-imagenlogo-botones-inicio-sesion{
     background-color: var(--primario800-sombra);
     border-radius: 20px;
 }
@@ -684,12 +612,8 @@ div .contenedor-inicio-sesion {
     justify-content: center;
 }
 
-.btn-iniciar-sesion2,
-.btn-iniciar-sesion,
-.btn-iniciar-sesion-google,
-.btn-iniciar-sesion-facebook,
-.btn-iniciar-sesion-registrate {
-    font-family: var(--letraGeneral, --letraBody);
+.btn-iniciar-sesion2 ,.btn-iniciar-sesion , .btn-iniciar-sesion-google, .btn-iniciar-sesion-facebook, .btn-iniciar-sesion-registrate {
+    font-family: var(--letraGeneral,--letraBody);
     font-weight: 900;
     font-size: 14px;
     letter-spacing: 0.7px;
@@ -697,9 +621,7 @@ div .contenedor-inicio-sesion {
     border: 2px solid;
     height: 40px;
 }
-
-.btn-iniciar-sesion-google,
-.btn-iniciar-sesion-facebook {
+.btn-iniciar-sesion-google, .btn-iniciar-sesion-facebook {
     margin-top: 2.5px;
     margin-bottom: 2.5px;
     display: flex;
@@ -729,29 +651,28 @@ div .contenedor-inicio-sesion {
     color: var(--neutro300);
 }
 
-.logo-google-btn,
-.logo-facebook-btn {
+.logo-google-btn , .logo-facebook-btn {
     padding-left: 5px;
     width: 24px;
     height: 24px;
 }
 
-.divisor-login {
+.divisor-login{
     color: var(--neutro300);
 }
 
 /* ARRANCA INICIO SESION CUENTA */
 
-.form-inicio-sesion-cuenta {
+.form-inicio-sesion-cuenta{
     width: 400px;
     height: 400px;
 }
 
-form .contenedor-inicio-sesion-cuenta {
+ .contenedor-inicio-sesion-cuenta {
     margin-top: 104px;
 }
 
-form .contenedor-inputs-inicio-sesion {
+ .contenedor-inputs-inicio-sesion{
     font-size: 14px;
     color: var(--neutro300);
     flex-direction: column;
@@ -759,7 +680,7 @@ form .contenedor-inputs-inicio-sesion {
     padding-right: 7%;
 }
 
-.form-p-inicio-sesion-cuenta {
+.form-p-inicio-sesion-cuenta{
     text-align: center;
     color: var(--neutro300);
 }

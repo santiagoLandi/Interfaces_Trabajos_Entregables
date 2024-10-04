@@ -23,7 +23,7 @@
         </div>
     </header>
     <main>
-        <form action="" method="post">
+        <form action="" method="post" class="registroFormulario">
             <div class="logoForm">
                 <img src="assets/logo-removebg.png" alt="logoManyGames">
                 <h3 class="tituloCrearCuenta">Crear Cuenta</h3>
@@ -34,35 +34,35 @@
             <div class="datosPersonales">
                 <div>
                   <label for="fname">Nombre<span>*</span></label>
-                  <input type="text" id="fname" name="fname">
+                  <input type="text" id="fname" name="fname" required>
                 </div>
                 <div>
                   <label for="lname">Apellido<span>*</span></label>
-                  <input type="text" id="lname" name="lname">
+                  <input type="text" id="lname" name="lname" required>
                 </div>
             </div>
             <div class="datosPersonales1">
                 <div class="apodo">
                   <label for="apodo" class="etiqueta-apodo">Apodo</label>
-                  <input type="text" id="apodo" name="apodo">
+                  <input type="text" id="apodo" name="apodo" required>
                 </div>
                 <div class="edad">
                   <label for="edad">Edad<span>*</span></label>
-                  <input type="number" id="edad" name="edad" >
+                  <input type="number" id="edad" name="edad" required>
                 </div>
                 <div class="email">
                   <label for="email" class="etiqueta-mail">E-mail<span>*</span></label>
-                  <input type="email" id="email" name="email">
+                  <input type="email" id="email" name="email" required>
                 </div>  
             </div>
             <div class="clave">
                 <div>
                   <label for="pwd">Contrase&ntilde;a<span>*</span></label>
-                  <input type="password" id="pwd" name="pwd">
+                  <input type="password" id="pwd" name="pwd" required>
                 </div>
                 <div>
                   <label for="pwd">Repetir Contrase&ntilde;a<span>*</span></label>
-                  <input type="password" id="pwd" name="pwd">
+                  <input type="password" id="pwd" name="pwd" required>
                 </div>
             </div>
             <div class="captcha">
@@ -147,5 +147,6 @@
             <p>Si tenes problemas con el juego comunicate con la linea 6969 de ayuda al ludopata</p>
         </div>
     </footer>
+    <script type="text/javascript" src="js/registro.js"></script>
 </body>
 </html>
