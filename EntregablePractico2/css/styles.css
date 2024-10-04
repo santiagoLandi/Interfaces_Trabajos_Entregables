@@ -355,6 +355,7 @@ footer .footer-redes img {
 }
 
 /*Parte vinculada al registro html*/
+
 .registro-header{
     background-color: #A48EFF;
     height: 140px;
@@ -487,10 +488,13 @@ form input{
     color:#FD8A76;
 }
 
+
 /*Hasta aca llega registro html*/
-  
+
+
 /*Arranca inicio sesion*/
-div .contenedor-inicio-sesion {
+
+.contenedor-inicio-sesion {
     display: flex;
 }
 
@@ -575,11 +579,11 @@ div .contenedor-inicio-sesion {
     height: 400px;
 }
 
- .contenedor-inicio-sesion-cuenta {
+.contenedor-inicio-sesion-cuenta {
     margin-top: 104px;
 }
 
- .contenedor-inputs-inicio-sesion{
+.contenedor-inputs-inicio-sesion{
     font-size: 14px;
     color: var(--neutro300);
     flex-direction: column;
