@@ -623,6 +623,11 @@ footer .footer-redes img {
     color:#FD8A76;
 }
 
+.datosPersonales div p{
+    margin: 0;
+    color:#FD8A76;
+    font-size: 14px;
+}
 
 /*Hasta aca llega registro html*/
 
