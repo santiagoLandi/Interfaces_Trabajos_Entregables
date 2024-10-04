@@ -328,11 +328,14 @@ aside.open {
 }
 
 /*---- ARRANCA EL MAIN ----*/
+
 .main-container {
     max-width: 1440px;
     /* Ancho máximo del contenedor */
     margin: 0 auto;
     /* Centra el contenedor horizontalmente */
+    display: flex;
+    min-height: 100vh;
 }
 
 main {
@@ -347,7 +350,7 @@ main {
 }
 
 .carousel-section {
-    margin: 20px 0;
+    margin: 65px 0;
     /* Espacio entre las secciones de los carruseles */
 }
 
@@ -356,15 +359,7 @@ main {
     display: flex;
     align-items: center;
     overflow: hidden;
-    width: 100%;
-}
-
-.carousel-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    width: 100%;
+    height: 356px;
 }
 
 .carousel-track {
@@ -374,6 +369,12 @@ main {
     gap: 25px;
     transition: transform 0.5s ease;
     /* Smooth animation */
+    width: 100%;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    margin-top: 0;
 }
 
 .card {
@@ -567,7 +568,6 @@ form input {
 .clave,
 .captcha {
     margin: 5px;
-    ;
     height: 50px;
 }
 
