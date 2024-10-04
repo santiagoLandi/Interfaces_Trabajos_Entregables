@@ -285,6 +285,99 @@ aside.open {
     width: 200px;
 }
 
+/*---- ARRANCA EL MAIN ----*/
+
+.main-container {
+    max-width: 1440px;
+    /* Ancho máximo del contenedor */
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente */
+    display: flex;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    margin-left: 100px;
+    /* Deja espacio para el aside */
+}
+
+.card img {
+    width: 213px;
+    height: 243px;
+}
+
+.carousel-section {
+    margin: 65px 0;
+    /* Espacio entre las secciones de los carruseles */
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 356px;
+}
+
+.carousel-track {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* Adjust number of cards visible */
+    gap: 25px;
+    transition: transform 0.5s ease;
+    /* Smooth animation */
+    width: 100%;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.card {
+    width: 213px;
+    height: 350px;
+    margin: 10px;
+    text-align: center;
+    background-color: var(--neutro300);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    /* Redondea solo las esquinas inferiores */
+    overflow: hidden;
+    /* Asegura que el contenido no sobresalga de la card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Alinea los elementos horizontalmente al centro */
+}
+
+.card img {
+    width: 213px;
+    height: 243px;
+    display: block;
+}
+
+.carousel-arrow {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: -10px;
+}
+
 /*Aca arrancan el footer*/
 footer {
     padding-top: 2%;
@@ -378,13 +471,15 @@ footer .footer-redes img {
     padding: 0; 
 }
 
+
 .registroFormulario{
     background-color: #3A2D6E;
     width: 820px;
-    height: 400px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: 40px auto; 
     margin-left: 350px;
     color:#DCEEFC;
@@ -397,54 +492,85 @@ footer .footer-redes img {
     height: auto;
     margin: 0;
 }
-.captcha{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #DCEEFC;
-    width: 200px;
-    margin: 5px;
-    color: #000000;
-    border-radius: 10px;
-}
-.registroFormulario div{
+
+.logoForm, .captcha, .submit, .logAgain{
     display: flex;
     width: 600px;
     align-items: center;
+    justify-content: center;
+   
 }
-
+.camposObligatorios{
+    width: 600px;
+}
 .logoForm{
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0;
+    height: 90px;
 }
-
-.registroFormulario div div{
-    flex-direction: column; 
+.registroFormulario h3 {
+    margin:0;
 }
+.datosPersonales{
+    width: 600px;
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-areas: 
+                        "nombre . apellido"
+                        "apodo edad email"
+                        "clave1 . clave2"
  
-.registroFormulario input{
+}
+.nombre{
+    grid-area: nombre;
+    display: flex;
+    flex-flow: column;
+}
+.apellido{
+    grid-area: apellido;
+    display: flex;
+    flex-flow: column;
+}
+.apodo{
+    grid-area: apodo;
+    display: flex;
+    flex-flow: column;
+}
+.edad{
+    grid-area: edad;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.email{
+    grid-area: email;
+    display: flex;
+    flex-flow: column;
+}
+.clave1{
+    grid-area: clave1;
+    display: flex;
+    flex-flow: column;
+}
+.clave2{
+    grid-area: clave2; 
+    display: flex;
+    flex-flow: column;
+    
+}
+.datosPersonales input{
     border-radius: 10px;
 }
-.datosPersonales  input{
-    width: 70%;
+.edad input{
+    width: 80px;
 }
-.clave input{
-    width: 70%;
-}
-.datosPersonales, .datosPersonales1, .clave , .captcha{
-    margin: 5px;;
-    height: 50px;
-}
-#edad{
-    width: 40%;
-}
-
-.captcha img{
-    width: 60px;
-    height: 60px;
-}
-#lname, .tituloCrearCuenta{
-    margin: 0;
+.logAgain a{
+    text-decoration: none;
+    color: #71AEE0;
+    padding-left: 5px;
 }
 .submit, .logAgain{
     justify-content: center;
@@ -458,38 +584,46 @@ footer .footer-redes img {
     font: size 14px;
     color: #DCEEFC;
 }
-.logAgain{
-    flex-direction: row;
-    align-items: center;
-    margin: 5px;
-    height: 40px;
+.captcha img{
+    width: 60px;
+    height: 60px;
+}
+.logoForm{
+    flex-direction: column;
+    justify-content: center;
+}
+.logoForm{
+    flex-direction: column;
+    justify-content: center;
+}
+.captcha{
+    background-color: #DCEEFC;
+    width: 230px;
+    height: 50px;
+    color: #000000;
+    margin: 10px;
+    border-radius: 10px;
     
 }
-.logAgain a{
-    text-decoration: none;
-    color: #71AEE0;
-    padding-left: 5px;
+.captcha div{
+    display: flex;
+    justify-content: center; /* Para centrar horizontalmente */
+    align-items: center;     /* Para centrar verticalmente */
+    gap: 10px; 
+   
 }
-.edad{
-    width: 40%;
-}
-.datosPersonales label{
-    width: 200px;
-}
-.clave label{
-    width: 200px;
-}
-.etiqueta-apodo, .etiqueta-mail{
-    width: 150px;
-}
-.camposObligatorios{
-    margin-left: 10%;
+.registroFormulario label{
+    text-align: left;
 }
 .camposObligatorios p, label span {
     margin:0;
     color:#FD8A76;
 }
-
+.datosPersonales div p{
+    margin: 0;
+    color:#FD8A76;
+    font-size: 14px;
+}
 /*Hasta aca llega registro html*/
   
 /*Arranca inicio sesion*/
