@@ -378,7 +378,7 @@ footer .footer-redes img {
     padding: 0; 
 }
 
-form{
+.registroFormulario{
     background-color: #3A2D6E;
     width: 820px;
     height: 400px;
@@ -392,12 +392,12 @@ form{
     font-family: "nunito",sans-serif;
     text-align: left;
 }
-form img{
+.registroFormulario img{
     width: 45px;
     height: auto;
     margin: 0;
 }
-form div{
+.registroFormulario div{
     display: flex;
     width: 600px;
     align-items: center;
@@ -407,10 +407,10 @@ form div{
     justify-content: center;
 }
 
-form div div{
+.registroFormulario div div{
     flex-direction: column; 
 }
-form input{
+.registroFormulario input{
     border-radius: 10px;
 }
 .datosPersonales  input{
