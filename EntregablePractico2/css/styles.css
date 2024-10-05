@@ -515,86 +515,104 @@ footer .footer-redes img {
     padding: 0;
 }
 
-form {
+.registroFormulario{
     background-color: #3A2D6E;
     width: 820px;
-    height: 400px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px auto;
+    justify-content: center;
+    margin: 40px auto; 
     margin-left: 350px;
     color: #DCEEFC;
     border-radius: 10px;
     font-family: "nunito", sans-serif;
     text-align: left;
 }
-
-form img {
+.registroFormulario img{
     width: 45px;
     height: auto;
     margin: 0;
 }
 
-form div {
+.logoForm, .captcha, .submit, .logAgain{
     display: flex;
     width: 600px;
     align-items: center;
-}
-
-.logoForm {
-    flex-direction: column;
     justify-content: center;
 }
-
-form div div {
-    flex-direction: column;
+.camposObligatorios{
+    width: 600px;
 }
-
-form input {
-    border-radius: 10px;
-}
-
-.datosPersonales input {
-    width: 70%;
-}
-
-.clave input {
-    width: 70%;
-}
-
-.datosPersonales,
-.datosPersonales1,
-.clave,
-.captcha {
-    margin: 5px;
-    ;
-    height: 50px;
-}
-
-#edad {
-    width: 40%;
-}
-
-.captcha {
+.logoForm{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    margin: 0;
+    height: 90px;
+}
+.registroFormulario h3 {
+    margin:0;
+}
+.datosPersonales{
+    width: 600px;
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-areas: 
+                        "nombre . apellido"
+                        "apodo edad email"
+                        "clave1 . clave2"
+ 
+}
+.nombre{
+    grid-area: nombre;
+    display: flex;
+    flex-flow: column;
+}
+.apellido{
+    grid-area: apellido;
+    display: flex;
+    flex-flow: column;
+}
+.apodo{
+    grid-area: apodo;
+    display: flex;
+    flex-flow: column;
+}
+.edad{
+    grid-area: edad;
+    display: flex;
+    flex-flow: column;
     align-items: center;
-    background-color: #DCEEFC;
-    width: 30%;
-    margin: 5px;
-    color: #000000;
+}
+.email{
+    grid-area: email;
+    display: flex;
+    flex-flow: column;
+}
+.clave1{
+    grid-area: clave1;
+    display: flex;
+    flex-flow: column;
+}
+.clave2{
+    grid-area: clave2; 
+    display: flex;
+    flex-flow: column;
+    
+}
+.datosPersonales input{
     border-radius: 10px;
 }
-
-.captcha img {
-    width: 60px;
-    height: 60px;
+.edad input{
+    width: 80px;
 }
-
-#lname,
-.tituloCrearCuenta {
-    margin: 0;
+.logAgain a{
+    text-decoration: none;
+    color: #71AEE0;
+    padding-left: 5px;
 }
 
 .submit,
@@ -611,40 +629,36 @@ form input {
     font: size 14px;
     color: #DCEEFC;
 }
-
-.logAgain {
-    flex-direction: row;
-    align-items: center;
-    margin: 5px;
-    height: 40px;
-
+.captcha img{
+    width: 60px;
+    height: 60px;
 }
-
-.logAgain a {
-    text-decoration: none;
-    color: #71AEE0;
-    padding-left: 5px;
+.logoForm{
+    flex-direction: column;
+    justify-content: center;
 }
-
-.edad {
-    width: 40%;
+.logoForm{
+    flex-direction: column;
+    justify-content: center;
 }
-
-.datosPersonales label {
-    width: 200px;
+.captcha{
+    background-color: #DCEEFC;
+    width: 230px;
+    height: 50px;
+    color: #000000;
+    margin: 10px;
+    border-radius: 10px;
+    
 }
-
-.clave label {
-    width: 200px;
+.captcha div{
+    display: flex;
+    justify-content: center; /* Para centrar horizontalmente */
+    align-items: center;     /* Para centrar verticalmente */
+    gap: 10px; 
+   
 }
-
-.etiqueta-apodo,
-.etiqueta-mail {
-    width: 150px;
-}
-
-.camposObligatorios {
-    margin-left: 10%;
+.registroFormulario label{
+    text-align: left;
 }
 
 .camposObligatorios p,
@@ -653,10 +667,17 @@ label span {
     color: #FD8A76;
 }
 
+.datosPersonales div p{
+    margin: 0;
+    color:#FD8A76;
+    font-size: 14px;
+}
+
 /*Hasta aca llega registro html*/
 
 /*Arranca inicio sesion*/
-div .contenedor-inicio-sesion {
+
+.contenedor-inicio-sesion {
     display: flex;
 }
 
@@ -780,4 +801,234 @@ div .contenedor-inicio-sesion {
     border-radius: 5px;
     border: 1px solid;
     margin-bottom: 10px;
+}
+
+/* Arranca la pagina del juego */
+
+/*Arranca ventana del juego */
+.contenedor-principal-4-en-linea {
+    height: 2000px;
+    width: 1000px;
+    margin-left: 120px;
+    margin-right:60px;
+    margin-top: 80px;
+}
+
+.contenedor-juego-4-en-linea{
+    height: 500px;
+    background-color: var(--primario800-sombra);
+    border-radius: 5px;
+    display: flex;
+}
+
+.contenedor-titulo-btn-volver{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--neutro500);
+}
+
+.btn-volver , .btn-jugar-4-en-linea{
+    width: 160px;
+    height: 50px;
+    font-family: var(--letraGeneral,--letraBody);
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 0.7px;
+    border-radius: 24px;
+    border: 2px solid;
+    background-color: var(--secundario700-sombra);
+    color: var(--neutro300);
+}
+
+.contenedor-juego-4-en-linea-izq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    
+}
+.contenedor-juego-4-en-linea-der {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+
+.img-4-en-linea {
+    width:520px;
+}
+
+.contenedor-img-personajes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.img-personaje-juego {
+    margin: 10px;
+}
+
+.vs-personajes{
+    color:var(--acento300-luz);
+}
+
+.titulo-personajes-vs {
+    font-size: 25px;
+    text-align: center;
+    font-family: var(--letraGeneral);
+    color:var(--neutro300);
+   text-shadow:  -1px -1px 0 var(--neutro700),   /* Sombra arriba a la izquierda */
+    1px -1px 0 var(--neutro700),    /* Sombra arriba a la derecha */
+    -1px 1px 0 var(--neutro700),    /* Sombra abajo a la izquierda */
+    1px 1px 0 var(--neutro700),     /* Sombra abajo a la derecha */
+    1px 0px 0 var(--neutro700),     /* Sombra derecha */
+    -1px 0px 0 var(--neutro700),    /* Sombra izquierda */
+    0px 1px 0 var(--neutro700),     /* Sombra abajo */
+    0px -1px 0 var(--neutro700);    /* Sombra arriba */
+}
+
+.p-descripcion-juego {
+    text-align: center;
+    color: var(--primario200-luz);
+    font-family: var(--letraGeneral);
+    font-size: 20px;
+}
+.contenedor-iconos-redes {
+    display: flex;
+    justify-content: center; 
+}
+.contenedor-iconos-redes img{
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+       
+}
+
+.icono-no-me-gusta {
+    transform: rotate(180deg);
+}
+.contenedor-btn-jugar-4-en-linea {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-jugar-4-en-linea{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono-play-jugar{
+    width: 0;
+    height: 0;
+    border-left: 17px solid var(--neutro300);
+    border-top: 8.5px solid transparent;
+    border-bottom: 8.5px solid transparent;
+    margin-left: 10px;
+}
+
+/*termina ventana del juego */
+
+/*Arranca venta de instrucciones */
+
+.contenedor-instrucciones-4-en-linea{
+    margin-top: 40px;
+    height: 340px;
+    background-color: var(--secundario300-luz);
+    border-radius: 5px;
+    display: flex;
+    border: 2px solid var(--secundario300-luz);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra con desplazamiento y transparencia */
+}
+
+.contenedor-instrucciones-4-en-linea-izq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.contenedor-instrucciones-4-en-linea-der {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+/*
+.contenedor-img-instrucciones{
+   
+
+}
+*/
+.contenedor-btn-pasos-4-en-linea {
+    width: 380px;
+    background-color: var(--secundario500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-izq-instrucciones, .btn-der-instrucciones {
+    background-color: transparent;
+    border: transparent;
+}
+
+.icono-btn-izq-instrucciones , .icono-btn-der-instrucciones{
+    width: 0;
+    height: 0;
+    border-left: 17px solid var(--neutro500);
+    border-top: 8.5px solid transparent;
+    border-bottom: 8.5px solid transparent;
+    margin-left: 10px;
+    
+}
+
+.icono-btn-izq-instrucciones {
+    transform: rotate(180deg);
+}
+
+.circulo-paso1, .circulo-paso2, .circulo-paso3, .circulo-paso4 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 5px;
+    border: 1px solid;
+}
+.con-relleno{
+    background-color: var(--neutro500);
+    border: 1px solid var(--neutro500);
+}
+
+.sin-relleno{
+    background-color: transparent;   
+}
+
+.titulos-instrucciones {
+    font-size: 20px;
+    color:var(--neutro700);
+    font-family: var(--letraGeneral,--letraBody);
+    letter-spacing: 0.13%;
+    margin-bottom: 5px;
+}
+
+.parrafo-instrucciones {
+    margin-top: 0;
+    color: var(--neutro500);
+    font-family: var(--letraBody,--letraGeneral);
+    font-size: 16px;
+}
+
+.titulos-instrucciones , .parrafo-instrucciones {
+    margin-left: 40px;
+}
+
+.imagen-pasos {
+    width: 380px;
+    height: 250px;
+    margin-top: 25px;
 }
