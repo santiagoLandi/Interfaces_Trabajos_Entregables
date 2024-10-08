@@ -1,28 +1,28 @@
 /* Variables de colores y fuentes */
 :root {
-    --primario200-luz : #ECE8FF;
-    --primario300-luz : #AF9DF9;
-    --primario400-luz : #A48EFF;
-    --primario600-sombra : #7F63F2;
-    --primario700-sombra : #5E3EE2;
-    --primario800-sombra : #3A2D6E;
-    --secundario500 : #D1DCE5;
-    --secundario300-luz : #DCEEFC;
-    --secundario600-sombra : #A3C5E2;
-    --secundario700-sombra : #71AEE0;
-    --secundario800-sombra : #3C8CCD;
-    --neutro300 : #F9F9F9;
-    --neutro400 : #F5F7FA;
-    --neutro500 : #49454F;
-    --neutro600 : #3374DC;
-    --neutro700 : #000000;
-    --acento200-luz : #F0F1F2;
+    --primario200-luz: #ECE8FF;
+    --primario300-luz: #AF9DF9;
+    --primario400-luz: #A48EFF;
+    --primario600-sombra: #7F63F2;
+    --primario700-sombra: #5E3EE2;
+    --primario800-sombra: #3A2D6E;
+    --secundario500: #D1DCE5;
+    --secundario300-luz: #DCEEFC;
+    --secundario600-sombra: #A3C5E2;
+    --secundario700-sombra: #71AEE0;
+    --secundario800-sombra: #3C8CCD;
+    --neutro300: #F9F9F9;
+    --neutro400: #F5F7FA;
+    --neutro500: #49454F;
+    --neutro600: #3374DC;
+    --neutro700: #000000;
+    --acento200-luz: #F0F1F2;
     --acento300-luz: #FD8A76;
-    --acento500 : #FF4F17;
-    --acento700-sombra : #71AEE0;
+    --acento500: #FF4F17;
+    --acento700-sombra: #71AEE0;
 
-    --letraGeneral : 'Nunito';
-    --letraBody : 'Nunito Sans';
+    --letraGeneral: 'Nunito';
+    --letraBody: 'Nunito Sans';
 }
 
 /* Estilos generales para el body */
@@ -30,6 +30,7 @@ body {
     text-decoration: none;
     margin: 0;
     padding: 0;
+    font-family: var(--letraGeneral);
 }
 
 /* Estilos para el header */
@@ -67,34 +68,26 @@ body {
 .search-bar input {
     background-color: var(--neutro400);
     flex-grow: 1;
-    /* Ocupa todo el espacio disponible */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 20px 0 0 20px;
-    /* Bordes redondeados solo a la izquierda */
     font-size: 16px;
     outline: none;
     box-shadow: none;
     border-right: none;
-    /* Elimina el borde derecho del input */
     height: 40px;
-    /* Fijar una altura consistente */
 }
 
 .search-bar button {
     background-color: var(--neutro400);
     border: 1px solid #ccc;
-    /* Añadir borde al botón */
     border-left: none;
-    /* Elimina el borde izquierdo del botón */
     padding: 0 10px;
     border-radius: 0 20px 20px 0;
-    /* Bordes redondeados solo a la derecha */
     cursor: pointer;
     align-items: center;
     justify-content: center;
     height: 40px;
-    /* Fijar la misma altura que el input */
 }
 
 .search-bar button img {
@@ -106,7 +99,6 @@ body {
 .search-bar *::before,
 .search-bar *::after {
     box-sizing: border-box;
-    /* Asegura que padding y borde estén incluidos en el tamaño del elemento */
 }
 
 /* Estilos para el div derecho (carrito, nombre y avatar) */
@@ -188,7 +180,7 @@ body {
     border: none;
     cursor: pointer;
     padding: 0;
-    color:var(--neutro300);
+    color: var(--neutro300);
 }
 
 #btn-cerrar-popup-login,
@@ -235,15 +227,17 @@ body {
     font-size: 16px;
 }
 
-/*    HASTA ACA EL HEADER */
+/*    Hasta Aca El Header  */
+/*    Barra Lateral   */
 aside {
+    padding-top: 25px;
     width: 60px;
     transition: width 0.3s ease;
     background-color: var(--primario800-sombra);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    z-index: 5;
 }
 
 aside img {
@@ -261,9 +255,7 @@ aside ul li {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* Asegura que los íconos estén alineados en el centro verticalmente */
     padding: 15px 0;
-    /* Añade espacio entre los íconos */
 }
 
 aside ul span {
@@ -274,7 +266,6 @@ aside ul span {
 
 aside.open ul span {
     display: inline;
-    /* Muestra los spans cuando el aside está abierto */
     color: var(--neutro300);
     font-weight: bold;
     letter-spacing: 4%;
@@ -288,68 +279,54 @@ aside.open {
 /*---- ARRANCA EL MAIN ----*/
 
 .main-container {
-    max-width: 1440px;
-    /* Ancho máximo del contenedor */
-    margin: 0 auto;
-    /* Centra el contenedor horizontalmente */
-    display: flex;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 1fr auto;
     min-height: 100vh;
 }
 
 main {
-    flex: 1;
-    margin-left: 100px;
-    /* Deja espacio para el aside */
-}
-
-.card img {
-    width: 213px;
-    height: 243px;
+    grid-column: 2;
+    grid-row: 1;
+    color: var(--primario700-sombra);
 }
 
 .carousel-section {
     margin: 65px 0;
-    /* Espacio entre las secciones de los carruseles */
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
 }
 
 .carousel-container {
-    position: relative;
     display: flex;
+    justify-content: start;
     align-items: center;
-    overflow: hidden;
-    height: 356px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .carousel-track {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    /* Adjust number of cards visible */
-    gap: 25px;
-    transition: transform 0.5s ease;
-    /* Smooth animation */
-    width: 100%;
+    gap: 30px;
 }
 
 section h2 {
     margin-bottom: 20px;
     margin-top: 0;
+    margin-left: 40px;
 }
 
 .card {
     width: 213px;
-    height: 350px;
-    margin: 10px;
-    text-align: center;
     background-color: var(--neutro300);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    /* Redondea solo las esquinas inferiores */
     overflow: hidden;
-    /* Asegura que el contenido no sobresalga de la card */
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Alinea los elementos horizontalmente al centro */
 }
 
 .card img {
@@ -358,27 +335,66 @@ section h2 {
     display: block;
 }
 
-.carousel-arrow {
-    background-color: #6a0dad;
-    color: white;
-    border: none;
+.texto-cards {
+    width: 213px;
+    height: auto;
+}
+
+.nombre-y-puntuacion-cards {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1;
+}
+
+.puntuacion {
+    display: flex;
+    align-items: center;
+}
+
+.puntuacion img {
+    width: 15px;
+    height: 15px;
+    margin-left: 3px;
+}
+
+.texto-cards h3 {
+    margin: 14px 0;
+}
+
+.categoria-card {
+    margin: 0;
+}
+
+.texto-cards p {
+    font-size: 14px;
+}
+
+.container-boton-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-cards {
+    width: 55%;
+    align-items: center;
+    margin: 5px 0 15px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
 }
 
-.left-arrow {
-    left: 10px;
+img.left-arrow,
+img.right-arrow {
+    width: 36px;
+    height: 106px;
+    cursor: pointer;
+    z-index: 2;
+    user-select: none;
 }
 
-.right-arrow {
-    right: -10px;
-}
-
-/*Aca arrancan el footer*/
+/*Aca arranca el Footer*/
 footer {
     padding-top: 2%;
     padding-left: 10%;
@@ -444,31 +460,33 @@ footer .footer-redes img {
     width: 27px;
     height: 27px;
     margin-left: 7px;
-    margin-right:7px;
+    margin-right: 7px;
 }
 
 /*Parte vinculada al registro html*/
-.registro-header{
-    background-color: #A48EFF;
+.registro-header {
+    background-color: var(--primario400-luz);
     height: 140px;
     display: flex;
     justify-content: space-around;
 }
 
-.registro-header img{
+.registro-header img {
     width: 289px;
     height: 134px;
 }
-.tituloHeaderRegistro{
+
+.tituloHeaderRegistro {
     display: flex;
     flex-direction: column;
-    font-family: "nunito",sans-serif;
-    color: #DCEEFC;
+    font-family: var(--letraGeneral), sans-serif;
+    color: var(--secundario300-luz);
     margin-top: 40px;
 }
+
 .tituloHeaderRegistro h2 {
-    margin: 0; 
-    padding: 0; 
+    margin: 0;
+    padding: 0;
 }
 
 .registroContenedor{
@@ -482,38 +500,47 @@ footer .footer-redes img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color:#DCEEFC;
+    justify-content: center;
+    margin: 40px auto;
+    color: var(--secundario300-luz);
     border-radius: 10px;
-    font-family: "nunito",sans-serif;
+    font-family: var(--letraGeneral), sans-serif;
     text-align: left;
 }
-.registroFormulario img{
+
+.registroFormulario img {
     width: 45px;
     height: auto;
     margin: 0;
 }
 
-.logoForm, .captcha, .submit, .logAgain{
+.logoForm,
+.captcha,
+.submit,
+.logAgain {
     display: flex;
     width: 600px;
     align-items: center;
     justify-content: center;
-   
 }
-.camposObligatorios{
+
+.camposObligatorios {
     width: 600px;
 }
-.logoForm{
+
+.logoForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0;
     height: 90px;
 }
+
 .registroFormulario h3 {
-    margin:0;
+    margin: 0;
 }
-.datosPersonales{
+
+.datosPersonales {
     width: 600px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -522,108 +549,125 @@ footer .footer-redes img {
                         "nombre nombre apellido apellido"
                         "apodo edad email email"
                         "clave1 clave1 clave2 clave2"
- 
 }
-.nombre{
+
+.nombre {
     grid-area: nombre;
+}
+
+.nombre,
+.apellido,
+.apodo,
+.edad,
+.email,
+.clave1,
+.clave2 {
     display: flex;
     flex-flow: column;
 }
-.apellido{
+
+.apellido {
     grid-area: apellido;
-    display: flex;
-    flex-flow: column;
 }
-.apodo{
+
+.apodo {
     grid-area: apodo;
-    display: flex;
-    flex-flow: column;
 }
-.edad{
+
+.edad {
     grid-area: edad;
     display: flex;
     flex-flow: column;
     
 }
-.email{
+
+.email {
     grid-area: email;
-    display: flex;
-    flex-flow: column;
 }
-.clave1{
+
+.clave1 {
     grid-area: clave1;
-    display: flex;
-    flex-flow: column;
 }
-.clave2{
-    grid-area: clave2; 
-    display: flex;
-    flex-flow: column;
-    
+
+.clave2 {
+    grid-area: clave2;
 }
-.datosPersonales input{
+
+.datosPersonales input {
     border-radius: 10px;
     width: 90%;
 }
 
+
 input#edad{
     width: 80%;
 }
-.logAgain a{
+
+
+.logAgain a {
     text-decoration: none;
-    color: #71AEE0;
+    color: var(--secundario700-sombra);
     padding-left: 5px;
 }
-.submit, .logAgain{
+
+.submit,
+.logAgain {
     justify-content: center;
 }
-.buttonCrear{
+
+.buttonCrear {
     width: 322px;
     height: 44px;
     border-radius: 24px;
-    background-color: #71AEE0;
+    background-color: var(--secundario700-sombra);
     font-weight: bold;
     font: size 14px;
-    color: #DCEEFC;
+    color: var(--secundario300-luz);
 }
-.captcha img{
+
+.captcha img {
     width: 60px;
     height: 60px;
 }
-.logoForm{
+
+.logoForm {
     flex-direction: column;
     justify-content: center;
 }
-.logoForm{
+
+.logoForm {
     flex-direction: column;
     justify-content: center;
 }
-.captcha{
-    background-color: #DCEEFC;
+
+.captcha {
+    background-color: var(--secundario300-luz);
     width: 230px;
     height: 50px;
-    color: #000000;
+    color: var(--neutro700);
     margin: 10px;
     border-radius: 10px;
-    
 }
-.captcha div{
+
+.captcha div {
     display: flex;
-    justify-content: center; /* Para centrar horizontalmente */
-    align-items: center;     /* Para centrar verticalmente */
-    gap: 10px; 
-   
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
-.registroFormulario label{
+
+.registroFormulario label {
     text-align: left;
 }
-.camposObligatorios p, label span {
-    margin:0;
-    color:#FD8A76;
-}
-.datosPersonales div p{
+
+.camposObligatorios p,
+label span,
+.datosPersonales div p {
     margin: 0;
-    color:#FD8A76;
+    color: var(--acento300-luz);
+}
+
+.datosPersonales div p {
     font-size: 14px;
 }
 
@@ -637,13 +681,14 @@ input#edad{
     color:#DCEEFC;
 }
 /*Hasta aca llega registro html*/
-  
+
 /*Arranca inicio sesion*/
-div .contenedor-inicio-sesion {
+
+.contenedor-inicio-sesion {
     display: flex;
 }
 
-.contenedor-imagenlogo-botones-inicio-sesion{
+.contenedor-imagenlogo-botones-inicio-sesion {
     background-color: var(--primario800-sombra);
     border-radius: 20px;
 }
@@ -668,8 +713,12 @@ div .contenedor-inicio-sesion {
     justify-content: center;
 }
 
-.btn-iniciar-sesion2 ,.btn-iniciar-sesion , .btn-iniciar-sesion-google, .btn-iniciar-sesion-facebook, .btn-iniciar-sesion-registrate {
-    font-family: var(--letraGeneral,--letraBody);
+.btn-iniciar-sesion2,
+.btn-iniciar-sesion,
+.btn-iniciar-sesion-google,
+.btn-iniciar-sesion-facebook,
+.btn-iniciar-sesion-registrate {
+    font-family: var(--letraGeneral, --letraBody);
     font-weight: 900;
     font-size: 14px;
     letter-spacing: 0.7px;
@@ -677,7 +726,9 @@ div .contenedor-inicio-sesion {
     border: 2px solid;
     height: 40px;
 }
-.btn-iniciar-sesion-google, .btn-iniciar-sesion-facebook {
+
+.btn-iniciar-sesion-google,
+.btn-iniciar-sesion-facebook {
     margin-top: 2.5px;
     margin-bottom: 2.5px;
     display: flex;
@@ -707,28 +758,29 @@ div .contenedor-inicio-sesion {
     color: var(--neutro300);
 }
 
-.logo-google-btn , .logo-facebook-btn {
+.logo-google-btn,
+.logo-facebook-btn {
     padding-left: 5px;
     width: 24px;
     height: 24px;
 }
 
-.divisor-login{
+.divisor-login {
     color: var(--neutro300);
 }
 
 /* ARRANCA INICIO SESION CUENTA */
 
-.form-inicio-sesion-cuenta{
+.form-inicio-sesion-cuenta {
     width: 400px;
     height: 400px;
 }
 
- .contenedor-inicio-sesion-cuenta {
+.contenedor-inicio-sesion-cuenta {
     margin-top: 104px;
 }
 
- .contenedor-inputs-inicio-sesion{
+.contenedor-inputs-inicio-sesion {
     font-size: 14px;
     color: var(--neutro300);
     flex-direction: column;
@@ -736,7 +788,7 @@ div .contenedor-inicio-sesion {
     padding-right: 7%;
 }
 
-.form-p-inicio-sesion-cuenta{
+.form-p-inicio-sesion-cuenta {
     text-align: center;
     color: var(--neutro300);
 }
@@ -756,4 +808,237 @@ div .contenedor-inicio-sesion {
     border-radius: 5px;
     border: 1px solid;
     margin-bottom: 10px;
+}
+
+/* Arranca la pagina del juego */
+
+/*Arranca ventana del juego */
+.contenedor-principal-4-en-linea {
+    height: 2000px;
+    width: 1000px;
+    margin-left: 120px;
+    margin-right: 60px;
+    margin-top: 80px;
+}
+
+.contenedor-juego-4-en-linea {
+    height: 500px;
+    background-color: var(--primario800-sombra);
+    border-radius: 5px;
+    display: flex;
+}
+
+.contenedor-titulo-btn-volver {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--neutro500);
+}
+
+.btn-volver,
+.btn-jugar-4-en-linea {
+    width: 160px;
+    height: 50px;
+    font-family: var(--letraGeneral, --letraBody);
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 0.7px;
+    border-radius: 24px;
+    border: 2px solid;
+    background-color: var(--secundario700-sombra);
+    color: var(--neutro300);
+}
+
+.contenedor-juego-4-en-linea-izq,
+.contenedor-juego-4-en-linea-der,
+.contenedor-img-personajes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-juego-4-en-linea-izq {
+    width: 60%;
+}
+
+.contenedor-juego-4-en-linea-der {
+    width: 40%;
+}
+
+.img-4-en-linea {
+    width: 520px;
+}
+
+.img-personaje-juego {
+    margin: 10px;
+}
+
+.vs-personajes {
+    color: var(--acento300-luz);
+}
+
+.titulo-personajes-vs {
+    font-size: 25px;
+    text-align: center;
+    font-family: var(--letraGeneral);
+    color: var(--neutro300);
+    text-shadow: -1px -1px 0 var(--neutro700),
+        /* Sombras por posicion */
+        1px -1px 0 var(--neutro700),
+        -1px 1px 0 var(--neutro700),
+        1px 1px 0 var(--neutro700),
+        1px 0px 0 var(--neutro700),
+        -1px 0px 0 var(--neutro700),
+        0px 1px 0 var(--neutro700),
+        0px -1px 0 var(--neutro700);
+}
+
+.p-descripcion-juego {
+    text-align: center;
+    color: var(--primario200-luz);
+    font-family: var(--letraGeneral);
+    font-size: 20px;
+}
+
+.contenedor-iconos-redes,
+.contenedor-btn-jugar-4-en-linea {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-iconos-redes img {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+}
+
+.icono-no-me-gusta {
+    transform: rotate(180deg);
+}
+
+.btn-jugar-4-en-linea {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono-play-jugar {
+    width: 0;
+    height: 0;
+    border-left: 17px solid var(--neutro300);
+    border-top: 8.5px solid transparent;
+    border-bottom: 8.5px solid transparent;
+    margin-left: 10px;
+}
+
+/*termina ventana del juego */
+
+/*Arranca ventana de instrucciones */
+
+.contenedor-instrucciones-4-en-linea {
+    margin-top: 40px;
+    height: 340px;
+    background-color: var(--secundario300-luz);
+    border-radius: 5px;
+    display: flex;
+    border: 2px solid var(--secundario300-luz);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra con desplazamiento y transparencia */
+}
+
+.contenedor-instrucciones-4-en-linea-izq,
+.contenedor-instrucciones-4-en-linea-der {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-instrucciones-4-en-linea-izq{
+    width: 60%;
+}
+
+.contenedor-instrucciones-4-en-linea-der {
+    width: 40%;
+}
+
+/*
+.contenedor-img-instrucciones{
+
+}
+*/
+.contenedor-btn-pasos-4-en-linea {
+    width: 380px;
+    background-color: var(--secundario500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-izq-instrucciones,
+.btn-der-instrucciones {
+    background-color: transparent;
+    border: transparent;
+}
+
+.icono-btn-izq-instrucciones,
+.icono-btn-der-instrucciones {
+    width: 0;
+    height: 0;
+    border-left: 17px solid var(--neutro500);
+    border-top: 8.5px solid transparent;
+    border-bottom: 8.5px solid transparent;
+    margin-left: 10px;
+
+}
+
+.icono-btn-izq-instrucciones {
+    transform: rotate(180deg);
+}
+
+.circulo-paso1,
+.circulo-paso2,
+.circulo-paso3,
+.circulo-paso4 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 5px;
+    border: 1px solid;
+}
+
+.con-relleno {
+    background-color: var(--neutro500);
+    border: 1px solid var(--neutro500);
+}
+
+.sin-relleno {
+    background-color: transparent;
+}
+
+.titulos-instrucciones {
+    font-size: 20px;
+    color: var(--neutro700);
+    font-family: var(--letraGeneral, --letraBody);
+    letter-spacing: 0.13%;
+    margin-bottom: 5px;
+}
+
+.parrafo-instrucciones {
+    margin-top: 0;
+    color: var(--neutro500);
+    font-family: var(--letraBody, --letraGeneral);
+    font-size: 16px;
+}
+
+.titulos-instrucciones,
+.parrafo-instrucciones {
+    margin-left: 40px;
+}
+
+.imagen-pasos {
+    width: 380px;
+    height: 250px;
+    margin-top: 25px;
 }

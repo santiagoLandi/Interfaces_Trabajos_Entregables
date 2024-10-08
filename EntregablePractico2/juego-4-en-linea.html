@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos Online</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Fuentes e íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-left">
+            <div class="hamburger-menu" id="burguer">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="logo">
+                <img src="assets/logo-removebg.png" alt="Logo" class="logo-img">
+            </div>
+        </div>
+
+        <div class="header-center">
+            <div class="search-bar">
+                <input type="text" placeholder="¿A qué jugamos hoy?">
+                <button type="submit"><img src="assets/lupa.png" alt="Buscar"></button>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <div class="shopping-cart" id="pop-bolsa">
+                <img src="assets/cart-claro.png" alt="Carrito">
+            </div>
+            <div id="popup-compras" class="">
+                <div class="cerrar-popup">
+                    <button id="btn-cerrar-popup-compras" class="btn-cerrar-popup">X</button>
+                </div>
+                <div class="encabezado-popup">
+                    <img src="assets/cart-claro.png" alt="Carrito">
+                    <h2>Mis Compras</h2>
+                </div>
+                <div class="contenido-popup">
+                    <div class="juego-precio">
+                        <p>Jurassic Park</p>
+                        <p>$15</p>
+                    </div>
+                    <p>--------------------</p>
+                    <div class="total-compras">
+                        <p>Total</p>
+                        <p>$25</p>
+                    </div>
+                    <button class="btn-pagar-compras">PAGAR</button>
+                </div>
+            </div>
+
+            <div class="user-info" id="usuario">
+                <span>Pipo19</span>
+                <img src="assets/user-removebg.png" alt="User Image" class="user-img">
+            </div>
+            <div id="popup-login" class="">
+                <div class="cerrar-popup">
+                    <button id="btn-cerrar-popup-login" class="btn-cerrar-popup">X</button>
+                </div>
+                <div class="encabezado-popup">
+                    <img src="assets/user-removebg.png" alt="user image">
+                    <h3>Pipo19</h3>
+                    <span>juan_tandil@gmail.com</span>
+                </div>
+                <div class="contenido-popup">
+                    <p><img src="assets/Mi perfil.png" alt="Mi perfil">Mi perfil</p>
+                    <p><img src="assets/Editar perfil.png" alt="Editar perfil">Editar perfil</p>
+                    <p><img src="assets/Notificaciones.png" alt="Notificaciones">Preferencias de notificación</p>
+                    <p><img src="assets/privacidad.png" alt="Privacidad">Preferencias de privacidad</p>
+                    <p><img src="assets/configurar.png" alt="Configuración">Configuración de cuenta</p>
+                    <p><img src="assets/Cerrar sesion.png" alt="Cerrar sesion">Cerrar sesión</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <main>
+            <div class="contenedor-principal-4-en-linea">
+                <div class="contenedor-titulo-btn-volver">
+                    <h2>Home -> Multijugador -> Rom&aacute;n</h2>
+                    <button onclick="" class="btn-volver">Volver</button>
+                </div>
+                <div class="contenedor-juego-4-en-linea">
+                    <div class="contenedor-juego-4-en-linea-izq">
+                        <img src="assets/imagenes/4-en-linea-jugar.jpg" class="img-4-en-linea" alt="juego-4-en-linea">
+                    </div>
+
+                    <div class="contenedor-juego-4-en-linea-der">
+                        <div>    
+                            <div class="contenedor-img-personajes">
+                                <div class="contenedor-img-roman">
+                                    <img src="assets/imagenes/img-roman.png" class="img-personaje-juego" alt="Juan Roman Riquelme">
+                                </div>
+                                <div class="cont-img-chavo">
+                                    <img src="assets/imagenes/img-chavo.png" class="img-personaje-juego" alt="Chavo Fox">
+                                </div>
+                            </div>
+                            
+                            <h3 class="titulo-personajes-vs">Roman <span class="vs-personajes">Vs</span> Chavo</h3>
+                            <p class="p-descripcion-juego">Consigue conectar 4 fichas de cada personaje (Roman o Chavo)</p>
+                            <div class="contenedor-iconos-redes"><img src="assets/icono-corazon.png" alt="icono corazon"><img src="assets/icono-me-gusta.png" alt="icono me gusta"><img src="assets/icono-me-gusta.png" class="icono-no-me-gusta" alt="icono no me gusta"><img src="assets/icono-compartir.png" alt="icono compartir"></div>
+                            <div class="contenedor-btn-jugar-4-en-linea">
+                                <button onclick="" class="btn-jugar-4-en-linea">Jugar<div class="icono-play-jugar"></div></button>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <!--ACA ARRANCAN LAS INSTRUCCIONES -->
+                <div class="contenedor-instrucciones-4-en-linea">
+                    <div class="contenedor-instrucciones-4-en-linea-izq">
+                        <div>
+                            <h2 class="titulos-instrucciones">Instrucciones</h2>
+                            <p class="parrafo-instrucciones">Cada jugador tiene fichas de un personaje (Roman o Chavo), y por turnos, debe introducir una ficha en la columna selecionada, la ficha caerá hasta la primer posición libre. Si una columna está llena ya no se podrán insertar más fichas. Quien logre unir horizontal o verticalmente 4 fichas de su personaje elegido será el ganador de la partida.
+                            </p>
+                            <h2 class="titulos-instrucciones">Ayuda</h2>
+                            <p class="parrafo-instrucciones">PASO 1: Elegir personaje haciendo doble click sobre la ficha. La pc será tu contrincante.</p>
+                            <p class="parrafo-instrucciones">PASO 2: Colocar la ficha en la columna deseada clickeando sobre la columna elegida.</p>
+                            <p class="parrafo-instrucciones">PASO 3: Espera el movimiento de la pc para volver a tu turno y repite el paso dos hasta que haya un ganador.</p>
+                        </div>
+                    </div>    
+                    <div class="contenedor-instrucciones-4-en-linea-der">
+                        <div>    
+                            <div class="contenedor-img-instrucciones">
+                                        <img id="imagen-paso" class="imagen-pasos" src="" alt=""/>
+                            <div class="contenedor-btn-pasos-4-en-linea">
+                                <button id="izq" class="btn-izq-instrucciones"><div class="icono-btn-izq-instrucciones"></div></button>
+                                <div id="circulo1" class="circulo-paso1 con-relleno"></div>
+                                <div id="circulo2" class="circulo-paso2 sin-relleno"></div>
+                                <div id="circulo3" class="circulo-paso3 sin-relleno"></div>
+                                <div id="circulo3" class="circulo-paso4 sin-relleno"></div>
+                                <button id="der" class="btn-der-instrucciones"><div class="icono-btn-der-instrucciones"></div></button>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+    </main>
+    <!-- BARRA LATERAL -->
+    <aside>
+        <ul>
+            <li>
+                <img src="assets/iconos/home.png" alt="Home">
+                <span class="categorias">Home</span>
+            </li>
+            <li>
+                <img src="assets/iconos/billar.png" alt="Billar">
+                <span class="categorias">Billar</span>
+            </li>
+            <li>
+                <img src="assets/iconos/logica.png" alt="Logica">
+                <span class="categorias">Logica</span>
+            </li>
+            <li>
+                <img src="assets/iconos/baseball.png" alt="Baseball">
+                <span class="categorias">Baseball</span>
+            </li>
+            <li>
+                <img src="assets/iconos/conduccion.png" alt="Conduccion">
+                <span class="categorias">Conduccion</span>
+            </li>
+            <li>
+                <img src="assets/iconos/pelea.png" alt="Pelea">
+                <span class="categorias">Pelea</span>
+            </li>
+            <li>
+                <img src="assets/iconos/motociclismo.png" alt="Motociclismo">
+                <span class="categorias">Motociclismo</span>
+            </li>
+            <li>
+                <img src="assets/iconos/bowling.png" alt="Bowling">
+                <span class="categorias">Bowling</span>
+            </li>
+            <li>
+                <img src="assets/iconos/ping-pong.png" alt="Ping Pong">
+                <span class="categorias">Ping Pong</span>
+            </li>
+            <li>
+                <img src="assets/iconos/disparos.png" alt="Disparos">
+                <span class="categorias">Disparos</span>
+            </li>
+            <li>
+                <img src="assets/iconos/puzzle.png" alt="Puzzle">
+                <span class="categorias">Puzzle</span>
+            </li>
+            <li>
+                <img src="assets/iconos/accion.png" alt="Accion">
+                <span class="categorias">Accion</span>
+            </li>
+            <li>
+                <img src="assets/iconos/carrera.png" alt="Autos">
+                <span class="categorias">Autos</span>
+            </li>
+            <li>
+                <img src="assets/iconos/olimpicos.png" alt="Olimpicos">
+                <span class="categorias">Olimpicos</span>
+            </li>
+            <li>
+                <img src="assets/iconos/multiplayer.png" alt="Multiplayer">
+                <span class="categorias">Multiplayer</span>
+            </li>
+            <li>
+                <img src="assets/iconos/cartas.png" alt="Cartas">
+                <span class="categorias">Cartas</span>
+            </li>
+            <li>
+                <img src="assets/iconos/medieval.png" alt="Medieval">
+                <span class="categorias">Medieval</span>
+            </li>
+            <li>
+                <img src="assets/iconos/ciclismo.png" alt="Ciclismo">
+                <span class="categorias">Ciclismo</span>
+            </li>
+            <li>
+                <img src="assets/iconos/basket.png" alt="Basket">
+                <span class="categorias">Basket</span>
+            </li>
+            <li>
+                <img src="assets/iconos/escape.png" alt="Escape">
+                <span class="categorias">Escape</span>
+            </li>
+            <li>
+                <img src="assets/iconos/terror.png" alt="Terror">
+                <span class="categorias">Terror</span>
+            </li>
+            <li>
+                <img src="assets/iconos/tenis.png" alt="Tenis">
+                <span class="categorias">Tenis</span>
+            </li>
+            <li>
+                <img src="assets/iconos/enduro.png" alt="Motocross">
+                <span class="categorias">Motocross</span>
+            </li>
+            <li>
+                <img src="assets/iconos/aventuraa.png" alt="Aventura">
+                <span class="categorias">Aventura</span>
+            </li>
+            <li>
+                <img src="assets/iconos/legos.png" alt="Lego's">
+                <span class="categorias">Lego's</span>
+            </li>
+            <li>
+                <img src="assets/iconos/pintura.png" alt="Pintura">
+                <span class="categorias">Pintura</span>
+            </li>
+            <li>
+                <img src="assets/iconos/guerra.png" alt="Guerra">
+                <span class="categorias">Guerra</span>
+            </li>
+        </ul>
+    </aside>
+    </div>
+    <footer>
+        <div>
+            <div class="footer-arriba">
+                <div class="fotter-links">
+                    <h3>Mapa del sitio</h3>
+                    <ul>
+                        <li><a href="#">Pagina principal</a></li>
+                        <li><a href="#">Mi cuenta</a></li>
+                        <li><a href="#">Mi carrito</a></li>
+                        <li><a href="#">Iniciar sesion</a></li>
+                    </ul>
+                </div>
+                <div class="fotter-links">
+                    <h3>Recomendaciones</h3>
+                    <ul>
+                        <li><a href="#">Nuestros recomendados</a></li>
+                        <li><a href="#">Mejores de la semana</a></li>
+                        <li><a href="#">Mas jugados</a></li>
+                        <li><a href="#">Ofertas del mes</a></li>
+                    </ul>
+                </div>
+                <div class="fotter-links">
+                    <h3>Novedades</h3>
+                    <ul>
+                        <li><a href="#">Eventos Especiales</a></li>
+                        <li><a href="#">Proximos Lanzamientos</a></li>
+                        <li><a href="#">Juegos en preventa</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-abajo">
+                <div class="fotter-links">
+                    <h3>Sobre nosotros</h3>
+                    <ul>
+                        <li><a href="#">Quienes somos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Mapa del sitio</a></li>
+                    </ul>
+                </div>
+                <div class="fotter-links">
+                    <h3>Ayuda</h3>
+                    <ul>
+                        <li><a href="#">Terminos y condiciones</a></li>
+                        <li><a href="#">Politicas de privacidad</a></li>
+                        <li><a href="#">Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="fotter-links">
+                    <h3>Seguinos</h3>
+                    <div class="footer-iconos">
+                        <div class="footer-redes">
+                            <img src="assets/LogoFacebook.png" alt="Logo faceboook">
+                            <img src="assets/LogoInstragram.png" alt="Logo instagram">
+                            <img src="assets/LogoTwitter.png" alt="Logo twitter">
+                        </div>
+                        <img src="assets/logo-removebg.png" class="logo-footer" alt="Logo pagina">
+                    </div>
+                    <ul>
+                        <li><a href="#"></a>Copyright © 2024 Many Games.</li>
+                        <li><a href="#"></a>Todos los derechos reservados.</li>
+                    </ul>
+                </div>
+            </div>
+            <p>Si tenes problemas con el juego comunicate con la linea 6969 de ayuda al ludopata</p>
+        </div>
+    </footer>
+
+    <!-- Scripts JS -->
+    <script type="text/javascript" src="js/menu-hamburguesa.js"></script>
+    <script type="text/javascript" src="js/pop-up.js"></script>
+    <script type="text/javascript" src="js/pasos-juego.js"></script>
+</body>
+
+</html>
