@@ -759,7 +759,7 @@ label span,
 }
 
 .contenedor-inicio-sesion-cuenta {
-    margin-top: 104px;
+    margin-top: 80px;
 }
 
 .contenedor-inputs-inicio-sesion {
@@ -770,9 +770,15 @@ label span,
     padding-right: 7%;
 }
 
-.form-p-inicio-sesion-cuenta {
+.form-p-inicio-sesion-cuenta , .form-inicio-sesion-cuenta-registrarme {
+    font-size: 14px;
     text-align: center;
     color: var(--neutro300);
+}
+
+.form-inicio-sesion-cuenta-registrarme {
+    color: var(--secundario700-sombra);
+    text-decoration: none;
 }
 
 .btn-iniciar-sesion2 {
@@ -987,7 +993,7 @@ label span,
     height: 10px;
     border-radius: 50%;
     margin: 5px;
-    border: 1px solid;
+    border: 1px solid var(--neutro500);
 }
 
 .con-relleno {
