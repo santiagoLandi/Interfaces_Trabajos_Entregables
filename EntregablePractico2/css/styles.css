@@ -525,10 +525,14 @@ footer .footer-redes img {
     padding: 0;
 }
 
-.registroFormulario {
-    background-color: var(--primario800-sombra);
+.registroContenedor{
     width: 820px;
     height: 500px;
+    margin: 40px auto; 
+    align-content: center;
+}
+.registroFormulario{
+    background-color: #3A2D6E;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -575,13 +579,12 @@ footer .footer-redes img {
 .datosPersonales {
     width: 600px;
     display: grid;
-    grid-template-columns: 40% 20% 40%;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-        "nombre . apellido"
-        "apodo edad email"
-        "clave1 . clave2"
-
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-areas: 
+                        "nombre nombre apellido apellido"
+                        "apodo edad email email"
+                        "clave1 clave1 clave2 clave2"
 }
 
 .nombre {
@@ -609,6 +612,9 @@ footer .footer-redes img {
 
 .edad {
     grid-area: edad;
+    display: flex;
+    flex-flow: column;
+    
 }
 
 .email {
@@ -625,10 +631,12 @@ footer .footer-redes img {
 
 .datosPersonales input {
     border-radius: 10px;
+    width: 90%;
 }
 
-.edad input {
-    width: 80px;
+
+input#edad{
+    width: 80%;
 }
 
 .logAgain a {
@@ -636,6 +644,12 @@ footer .footer-redes img {
     color: var(--secundario700-sombra);
     padding-left: 5px;
 }
+.logAgain a:hover {
+    text-decoration: none;
+    color: var(--acento500);
+    
+}
+
 
 .submit,
 .logAgain {
@@ -698,6 +712,54 @@ label span,
     font-size: 14px;
 }
 
+.ocultar{
+    visibility: hidden;
+}
+
+.validarCorreo{
+    font-family: var (--letraBody) ;
+    background-color: #3A2D6E;
+    color:#DCEEFC;
+}
+.buttonCrear:hover{
+    background-color: var(--secundario800-sombra);
+}
+.buttonCrear:active{
+    background-color: var(--secundario700-sombra);
+    box-shadow: 0 5px var(--secundario300-luz);
+    transform: translateY(4px);
+}
+.ocultarMostrarPsw{
+    display: flex;
+    align-items: center;/*agregue esto*/
+}
+.ocultarMostrarPsw img{
+    width: 22px;
+    height: 12px;
+}
+input#pwd1{
+    width: 82%;
+    border-radius: 10px 0 0 10px;
+    border-right: none;
+}
+input#pwd2{
+    width: 82%;
+    border-radius: 10px 0 0 10px;
+    border-right: none; 
+}
+button#btn-psw, button#btn-psw2{
+    padding: 0;
+    height: 21.2px;
+    border: 0;
+    border-radius: 0 10px 10px 0;
+    border-left: none;
+    align-items: center;
+    border-bottom: 1.600px solid #7a7575;
+    border-top: 1.600px solid #090606;
+    border-right: 1.600px solid #7a7575;
+    
+    
+}
 /*Hasta aca llega registro html*/
 
 /*Arranca inicio sesion*/
