@@ -603,12 +603,17 @@ input#edad{
     width: 80%;
 }
 
-
 .logAgain a {
     text-decoration: none;
     color: var(--secundario700-sombra);
     padding-left: 5px;
 }
+.logAgain a:hover {
+    text-decoration: none;
+    color: var(--acento500);
+    
+}
+
 
 .submit,
 .logAgain {
@@ -679,6 +684,45 @@ label span,
     font-family: var (--letraBody) ;
     background-color: #3A2D6E;
     color:#DCEEFC;
+}
+.buttonCrear:hover{
+    background-color: var(--secundario800-sombra);
+}
+.buttonCrear:active{
+    background-color: var(--secundario700-sombra);
+    box-shadow: 0 5px var(--secundario300-luz);
+    transform: translateY(4px);
+}
+.ocultarMostrarPsw{
+    display: flex;
+    align-items: center;/*agregue esto*/
+}
+.ocultarMostrarPsw img{
+    width: 22px;
+    height: 12px;
+}
+input#pwd1{
+    width: 82%;
+    border-radius: 10px 0 0 10px;
+    border-right: none;
+}
+input#pwd2{
+    width: 82%;
+    border-radius: 10px 0 0 10px;
+    border-right: none; 
+}
+button#btn-psw, button#btn-psw2{
+    padding: 0;
+    height: 21.2px;
+    border: 0;
+    border-radius: 0 10px 10px 0;
+    border-left: none;
+    align-items: center;
+    border-bottom: 1.600px solid #362f2f;
+    border-top: 1.600px solid #362f2f;
+    border-right: 1.600px solid #362f2f;
+    
+    
 }
 /*Hasta aca llega registro html*/
 
