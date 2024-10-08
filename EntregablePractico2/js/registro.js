@@ -36,18 +36,32 @@ form.addEventListener("submit",e=>{
         esValido=false;
     }
     let patronClave = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
-    if(!patronClave.test(clave)||!patronClave.test(clave2)){
+    let patronClave2=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
+
+    if(!patronClave2.test(clave.value)){
         document.getElementById("ctrlPsw").textContent = "Debe contener 1mayus y 1 caract especial"
         esValido=false;
+    }else if(clave.value!=clave2.value){
+        document.getElementById("ctrlPsw1").textContent = "Las claves no coinciden"
+        esValido=false;
     }
-    if(patronClave.test(clave)&&patronClave.test(clave2)){
-        if(clave.value!==clave2.value){
-            document.getElementById("ctrlPsw1").textContent = "Las claves no coinciden"
-            esValido=false;
-        }
-    }
+    
     if(esValido){
-        form.submit()
+        validacionCorreo()
     }
 
 })
+
+function validacionCorreo(){
+   
+    let formulario=document.getElementById("form");
+    let contenedor=document.getElementById("regCont");
+    formulario.classList.add("ocultar");
+    contenedor.innerHTML= `<h2>"¡Registro exitoso! Por favor, revisa tu correo electrónico y sigue el enlace de verificación para activar tu cuenta."</h2>`;
+    contenedor.classList.add("validarCorreo");
+
+     // Esperar 15 segundos antes de redirigir al index
+     setTimeout(function() {
+        window.location.href = "index.html"; // Redirigir a la página de inicio
+    }, 15000);
+}

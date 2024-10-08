@@ -23,66 +23,68 @@
         </div>
     </header>
     <main>
-        <form action="" method="post" class="registroFormulario" id="form">
-            <div class="logoForm">
-                <img src="assets/logo-removebg.png" alt="logoManyGames">
-                <h3 class="tituloCrearCuenta">Crear Cuenta</h3>
-            </div>
-            <div class="camposObligatorios">
-                <p>* Indica que el campo es obligatorio</p>
-            </div>
-            <div class="datosPersonales">
-                <div class="nombre">
-                  <label for="fname">Nombre<span>*</span></label>
-                  <input type="text" id="fname" name="fname" required>
-                  <p id="ctrlNombre"></p>
+        <div class="registroContenedor" id="regCont">
+            <form action="" method="post" class="registroFormulario" id="form">
+                <div class="logoForm">
+                    <img src="assets/logo-removebg.png" alt="logoManyGames">
+                    <h3 class="tituloCrearCuenta">Crear Cuenta</h3>
                 </div>
-                <div class="apellido">
-                  <label for="lname">Apellido<span>*</span></label>
-                  <input type="text" id="lname" name="lname" required>
-                  <p id="ctrlApellido"></p>
+                <div class="camposObligatorios">
+                    <p>* Indica que el campo es obligatorio</p>
                 </div>
-                <div class="apodo">
-                  <label for="apodo" class="etiqueta-apodo">Apodo</label>
-                  <input type="text" id="apodo" name="apodo" required>
+                <div class="datosPersonales">
+                    <div class="nombre">
+                    <label for="fname">Nombre<span>*</span></label>
+                    <input type="text" id="fname" name="fname" required>
+                    <p id="ctrlNombre"></p>
+                    </div>
+                    <div class="apellido">
+                    <label for="lname">Apellido<span>*</span></label>
+                    <input type="text" id="lname" name="lname" required>
+                    <p id="ctrlApellido"></p>
+                    </div>
+                    <div class="apodo">
+                    <label for="apodo" class="etiqueta-apodo">Apodo</label>
+                    <input type="text" id="apodo" name="apodo" required>
+                    </div>
+                    <div class="edad">
+                    <label for="edad">Edad<span>*</span></label>
+                    <input type="number" id="edad" name="edad" required>
+                    <p id="ctrlEdad"></p>
+                    </div>
+                    <div class="email">
+                    <label for="email" class="etiqueta-mail">E-mail<span>*</span></label>
+                    <input type="email" id="email" name="email" required>
+                    <p id="ctrlEmail"></p>
+                    </div> 
+                    <div class="clave1">
+                    <label for="pwd">Contrase&ntilde;a<span>*</span></label>
+                    <input type="password" id="pwd1" name="pwd" required>
+                    <p id="ctrlPsw"></p>
+                    </div>
+                    <div class="clave2">
+                    <label for="pwd">Repetir Contrase&ntilde;a<span>*</span></label>
+                    <input type="password" id="pwd2" name="pwd" required>
+                    <p id="ctrlPsw1"></p>
+                    </div>
                 </div>
-                <div class="edad">
-                  <label for="edad">Edad<span>*</span></label>
-                  <input type="number" id="edad" name="edad" required>
-                  <p id="ctrlEdad"></p>
+                <div class="captcha">
+                    <div>
+                        <input type="checkbox" id="checkPersona" name="checkPersona" value="persona" required>
+                        <label for="checkHuman"> No soy un robot</label>
+                        <img src="assets/captchaImagen.png" alt="captcha">
+                    </div>
                 </div>
-                <div class="email">
-                  <label for="email" class="etiqueta-mail">E-mail<span>*</span></label>
-                  <input type="email" id="email" name="email" required>
-                  <p id="ctrlEmail"></p>
-                </div> 
-                <div class="clave1">
-                  <label for="pwd">Contrase&ntilde;a<span>*</span></label>
-                  <input type="password" id="pwd1" name="pwd" required>
-                  <p id="ctrlPsw"></p>
+                <div class="submit">
+                    <button class="buttonCrear" type="submit">Crear Cuenta</button>
                 </div>
-                <div class="clave2">
-                  <label for="pwd">Repetir Contrase&ntilde;a<span>*</span></label>
-                  <input type="password" id="pwd2" name="pwd" required>
-                  <p id="ctrlPsw1"></p>
+                <div class="logAgain">
+                    <p>¿Tienes una cuenta de ManyGames?</p>
+                    <a href="inicio-sesion.html">Iniciar Sesion</a>
                 </div>
-            </div>
-            <div class="captcha">
-                <div>
-                    <input type="checkbox" id="checkPersona" name="checkPersona" value="persona">
-                    <label for="checkHuman"> No soy un robot</label>
-                    <img src="assets/captchaImagen.png" alt="captcha">
-                </div>
-            </div>
-            <div class="submit">
-                <button class="buttonCrear" type="submit">Crear Cuenta</button>
-            </div>
-            <div class="logAgain">
-                <p>¿Tienes una cuenta de ManyGames?</p>
-                <a href="">Iniciar Sesion</a>
-            </div>
 
-        </form>
+            </form>
+        </div>    
     </main>
     <footer>
         <div>
