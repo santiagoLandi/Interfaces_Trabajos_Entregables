@@ -628,6 +628,7 @@ input#edad{
     font-weight: bold;
     font: size 14px;
     color: var(--secundario300-luz);
+    box-shadow: 0 7px var(--neutro700);
 }
 
 .captcha img {
@@ -690,7 +691,7 @@ label span,
 }
 .buttonCrear:active{
     background-color: var(--secundario700-sombra);
-    box-shadow: 0 5px var(--secundario300-luz);
+    box-shadow: 0 5px var(--neutro700);
     transform: translateY(4px);
 }
 .ocultarMostrarPsw{
