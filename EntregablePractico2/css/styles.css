@@ -52,6 +52,7 @@ body {
 .hamburger-menu {
     font-size: 24px;
     margin-right: 15px;
+    cursor: pointer;
 }
 
 .logo-img {
@@ -72,7 +73,6 @@ body {
     border: 1px solid #ccc;
     border-radius: 20px 0 0 20px;
     font-size: 16px;
-    outline: none;
     box-shadow: none;
     border-right: none;
     height: 40px;
@@ -289,6 +289,7 @@ main {
     grid-column: 2;
     grid-row: 1;
     color: var(--primario700-sombra);
+    margin: 0 auto;
 }
 
 .carousel-section {
@@ -358,7 +359,9 @@ section h2 {
 }
 
 .texto-cards h3 {
-    margin: 14px 0;
+    margin-top: 14px;
+    margin-bottom: 0;
+    color: var(--primario800-sombra);
 }
 
 .categoria-card {
@@ -367,6 +370,7 @@ section h2 {
 
 .texto-cards p {
     font-size: 14px;
+    color: var(--neutro700);
 }
 
 .container-boton-card {
@@ -376,13 +380,45 @@ section h2 {
     align-items: center;
 }
 
-.boton-cards {
-    width: 55%;
-    align-items: center;
+.boton-cards,
+.botonComprar {
+    height: 30px;
+    background-color: var(--secundario300-luz);
+    color: var(--primario800-sombra);
+    font-weight: bold;
     margin: 5px 0 15px 0;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    border: 3px solid var(--primario800-sombra);
     cursor: pointer;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+.boton-cards:hover,
+.botonComprar:hover {
+    background-color: var(--acento300-luz);
+    color: var(--primario800-sombra);
+    transform: scale(1.10);
+}
+
+.botonComprar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+.botonComprar img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    color: var(--primario800-sombra);
+}
+
+.botonComprar.clickeado {
+    background-color: #28a745;
+    color: var(--primario800-sombra);
+    text-align: center;
+    transition: background-color 0.5s, transform 0.5s;
 }
 
 img.left-arrow,
@@ -1000,7 +1036,7 @@ button#btn-psw, button#btn-psw2{
     align-items: center;
 }
 
-.contenedor-instrucciones-4-en-linea-izq{
+.contenedor-instrucciones-4-en-linea-izq {
     width: 60%;
 }
 
