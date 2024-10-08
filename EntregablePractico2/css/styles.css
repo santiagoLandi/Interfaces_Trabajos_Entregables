@@ -489,10 +489,14 @@ footer .footer-redes img {
     padding: 0;
 }
 
-.registroFormulario {
-    background-color: var(--primario800-sombra);
+.registroContenedor{
     width: 820px;
     height: 500px;
+    margin: 40px auto; 
+    align-content: center;
+}
+.registroFormulario{
+    background-color: #3A2D6E;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -539,13 +543,12 @@ footer .footer-redes img {
 .datosPersonales {
     width: 600px;
     display: grid;
-    grid-template-columns: 40% 20% 40%;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-        "nombre . apellido"
-        "apodo edad email"
-        "clave1 . clave2"
-
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-areas: 
+                        "nombre nombre apellido apellido"
+                        "apodo edad email email"
+                        "clave1 clave1 clave2 clave2"
 }
 
 .nombre {
@@ -573,6 +576,9 @@ footer .footer-redes img {
 
 .edad {
     grid-area: edad;
+    display: flex;
+    flex-flow: column;
+    
 }
 
 .email {
@@ -589,11 +595,14 @@ footer .footer-redes img {
 
 .datosPersonales input {
     border-radius: 10px;
+    width: 90%;
 }
 
-.edad input {
-    width: 80px;
+
+input#edad{
+    width: 80%;
 }
+
 
 .logAgain a {
     text-decoration: none;
@@ -662,6 +671,15 @@ label span,
     font-size: 14px;
 }
 
+.ocultar{
+    visibility: hidden;
+}
+
+.validarCorreo{
+    font-family: var (--letraBody) ;
+    background-color: #3A2D6E;
+    color:#DCEEFC;
+}
 /*Hasta aca llega registro html*/
 
 /*Arranca inicio sesion*/
