@@ -777,7 +777,7 @@ label span,
 }
 
 .contenedor-inicio-sesion-cuenta {
-    margin-top: 80px;
+    margin-top: 45px;
 }
 
 .contenedor-inputs-inicio-sesion {
@@ -793,7 +793,10 @@ label span,
     text-align: center;
     color: var(--neutro300);
 }
-
+.p-obligatorios{
+    margin: 0;
+    color: var(--acento300-luz);
+}
 .form-inicio-sesion-cuenta-registrarme {
     color: var(--secundario700-sombra);
     text-decoration: none;
