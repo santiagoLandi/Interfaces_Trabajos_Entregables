@@ -27,16 +27,20 @@
             <div class="contenedor-imagenlogo-botones-inicio-sesion">
                 <div class="contenedor-inicio-sesion">    
                     <img src="assets/imagen-logo.jpg" class="imagen-logo-inicio-sesion" alt="imagen del logo de la pagina">
-                    <form class="form-inicio-sesion-cuenta">
+                    <form id="form-inicio-sesion-cuenta" action="" method="post" class="form-inicio-sesion-cuenta">
                         <div class="contenedor-inicio-sesion-cuenta">
                             <div class="contenedor-inputs-inicio-sesion">
-                                <label>Introduzca su direccion de correo electronico</label>
-                                <input type="text" class="input-inicio-sesion-cuenta">
-                                <label>Introduzca su contrase&ntilde;a</label>
-                                <input type="password" class="input-inicio-sesion-cuenta">
+                                <label for="email-sesion">Introduzca su direccion de correo electronico</label>
+                                <input type="email" id="email-sesion" name="email-sesion" class="input-inicio-sesion-cuenta" required>
+                                <p id="ctrl-email-sesion" class="p-obligatorios"></p>
+                                <label for="password-sesion">Introduzca su contrase&ntilde;a</label>
+                                <input type="password" id="password-sesion" name="password-sesion" class="input-inicio-sesion-cuenta" required>
+                                <p id="ctrl-password-sesion" class="p-obligatorios"></p>
                             </div>
-                            <button onclick="" class="btn-iniciar-sesion2">Iniciar Sesi&oacute;n</button>
+                            <button id="btn-iniciar" type="submit" class="btn-iniciar-sesion2">Iniciar Sesi&oacute;n</button>
                             <p class="form-p-inicio-sesion-cuenta">¿Has olvidado tu contrase&ntilde;a ?</p>
+                            <p class="form-p-inicio-sesion-cuenta">¿No tienes una cuenta de ManyGames?<a href="registro.html" class="form-inicio-sesion-cuenta-registrarme"> Registrarme</a></p>
+                                
                         </div>    
                     </form>
                 </div>
@@ -110,6 +114,6 @@
             <p>Si tenes problemas con el juego comunicate con la linea 6969 de ayuda al ludopata</p>
         </div>
     </footer>
-    <script type="text/javascript" src="js/menu-hamburguesa.js"></script>
+    <script type="text/javascript" src="js/inicio-sesion-cuenta.js"></script>
 </body>
 </html>

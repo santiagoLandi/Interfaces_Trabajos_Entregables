@@ -525,13 +525,14 @@ footer .footer-redes img {
     padding: 0;
 }
 
-.registroContenedor{
+.registroContenedor {
     width: 820px;
     height: 500px;
-    margin: 40px auto; 
+    margin: 40px auto;
     align-content: center;
 }
-.registroFormulario{
+
+.registroFormulario {
     background-color: #3A2D6E;
     display: flex;
     flex-direction: column;
@@ -580,11 +581,11 @@ footer .footer-redes img {
     width: 600px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 1fr 1fr 1fr ;
-    grid-template-areas: 
-                        "nombre nombre apellido apellido"
-                        "apodo edad email email"
-                        "clave1 clave1 clave2 clave2"
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "nombre nombre apellido apellido"
+        "apodo edad email email"
+        "clave1 clave1 clave2 clave2"
 }
 
 .nombre {
@@ -614,7 +615,7 @@ footer .footer-redes img {
     grid-area: edad;
     display: flex;
     flex-flow: column;
-    
+
 }
 
 .email {
@@ -635,7 +636,7 @@ footer .footer-redes img {
 }
 
 
-input#edad{
+input#edad {
     width: 80%;
 }
 
@@ -644,10 +645,11 @@ input#edad{
     color: var(--secundario700-sombra);
     padding-left: 5px;
 }
+
 .logAgain a:hover {
     text-decoration: none;
     color: var(--acento500);
-    
+
 }
 
 
@@ -776,36 +778,43 @@ label span,
     font-size: 14px;
 }
 
-.ocultar{
+.ocultar {
     visibility: hidden;
 }
 
-.validarCorreo{
-    font-family: var (--letraBody) ;
+.validarCorreo {
+    font-family: var (--letraBody);
     background-color: #3A2D6E;
-    color:#DCEEFC;
+    color: #DCEEFC;
 }
 
 
-.ocultarMostrarPsw{
+
+.ocultarMostrarPsw {
     display: flex;
-    align-items: center;/*agregue esto*/
+    align-items: center;
+    /*agregue esto*/
 }
-.ocultarMostrarPsw img{
+
+.ocultarMostrarPsw img {
     width: 22px;
     height: 12px;
 }
-input#pwd1{
+
+input#pwd1 {
     width: 82%;
     border-radius: 10px 0 0 10px;
     border-right: none;
 }
-input#pwd2{
+
+input#pwd2 {
     width: 82%;
     border-radius: 10px 0 0 10px;
-    border-right: none; 
+    border-right: none;
 }
-button#btn-psw, button#btn-psw2{
+
+button#btn-psw,
+button#btn-psw2 {
     padding: 0;
     height: 21.2px;
     border: 0;
@@ -815,9 +824,10 @@ button#btn-psw, button#btn-psw2{
     border-bottom: 1.600px solid #7a7575;
     border-top: 1.600px solid #090606;
     border-right: 1.600px solid #7a7575;
-    
-    
+
+
 }
+
 /*Hasta aca llega registro html*/
 
 /*Arranca inicio sesion*/
@@ -915,7 +925,7 @@ button#btn-psw, button#btn-psw2{
 }
 
 .contenedor-inicio-sesion-cuenta {
-    margin-top: 104px;
+    margin-top: 45px;
 }
 
 .contenedor-inputs-inicio-sesion {
@@ -926,9 +936,18 @@ button#btn-psw, button#btn-psw2{
     padding-right: 7%;
 }
 
-.form-p-inicio-sesion-cuenta {
+.form-p-inicio-sesion-cuenta , .form-inicio-sesion-cuenta-registrarme {
+    font-size: 14px;
     text-align: center;
     color: var(--neutro300);
+}
+.p-obligatorios{
+    margin: 0;
+    color: var(--acento300-luz);
+}
+.form-inicio-sesion-cuenta-registrarme {
+    color: var(--secundario700-sombra);
+    text-decoration: none;
 }
 
 .btn-iniciar-sesion2 {
@@ -985,6 +1004,27 @@ button#btn-psw, button#btn-psw2{
     border: 2px solid;
     background-color: var(--secundario700-sombra);
     color: var(--neutro300);
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+}
+
+.btn-jugar-4-en-linea:hover,
+.btn-jugar-4-en-linea:focus {
+    -webkit-animation: pulse 1s;
+    animation: pulse 1s;
+    box-shadow: 0 0 0 1.5em rgba(255, 255, 255, 0);
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--acento200-luz);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--acento200-luz);
+    }
 }
 
 .contenedor-juego-4-en-linea-izq,
@@ -1143,7 +1183,7 @@ button#btn-psw, button#btn-psw2{
     height: 10px;
     border-radius: 50%;
     margin: 5px;
-    border: 1px solid;
+    border: 1px solid var(--neutro500);
 }
 
 .con-relleno {
@@ -1179,4 +1219,51 @@ button#btn-psw, button#btn-psw2{
     width: 380px;
     height: 250px;
     margin-top: 25px;
+}
+
+/*Arranca los videos */
+
+.contenedor-principal-videos {
+    height: 500px;
+    border-radius: 5px;
+}
+
+.titulo-videos{
+    font-size: 25px;
+    letter-spacing: 0.13%;
+    color: var(--neutro700);
+}
+
+.contenedor-videos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img-videos {
+    width:  323px;
+    height: 181px;
+}
+
+.titulo-video {
+    margin-top: 2px;
+    color: var(--neutro700);
+    font-size: 18px;
+}
+.p-tiempo{
+    margin-top: 2px;
+    color: var(--neutro500);
+    font-size: 16px;
+}
+
+.contenedor-titulo-tiempo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p-descripcion-video-juego{
+    margin-top: 2px;
+    font-size: 14px;
+    color: var(--neutro500);
 }
