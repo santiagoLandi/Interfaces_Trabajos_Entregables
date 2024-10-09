@@ -665,7 +665,70 @@ input#edad{
     font: size 14px;
     color: var(--secundario300-luz);
     box-shadow: 0 7px var(--neutro700);
+    cursor:pointer;
+    overflow: hidden;/*agregado para probar efecto en boton*/
+    transition: left 0.5s ease-in-out;/*agregado para probar efecto en boton*/
+    position: relative;
 }
+.buttonCrear:before {/*agregado para hover*/
+    content: "Crear Cuenta";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -200px;
+    top: 0;
+    background: linear-gradient(45deg, var(--primario800-sombra), transparent);
+    display: flex; /* Flexbox para centrar */
+    justify-content: center; /* Alineación horizontal */
+    align-items: center; /* Alineación vertical */
+    color: white; /* Cambiar el color del texto según sea necesario */
+    font-weight: bold;
+    transition: left 0.5s ease-in-out;
+}
+  
+.buttonCrear:after {/*agregado para hover*/
+    content: "Crear Cuenta";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: -200px;
+    top: 0;
+    background: linear-gradient(45deg, transparent, var(--primario800-sombra));
+    display: flex; /* Flexbox para centrar */
+    justify-content: center; /* Alineación horizontal */
+    align-items: center; /* Alineación vertical */
+    color: white; /* Cambiar el color del texto según sea necesario */
+    font-weight: bold;
+    transition: right 0.5s ease-in-out;
+}
+.buttonCrear:hover:after {/*agregado para hover*/
+    right: 0;
+    animation: infinite-spinning 10s 0.5s infinite;
+}
+  
+.buttonCrear:hover:before {/*agregado para hover*/
+    left: 0;
+    animation: infinite-spinning 10s 0.5s infinite;
+}
+  
+@keyframes infinite-spinning {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+/*
+.buttonCrear:hover{
+    background-color: var(--secundario800-sombra);
+}*/
+.buttonCrear:active{
+    background-color: var(--secundario700-sombra);
+    box-shadow: 0 5px var(--neutro700);
+    transform: translateY(4px);
+}  
 
 .captcha img {
     width: 60px;
@@ -722,14 +785,8 @@ label span,
     background-color: #3A2D6E;
     color:#DCEEFC;
 }
-.buttonCrear:hover{
-    background-color: var(--secundario800-sombra);
-}
-.buttonCrear:active{
-    background-color: var(--secundario700-sombra);
-    box-shadow: 0 5px var(--neutro700);
-    transform: translateY(4px);
-}
+
+
 .ocultarMostrarPsw{
     display: flex;
     align-items: center;/*agregue esto*/
