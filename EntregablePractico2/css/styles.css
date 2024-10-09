@@ -1164,3 +1164,50 @@ button#btn-psw2 {
     height: 250px;
     margin-top: 25px;
 }
+
+/*Arranca los videos */
+
+.contenedor-principal-videos {
+    height: 500px;
+    border-radius: 5px;
+}
+
+.titulo-videos{
+    font-size: 25px;
+    letter-spacing: 0.13%;
+    color: var(--neutro700);
+}
+
+.contenedor-videos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img-videos {
+    width:  323px;
+    height: 181px;
+}
+
+.titulo-video {
+    margin-top: 2px;
+    color: var(--neutro700);
+    font-size: 18px;
+}
+.p-tiempo{
+    margin-top: 2px;
+    color: var(--neutro500);
+    font-size: 16px;
+}
+
+.contenedor-titulo-tiempo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p-descripcion-video-juego{
+    margin-top: 2px;
+    font-size: 14px;
+    color: var(--neutro500);
+}
