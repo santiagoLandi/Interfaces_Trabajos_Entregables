@@ -164,6 +164,7 @@ body {
 
 .encabezado-popup {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 15px auto 15px auto;
@@ -207,12 +208,18 @@ body {
     justify-content: space-between;
 }
 
+.contenido-popup p img{
+    margin-right: 5%;
+}
+
 #popup-compras p {
     text-align: left;
 }
 
 .contenido-popup p {
     padding-top: 15px;
+    display: flex;
+    align-items: center;
 }
 
 .btn-pagar-compras {
@@ -262,6 +269,10 @@ aside ul span {
     display: none;
     font-family: var(--letraTitulos);
     margin-left: 10px;
+}
+aside ul span a{
+    text-decoration: none;
+    color: var(--neutro300);
 }
 
 aside.open ul span {
