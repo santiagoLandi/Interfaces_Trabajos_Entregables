@@ -864,6 +864,48 @@ button#btn-psw2 {
 
 
 }
+#loading-container {
+    display: none;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    position: fixed;
+    top: 30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    z-index: 999;
+}
+
+#loading {
+  width: 60px;
+  height: 60px;
+  border: 10px solid var(--acento500);
+  border-top: 6px solid transparent;
+  border-radius: 50%;
+  animation: spin 5s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#loading-progress {
+    font-size: 24px;
+    color: var(--acento500);
+    margin-top: 20px;
+    position: relative;
+    top: 10px;
+}
+
+/* Clase para ocultar elementos */
+.loading-oculto {
+  display: none;
+}
 
 /*Hasta aca llega registro html*/
 

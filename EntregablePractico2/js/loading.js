@@ -1,4 +1,3 @@
-
 const nombre=document.getElementById("fname");
 const apellido=document.getElementById("lname");
 const edad=document.getElementById("edad");
@@ -74,7 +73,6 @@ function validacionCorreo(){
         }
     }, 1000); // Incrementar cada segundo
 }
-
 
 
 
