@@ -1,4 +1,4 @@
-/* Variables de colores y fuentes */
+ /* Variables de colores y fuentes */
 :root {
     --primario200-luz: #ECE8FF;
     --primario300-luz: #AF9DF9;
@@ -214,7 +214,12 @@ body {
 .contenido-popup p img{
     margin-right: 5%;
 }
+.contenido-popup p:hover{
+    background-color: var(--primario700-sombra);
+    transform: scale(1.10);
+    cursor: pointer;
 
+}
 #popup-compras p {
     text-align: left;
 }
@@ -235,6 +240,13 @@ body {
     height: 38px;
     width: 60%;
     font-size: 16px;
+}
+
+.btn-pagar-compras:hover{
+        background-color: var(--primario600-sombra);
+        transform: scale(1.10);
+        cursor: pointer;
+        border-radius: 24px;
 }
 
 /*    Hasta Aca El Header  */
@@ -906,7 +918,7 @@ button#btn-psw2 {
 .btn-iniciar-sesion-facebook,
 .btn-iniciar-sesion-registrate {
     font-family: var(--letraGeneral, --letraBody);
-    font-weight: 900;
+    font-weight: bold;
     font-size: 14px;
     letter-spacing: 0.7px;
     border-radius: 24px;
@@ -1015,8 +1027,7 @@ button#btn-psw2 {
 .input-inicio-sesion-cuenta {
     width: 332px;
     height: 25px;
-    border-radius: 5px;
-    border: 1px solid;
+    border-radius: 30px;
     margin-bottom: 10px;
 }
 
@@ -1054,7 +1065,7 @@ button#btn-psw2 {
     width: 160px;
     height: 50px;
     font-family: var(--letraGeneral, --letraBody);
-    font-weight: 900;
+    font-weight: bold;
     font-size: 16px;
     letter-spacing: 0.7px;
     border-radius: 24px;
@@ -1220,7 +1231,7 @@ button#btn-psw2 {
     width: 70px;
     height: 20px;
     font-family: var(--letraGeneral, --letraBody);
-    font-weight: 800;
+    font-weight: bold;
     font-size: 12px;
     letter-spacing: 0.7px;
     border-radius: 24px;
@@ -1298,19 +1309,19 @@ button#btn-psw2 {
 
 .btn-video{
     position: absolute;
-    top: 50%; /* Colocar el botón al centro verticalmente */
-    left: 50%; /* Colocar el botón al centro horizontalmente */
-    transform: translate(-50%, -50%); /* Centra el botón perfectamente */
-    background-color: var(--neutro500); /* Fondo semitransparente */
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: var(--neutro500); 
     border: none;
     cursor: pointer;
     padding: 28px;
-    border-radius: 100%; /* Hace que el botón sea redondo */
+    border-radius: 100%; 
 }
 .icono-play-video{
     width: 0; 
     height: 0; 
-    border-left: 35px solid white; /* Crea el triángulo del icono play */
+    border-left: 35px solid white; 
     border-top: 21px solid transparent;
     border-bottom: 21px solid transparent;
     margin-left: 13%;
@@ -1381,7 +1392,8 @@ button#btn-psw2 {
     margin-left: 5px;
     width: 800px;
     height: 40px;
-    border-radius: 5px;
+    font-size: 16px;
+    border-radius: 30px;
     border: 1px solid;
 }
 
@@ -1397,7 +1409,7 @@ button#btn-psw2 {
     width: 221px;
     height: 45px;
     font-family: var(--letraGeneral, --letraBody);
-    font-weight: 900;
+    font-weight: bold;
     font-size: 16px;
     letter-spacing: 0.7px;
     border-radius: 24px;
