@@ -879,6 +879,7 @@ button#btn-psw2 {
     z-index: 999;
 }
 
+
 #loading {
   width: 60px;
   height: 60px;
@@ -898,8 +899,6 @@ button#btn-psw2 {
     font-size: 24px;
     color: var(--acento500);
     margin-top: 20px;
-    position: relative;
-    top: 10px;
 }
 
 /* Clase para ocultar elementos */

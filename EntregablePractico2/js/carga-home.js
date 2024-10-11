@@ -1,6 +1,6 @@
 "use strict"
 let logo=document.getElementById("logo");
-let btn=document.getElementById("btn-juego4");
+let btn=document.getElementById("btn-volver");
 let house=document.getElementById("spanHome");
 let loadContainer=document.getElementById("loading-container");
 const loadingContainer = document.getElementById("loading-container");
