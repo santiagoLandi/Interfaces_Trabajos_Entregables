@@ -15,70 +15,75 @@
 </head>
 
 <body>
+    <div id="loading">
+        <div class="spinner"></div>
+    </div>
     <!-- Header -->
-    <header class="main-header">
-        <div class="header-left">
-            <div class="hamburger-menu" id="burguer">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <div class="logo">
-                <a href="index.html"><img src="assets/logo-removebg.png" alt="Logo" class="logo-img"></a>
-            </div>
-        </div>
-
-        <div class="header-center">
-            <div class="search-bar">
-                <input type="text" placeholder="¿A qué jugamos hoy?">
-                <button type="submit"><img src="assets/lupa.png" alt="Buscar"></button>
-            </div>
-        </div>
-
-        <div class="header-right">
-            <div class="shopping-cart" id="pop-bolsa">
-                <img src="assets/cart-claro.png" alt="Carrito">
-            </div>
-            <div id="popup-compras" class="">
-                <div class="cerrar-popup">
-                    <button id="btn-cerrar-popup-compras" class="btn-cerrar-popup">X</button>
+    <header>
+        <div class="main-header">
+            <div class="header-left">
+                <div class="hamburger-menu" id="burguer">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
-                <div class="encabezado-popup">
+                <div class="logo">
+                    <img src="assets/logo-removebg.png" alt="Logo" class="logo-img">
+                </div>
+            </div>
+
+            <div class="header-center">
+                <div class="search-bar">
+                    <input type="text" placeholder="¿A qué jugamos hoy?">
+                    <button type="submit"><img src="assets/lupa.png" alt="Buscar"></button>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="shopping-cart" id="pop-bolsa">
                     <img src="assets/cart-claro.png" alt="Carrito">
-                    <h2>Mis Compras</h2>
                 </div>
-                <div class="contenido-popup">
-                    <div class="juego-precio">
-                        <p>Jurassic Park</p>
-                        <p>$15</p>
+                <div id="popup-compras" class="">
+                    <div class="cerrar-popup">
+                        <button id="btn-cerrar-popup-compras" class="btn-cerrar-popup">X</button>
                     </div>
-                    <p>--------------------</p>
-                    <div class="total-compras">
-                        <p>Total</p>
-                        <p>$25</p>
+                    <div class="encabezado-popup">
+                        <img src="assets/cart-claro.png" alt="Carrito">
+                        <h2>Mis Compras</h2>
                     </div>
-                    <button class="btn-pagar-compras">PAGAR</button>
+                    <div class="contenido-popup">
+                        <div class="juego-precio">
+                            <p>Jurassic Park</p>
+                            <p>$15</p>
+                        </div>
+                        <p>--------------------</p>
+                        <div class="total-compras">
+                            <p>Total</p>
+                            <p>$25</p>
+                        </div>
+                        <button class="btn-pagar-compras">PAGAR</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="user-info" id="usuario">
-                <span>Pipo19</span>
-                <img src="assets/user-removebg.png" alt="User Image" class="user-img">
-            </div>
-            <div id="popup-login" class="">
-                <div class="cerrar-popup">
-                    <button id="btn-cerrar-popup-login" class="btn-cerrar-popup">X</button>
+                <div class="user-info" id="usuario">
+                    <span>Pipo19</span>
+                    <img src="assets/user-removebg.png" alt="User Image" class="user-img">
                 </div>
-                <div class="encabezado-popup">
-                    <img src="assets/user-removebg.png" alt="user image">
-                    <h3>Pipo19</h3>
-                    <span>juan_tandil@gmail.com</span>
-                </div>
-                <div class="contenido-popup">
-                    <p><img src="assets/Mi perfil.png" alt="Mi perfil">Mi perfil</p>
-                    <p><img src="assets/Editar perfil.png" alt="Editar perfil">Editar perfil</p>
-                    <p><img src="assets/Notificaciones.png" alt="Notificaciones">Preferencias de notificación</p>
-                    <p><img src="assets/privacidad.png" alt="Privacidad">Preferencias de privacidad</p>
-                    <p><img src="assets/configurar.png" alt="Configuración">Configuración de cuenta</p>
-                    <p><img src="assets/Cerrar sesion.png" alt="Cerrar sesion">Cerrar sesión</p>
+                <div id="popup-login" class="">
+                    <div class="cerrar-popup">
+                        <button id="btn-cerrar-popup-login" class="btn-cerrar-popup">X</button>
+                    </div>
+                    <div class="encabezado-popup">
+                        <img src="assets/user-removebg.png" alt="user image">
+                        <h3>Pipo19</h3>
+                        <span>juan_tandil@gmail.com</span>
+                    </div>
+                    <div class="contenido-popup">
+                        <p><img src="assets/Mi perfil.png" alt="Mi perfil">Mi perfil</p>
+                        <p><img src="assets/Editar perfil.png" alt="Editar perfil">Editar perfil</p>
+                        <p><img src="assets/Notificaciones.png" alt="Notificaciones">Preferencias de notificación</p>
+                        <p><img src="assets/privacidad.png" alt="Privacidad">Preferencias de privacidad</p>
+                        <p><img src="assets/configurar.png" alt="Configuración">Configuración de cuenta</p>
+                        <p><img src="assets/Cerrar sesion.png" alt="Cerrar sesion">Cerrar sesión</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -88,9 +93,7 @@
         <main>
             <!-- Primera fila: Top juegos gratis de esta semana -->
             <section class="carousel-section">
-                <div>
-                    <h2>Top juegos gratis de esta semana</h2>
-                </div>
+                <h2>Top juegos gratis de esta semana</h2>
                 <div class="carousel-container">
                     <img class="left-arrow" src="assets/flecha-izq.png" alt="flecha-izq">
                     <div class="carousel-track">
@@ -174,6 +177,54 @@
                                 <button class="boton-cards">JUGAR</button>
                             </div>
                         </div>
+                        <div class="card">
+                            <img src="assets/juegos/mortal-kombat.png" alt="mortal-kombat">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Mortal Kombat</h3>
+                                    <div class="puntuacion">
+                                        <p>4.8</p>
+                                        <img src="assets/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Combate</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="boton-cards">JUGAR</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/juegos/fifa-98.png" alt="fifa-98">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>FIFA 98</h3>
+                                    <div class="puntuacion">
+                                        <p>4.1</p>
+                                        <img src="assets/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Futbol</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="boton-cards">JUGAR</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/juegos/metal-slug.png" alt="metal-slug">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Metal Slug XX</h3>
+                                    <div class="puntuacion">
+                                        <p>3.8</p>
+                                        <img src="assets/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Acción</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="boton-cards">JUGAR</button>
+                            </div>
+                        </div>
                     </div>
                     <img class="right-arrow" src="assets/flecha-der.png" alt="flecha-der">
                 </div>
@@ -181,10 +232,10 @@
             <!-- Segunda fila: Compra y disfruta juegos exclusivos -->
             <section class="carousel-section">
                 <h2>Compra y disfruta juegos exclusivos</h2>
-                <div class="carousel-container">
-                    <img class="left-arrow" src="assets/flecha-izq.png" alt="flecha-izq">
+                <div class="cards-container">
                     <div class="carousel-track">
                         <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
                             <img src="assets/juegos/6- Sonic.png" alt="sonic">
                             <div class="texto-cards">
                                 <div class="nombre-y-puntuacion-cards">
@@ -202,6 +253,7 @@
                             </div>
                         </div>
                         <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
                             <img src="assets/juegos/7- Jurassic Park.jpg" alt="jurassic park">
                             <div class="texto-cards">
                                 <div class="nombre-y-puntuacion-cards">
@@ -219,6 +271,7 @@
                             </div>
                         </div>
                         <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
                             <img src="assets/juegos/8-poker.png" alt="poker">
                             <div class="texto-cards">
                                 <div class="nombre-y-puntuacion-cards">
@@ -236,6 +289,7 @@
                             </div>
                         </div>
                         <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
                             <img src="assets/juegos/9- Fifa street.jpg" alt="fifa street">
                             <div class="texto-cards">
                                 <div class="nombre-y-puntuacion-cards">
@@ -253,6 +307,7 @@
                             </div>
                         </div>
                         <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
                             <img src="assets/juegos/10- Dragon Ball Z.webp" alt="dragon ball">
                             <div class="texto-cards">
                                 <div class="nombre-y-puntuacion-cards">
@@ -270,14 +325,12 @@
                             </div>
                         </div>
                     </div>
-                    <img class="right-arrow" src="assets/flecha-der.png" alt="flecha-der">
                 </div>
             </section>
             <!-- Tercera fila: Juegos recomendados para vos -->
             <section class="carousel-section">
                 <h2>Juegos recomendados para vos</h2>
-                <div class="carousel-container">
-                    <img class="left-arrow" src="assets/flecha-izq.png" alt="flecha-izq">
+                <div class="cards-container">
                     <div class="carousel-track">
                         <div class="card">
                             <img src="assets/juegos/11-uno.png" alt="uno">
@@ -296,6 +349,7 @@
                             </div>
                         </div>
                         <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
                             <img src="assets/juegos/12- Black Jack.jfif" alt="black jack">
                             <div class="texto-cards">
                                 <div class="nombre-y-puntuacion-cards">
@@ -329,6 +383,7 @@
                             </div>
                         </div>
                         <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
                             <img src="assets/juegos/14- Spades.webp" alt="spades">
                             <div class="texto-cards">
                                 <div class="nombre-y-puntuacion-cards">
@@ -346,6 +401,7 @@
                             </div>
                         </div>
                         <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
                             <img src="assets/juegos/15-solitario.png" alt="solitario">
                             <div class="texto-cards">
                                 <div class="nombre-y-puntuacion-cards">
@@ -363,16 +419,15 @@
                             </div>
                         </div>
                     </div>
-                    <img class="right-arrow" src="assets/flecha-der.png" alt="flecha-der">
                 </div>
             </section>
             <!-- Cuarta fila: Juegos de velocidad -->
             <section class="carousel-section">
                 <h2>Juegos de velocidad</h2>
-                <div class="carousel-container">
-                    <img class="left-arrow" src="assets/flecha-izq.png" alt="flecha-izq">
+                <div class="cards-container">
                     <div class="carousel-track">
                         <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
                             <img src="assets/juegos/16- Formula 1.webp" alt="formula 1">
                             <div class="texto-cards">
                                 <div class="nombre-y-puntuacion-cards">
@@ -406,6 +461,7 @@
                             </div>
                         </div>
                         <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
                             <img src="assets/juegos/18- Moto GP.jpeg" alt="moto gp">
                             <div class="texto-cards">
                                 <div class="nombre-y-puntuacion-cards">
@@ -455,7 +511,6 @@
                             </div>
                         </div>
                     </div>
-                    <img class="right-arrow" src="assets/flecha-der.png" alt="flecha-der" class="right-arrow">
                 </div>
             </section>
             
@@ -647,6 +702,8 @@
     <script type="text/javascript" src="js/menu-hamburguesa.js"></script>
     <script type="text/javascript" src="js/pop-up.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/carrusel.js"></script>
+    <script src="js/loading-home.js"></script>
 </body>
 
 </html>

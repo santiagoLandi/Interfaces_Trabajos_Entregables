@@ -24,6 +24,37 @@
     --letraGeneral: 'Nunito';
     --letraBody: 'Nunito Sans';
 }
+/* Estilos para la pantalla de loading */
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99; 
+}
+
+/* Spinner - animación circular */
+.spinner {
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #3498db; /* Color del círculo */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+/* Animación del spinner */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 /* Estilos generales para el body */
 body {
@@ -309,37 +340,45 @@ main {
     grid-row: 1;
     color: var(--primario700-sombra);
     margin: 0 auto;
+    max-width: 1240px;
 }
 
 .carousel-section {
-    margin: 65px 0;
-    margin-left: 150px;
+    margin: 60px auto;
     display: flex;
     flex-direction: column;
 }
 
-.carousel-container {
+.carousel-container,
+.cards-container {
     display: flex;
-    justify-content: start;
     align-items: center;
-    width: 100%;
+    position: relative;
     margin: 0 auto;
+    max-width: 100%;
+}
+
+.cards-container {
+    margin-top: 30px;
+}
+
+.carousel-container {
+    height: 420px;
+    overflow: hidden;
 }
 
 .carousel-track {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 30px;
+    display: flex;
+    gap: 25px;
+    transition: transform 0.5s ease;
+    width: max-content;
 }
 
-section h2 {
-    margin-bottom: 20px;
-    margin-top: 0;
-    margin-left: 40px;
+.carousel-section h2 {
+    margin: 0 0 0 40px;
 }
 
 .card {
-    width: 213px;
     background-color: var(--neutro300);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
@@ -347,6 +386,14 @@ section h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-shrink: 0;
+    flex: 0 0 213px;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 20px var(--primario400-luz);
+    transform: scale(1.10);
 }
 
 .card img {
@@ -440,13 +487,34 @@ section h2 {
     transition: background-color 0.5s, transform 0.5s;
 }
 
+.ribbon {
+    position: absolute;
+    bottom: 80px;
+    background-color: #28a745;
+    color: white;
+    padding: 8px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    transform: rotate(-30deg);
+    z-index: 10;
+    display: none;
+}
+
+
 img.left-arrow,
 img.right-arrow {
     width: 36px;
     height: 106px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 3;
     user-select: none;
+}
+
+.right-arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /*Aca arranca el Footer*/
@@ -516,6 +584,82 @@ footer .footer-redes img {
     height: 27px;
     margin-left: 7px;
     margin-right: 7px;
+}
+
+/* Estilos para móviles con max-width (pantallas de 768px o menos) */
+@media (max-width: 768px) {
+
+    .main-header {
+        width: 100%;
+    }
+
+    footer {
+        height: 380px;
+    }
+
+    footer h3,
+    footer {
+        font-size: x-small;
+    }
+  
+    .footer-arriba,
+    .footer-abajo {
+        justify-content: start;
+    }
+
+    footer img {
+        display: none;
+    }
+
+    .main-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        width: 100%;
+        max-width: 768px;
+        padding: 0;
+        margin: auto 10px;
+    }
+
+    aside {
+        display: none;
+    }
+
+    main {
+        margin: 0 10px;
+        width: 100%;
+    }
+
+    .carousel-container {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .card {
+        height: 300px;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .texto-cards {
+        padding: 10px;
+    }
+
+    .nombre-y-puntuacion-cards {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .puntuacion {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .container-boton-card {
+        margin-top: 10px;
+    }
+
+
 }
 
 /*Parte vinculada al registro html*/
@@ -634,7 +778,6 @@ footer .footer-redes img {
     grid-area: edad;
     display: flex;
     flex-flow: column;
-
 }
 
 .email {
@@ -668,7 +811,6 @@ input#edad {
 .logAgain a:hover {
     text-decoration: none;
     color: var(--acento500);
-
 }
 
 .submit,
@@ -750,11 +892,6 @@ input#edad {
 .captcha img {
     width: 60px;
     height: 60px;
-}
-
-.logoForm {
-    flex-direction: column;
-    justify-content: center;
 }
 
 .logoForm {
@@ -861,8 +998,6 @@ button#btn-psw2 {
     border-bottom: 1.600px solid #7a7575;
     border-top: 1.600px solid #090606;
     border-right: 1.600px solid #7a7575;
-
-
 }
 #loading-container {
     display: none;
@@ -1023,7 +1158,8 @@ button#btn-psw2 {
     padding-right: 7%;
 }
 
-.form-p-inicio-sesion-cuenta , .form-inicio-sesion-cuenta-registrarme {
+.form-p-inicio-sesion-cuenta,
+.form-inicio-sesion-cuenta-registrarme {
     font-size: 14px;
     text-align: center;
     color: var(--neutro300);
@@ -1035,6 +1171,7 @@ button#btn-psw2 {
     margin: 0;
     color: var(--acento300-luz);
 }
+
 .form-inicio-sesion-cuenta-registrarme {
     color: var(--secundario700-sombra);
     text-decoration: none;
@@ -1312,7 +1449,7 @@ button#btn-psw2 {
     border-radius: 5px;
 }
 
-.titulo-videos{
+.titulo-videos {
     font-size: 25px;
     letter-spacing: 0.13%;
     color: var(--neutro700);
@@ -1329,7 +1466,6 @@ button#btn-psw2 {
     height: 181px;
     position: relative;
     display: inline-block;
-
 }
 
 .img-videos {
@@ -1370,7 +1506,8 @@ button#btn-psw2 {
     color: var(--neutro700);
     font-size: 18px;
 }
-.p-tiempo{
+
+.p-tiempo {
     margin-top: 2px;
     color: var(--neutro500);
     font-size: 16px;
@@ -1382,7 +1519,7 @@ button#btn-psw2 {
     align-items: center;
 }
 
-.p-descripcion-video-juego{
+.p-descripcion-video-juego {
     margin-top: 2px;
     font-size: 14px;
     color: var(--neutro500);
