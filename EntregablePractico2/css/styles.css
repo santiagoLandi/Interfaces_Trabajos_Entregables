@@ -1,4 +1,4 @@
-/* Variables de colores y fuentes */
+ /* Variables de colores y fuentes */
 :root {
     --primario200-luz: #ECE8FF;
     --primario300-luz: #AF9DF9;
@@ -261,7 +261,12 @@ body {
 .contenido-popup p img {
     margin-right: 5%;
 }
+.contenido-popup p:hover{
+    background-color: var(--primario700-sombra);
+    transform: scale(1.10);
+    cursor: pointer;
 
+}
 #popup-compras p {
     text-align: left;
 }
@@ -282,6 +287,13 @@ body {
     height: 38px;
     width: 60%;
     font-size: 16px;
+}
+
+.btn-pagar-compras:hover{
+        background-color: var(--primario600-sombra);
+        transform: scale(1.10);
+        cursor: pointer;
+        border-radius: 24px;
 }
 
 /*    Hasta Aca El Header  */
@@ -1140,6 +1152,16 @@ button#btn-psw2 {
 }
 
 
+#loading {
+  width: 60px;
+  height: 60px;
+  border: 10px solid var(--acento500);
+  border-top: 6px solid transparent;
+  border-radius: 50%;
+  animation: spin 5s linear infinite;
+  margin: 0 auto;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -1154,8 +1176,6 @@ ass #loading-progress {
     font-size: 24px;
     color: var(--acento500);
     margin-top: 20px;
-    position: relative;
-    top: 10px;
 }
 
 /* Clase para ocultar elementos */
@@ -1204,7 +1224,7 @@ ass #loading-progress {
 .btn-iniciar-sesion-facebook,
 .btn-iniciar-sesion-registrate {
     font-family: var(--letraGeneral, --letraBody);
-    font-weight: 900;
+    font-weight: bold;
     font-size: 14px;
     letter-spacing: 0.7px;
     border-radius: 24px;
@@ -1316,14 +1336,48 @@ ass #loading-progress {
     cursor: pointer;
 }
 
+.input-inicio-sesion-cuenta2 {
+    width: 315px;
+    height: 25px;
+    margin-bottom: 10px;
+    border-radius: 30px 0 0 30px;
+    border-right: none;
+    padding-right: 0px;
+}
+button#btn-psw3 {
+    padding: 0;
+    height: 30.5px;
+    border: 0;
+    border-radius: 0 30px 30px 0;
+    border-left: none;
+    align-items: center;
+    border-bottom: 2px solid #7a7575;
+    border-top: 2px solid #090606;
+    border-right: 2px solid #7a7575;
+    background-color: #ffffff;
+}
+
 .input-inicio-sesion-cuenta {
     width: 332px;
     height: 25px;
-    border-radius: 5px;
-    border: 1px solid;
+    border-radius: 30px;
     margin-bottom: 10px;
 }
 
+
+.contenedor-input-contrasena{
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-input-contrasena{
+    position: relative;
+    display: inline-block;
+}
+
+.btn-ojo{
+    position: absolute;
+}
 .p-obligatorio-contrasena {
     height: 20px;
 }
@@ -1358,7 +1412,7 @@ ass #loading-progress {
     width: 160px;
     height: 50px;
     font-family: var(--letraGeneral, --letraBody);
-    font-weight: 900;
+    font-weight: bold;
     font-size: 16px;
     letter-spacing: 0.7px;
     border-radius: 24px;
@@ -1525,7 +1579,7 @@ ass #loading-progress {
     width: 70px;
     height: 20px;
     font-family: var(--letraGeneral, --letraBody);
-    font-weight: 800;
+    font-weight: bold;
     font-size: 12px;
     letter-spacing: 0.7px;
     border-radius: 24px;
@@ -1602,26 +1656,19 @@ ass #loading-progress {
 
 .btn-video {
     position: absolute;
-    top: 50%;
-    /* Colocar el botón al centro verticalmente */
-    left: 50%;
-    /* Colocar el botón al centro horizontalmente */
-    transform: translate(-50%, -50%);
-    /* Centra el botón perfectamente */
-    background-color: var(--neutro500);
-    /* Fondo semitransparente */
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: var(--neutro500); 
     border: none;
     cursor: pointer;
     padding: 28px;
-    border-radius: 100%;
-    /* Hace que el botón sea redondo */
+    border-radius: 100%; 
 }
-
-.icono-play-video {
-    width: 0;
-    height: 0;
-    border-left: 35px solid white;
-    /* Crea el triángulo del icono play */
+.icono-play-video{
+    width: 0; 
+    height: 0; 
+    border-left: 35px solid white; 
     border-top: 21px solid transparent;
     border-bottom: 21px solid transparent;
     margin-left: 13%;
@@ -1695,7 +1742,8 @@ ass #loading-progress {
     margin-left: 5px;
     width: 800px;
     height: 40px;
-    border-radius: 5px;
+    font-size: 16px;
+    border-radius: 30px;
     border: 1px solid;
 }
 
@@ -1711,7 +1759,7 @@ ass #loading-progress {
     width: 221px;
     height: 45px;
     font-family: var(--letraGeneral, --letraBody);
-    font-weight: 900;
+    font-weight: bold;
     font-size: 16px;
     letter-spacing: 0.7px;
     border-radius: 24px;
