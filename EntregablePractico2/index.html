@@ -16,7 +16,10 @@
 
 <body>
     <div id="loading">
-        <div class="spinner"></div>
+        <div class="loading-spinner"></div>
+        <div class="loading-text">
+            <span id="loading-percentage">0%</span>
+        </div>
     </div>
     <!-- Header -->
     <header>
@@ -29,14 +32,12 @@
                     <img src="assets/logo-removebg.png" alt="Logo" class="logo-img">
                 </div>
             </div>
-
             <div class="header-center">
                 <div class="search-bar">
                     <input type="text" placeholder="¿A qué jugamos hoy?">
                     <button type="submit"><img src="assets/lupa.png" alt="Buscar"></button>
                 </div>
             </div>
-
             <div class="header-right">
                 <div class="shopping-cart" id="pop-bolsa">
                     <img src="assets/cart-claro.png" alt="Carrito">
@@ -62,7 +63,6 @@
                         <button class="btn-pagar-compras">PAGAR</button>
                     </div>
                 </div>
-
                 <div class="user-info" id="usuario">
                     <span>Pipo19</span>
                     <img src="assets/user-removebg.png" alt="User Image" class="user-img">
@@ -233,7 +233,7 @@
             <section class="carousel-section">
                 <h2>Compra y disfruta juegos exclusivos</h2>
                 <div class="cards-container">
-                    <div class="carousel-track">
+                    <div class="carousel-cards">
                         <div class="card">
                             <div class="ribbon" style="display: none;">Comprado</div>
                             <img src="assets/juegos/6- Sonic.png" alt="sonic">
@@ -331,7 +331,7 @@
             <section class="carousel-section">
                 <h2>Juegos recomendados para vos</h2>
                 <div class="cards-container">
-                    <div class="carousel-track">
+                    <div class="carousel-cards">
                         <div class="card">
                             <img src="assets/juegos/11-uno.png" alt="uno">
                             <div class="texto-cards">
@@ -425,7 +425,7 @@
             <section class="carousel-section">
                 <h2>Juegos de velocidad</h2>
                 <div class="cards-container">
-                    <div class="carousel-track">
+                    <div class="carousel-cards">
                         <div class="card">
                             <div class="ribbon" style="display: none;">Comprado</div>
                             <img src="assets/juegos/16- Formula 1.webp" alt="formula 1">
@@ -698,7 +698,6 @@
     </footer>
 
     <!-- Scripts JS -->
-  <!--  <script type="text/javascript" src="js/loading.js"></script> -->
     <script type="text/javascript" src="js/menu-hamburguesa.js"></script>
     <script type="text/javascript" src="js/pop-up.js"></script>
     <script type="text/javascript" src="js/index.js"></script>

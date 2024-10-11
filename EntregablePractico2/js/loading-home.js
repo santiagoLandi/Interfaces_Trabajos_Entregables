@@ -1,16 +1,20 @@
-/*
-document.addEventListener("DOMContentLoaded", function() {
-    // Muestra el loader durante 15 segundos
-    setTimeout(function() {
-        const loadingElement = document.getElementById("loading");
-        loadingElement.style.display = "none"; // Oculta la ventana de loading
-    }, 5000); 
-});
-*/
 window.onload = function() {
-    // Espera 15 segundos y luego oculta el loader
+    const loadingDiv = document.getElementById('loading');
+    const loadingPercentage = document.getElementById('loading-percentage');
+    let percentage = 0;
+
+    const interval = setInterval(function() {
+        percentage += 1;
+        loadingPercentage.textContent = percentage + '%'; 
+        
+        if (percentage >= 100) {
+            clearInterval(interval);
+            loadingDiv.style.display = 'none';
+        }
+    }, 50); 
+
     setTimeout(function() {
-        const loadingDiv = document.getElementById('loading');
-        loadingDiv.style.display = 'none'; // Oculta el loader
-    }, 5000); // 15000 ms = 15 segundos
+        clearInterval(interval);
+        loadingDiv.style.display = 'none';
+    }, 5000); 
 };
