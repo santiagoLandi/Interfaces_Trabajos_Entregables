@@ -1202,6 +1202,27 @@ button#btn-psw2 {
     cursor: pointer;
 }
 
+.input-inicio-sesion-cuenta2 {
+    width: 315px;
+    height: 25px;
+    margin-bottom: 10px;
+    border-radius: 30px 0 0 30px;
+    border-right: none;
+    padding-right: 0px;
+}
+button#btn-psw3 {
+    padding: 0;
+    height: 30.5px;
+    border: 0;
+    border-radius: 0 30px 30px 0;
+    border-left: none;
+    align-items: center;
+    border-bottom: 2px solid #7a7575;
+    border-top: 2px solid #090606;
+    border-right: 2px solid #7a7575;
+    background-color: #ffffff;
+}
+
 .input-inicio-sesion-cuenta {
     width: 332px;
     height: 25px;
@@ -1209,6 +1230,20 @@ button#btn-psw2 {
     margin-bottom: 10px;
 }
 
+
+.contenedor-input-contrasena{
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-input-contrasena{
+    position: relative;
+    display: inline-block;
+}
+
+.btn-ojo{
+    position: absolute;
+}
 .p-obligatorio-contrasena {
     height: 20px;
 }

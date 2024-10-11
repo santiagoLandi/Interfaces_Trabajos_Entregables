@@ -81,6 +81,7 @@ function validacionCorreo(){
 const btnPsw = document.getElementById("btn-psw");
 const btnPsw2 = document.getElementById("btn-psw2");
 
+
 // Función para mostrar/ocultar la contraseña
 function ocultarMostrarPsw(input) {
     if (input.type === "password") {
@@ -103,6 +104,7 @@ btnPsw2.addEventListener("click", function (e) {
     let input = document.getElementById("pwd2");
     ocultarMostrarPsw(input);
 });
+
 
 // Elementos del DOM
 
