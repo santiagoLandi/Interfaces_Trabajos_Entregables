@@ -14,10 +14,13 @@ botonesComprar.forEach(function (botonComprar) {
             // quita la clase para volver al estado original
             setTimeout(function () {
                 botonComprar.classList.remove('clickeado');
-                // cambia el contenido a "JUGAR"
-                
-                    botonComprar.textContent = jugar;
-                }, 1500);
+
+                botonComprar.textContent = jugar;
+
+                // Muestra el ribbon de "Comprado"
+                const ribbon = botonComprar.closest('.card').querySelector('.ribbon');
+                ribbon.style.display = 'block'; 
+            }, 1500);
         }
     });
 });
