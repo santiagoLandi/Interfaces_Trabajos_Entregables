@@ -32,10 +32,11 @@
                             <div class="contenedor-inputs-inicio-sesion">
                                 <label for="email-sesion">Introduzca su direccion de correo electronico</label>
                                 <input type="email" id="email-sesion" name="email-sesion" class="input-inicio-sesion-cuenta" required>
-                                <p id="ctrl-email-sesion" class="p-obligatorios"></p>
+                                <div>
+                                    <p id="ctrl-email-sesion" class="p-obligatorios p-obligatorio-contrasena"></p>
+                                </div>
                                 <label for="password-sesion">Introduzca su contrase&ntilde;a</label>
-                                <input type="password" id="password-sesion" name="password-sesion" class="input-inicio-sesion-cuenta" required>
-                                <p id="ctrl-password-sesion" class="p-obligatorios"></p>
+                                <input type="password" name="password-sesion" class="input-inicio-sesion-cuenta" required>
                             </div>
                             <button id="btn-iniciar" type="submit" class="btn-iniciar-sesion2">Iniciar Sesi&oacute;n</button>
                             <p class="form-p-inicio-sesion-cuenta">¿Has olvidado tu contrase&ntilde;a ?</p>
@@ -43,6 +44,10 @@
                                 
                         </div>    
                     </form>
+                    <div id="loading-container" class="loading-oculto">
+                        <div id="loading"></div>
+                        <div id="loading-progress">0%</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -114,6 +119,7 @@
             <p>Si tenes problemas con el juego comunicate con la linea 6969 de ayuda al ludopata</p>
         </div>
     </footer>
+    <script type="text/javascript" src="js/loadInSc.js"></script>
     <script type="text/javascript" src="js/inicio-sesion-cuenta.js"></script>
 </body>
 </html>

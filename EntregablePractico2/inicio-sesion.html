@@ -22,6 +22,10 @@
             <h2>Preparate para divertirte y desafiar tus habilidades</h2>
         </div>
     </header>
+    <div id="loading-container" class="loading-oculto">
+        <div id="loading"></div>
+        <div id="loading-progress">0%</div>
+    </div>
     <main>
         <div class="contenedor-principal-inicio-sesion">
             <div class="contenedor-imagenlogo-botones-inicio-sesion">
@@ -30,11 +34,12 @@
                 
                     <div class="contenedor-botones-inicio-sesion">
                             <button id="btn-iniciar-sesion" class="btn-iniciar-sesion">Iniciar Sesi&oacute;n</button>
-                            <button id="btn-iniciar-sesion-google" class="btn-iniciar-sesion-google">Iniciar sesi&oacute;n con Google<img src="assets/logo-google-btn.png" class="logo-google-btn" alt="logo google"></button>
-                            <button id="btn-iniciar-sesion-facebook" class="btn-iniciar-sesion-facebook">Iniciar sesi&oacute;n con Facebook<img src="assets/logo-facebook-btn.png" class="logo-facebook-btn" alt="logo faceboook"></button>
+                            <button id="btn-iniciar-sesion-google" class="btn-iniciar-sesion-google" type="button">Iniciar sesi&oacute;n con Google<img src="assets/logo-google-btn.png" class="logo-google-btn" alt="logo google"></button>
+                            <button id="btn-iniciar-sesion-facebook" class="btn-iniciar-sesion-facebook" type="button">Iniciar sesi&oacute;n con Facebook<img src="assets/logo-facebook-btn.png" class="logo-facebook-btn" alt="logo faceboook"></button>
                             <img src="assets/divisor-login.png" class="divisor-login" alt="divisor del login">
                             <button id="btn-iniciar-sesion-registrate" class="btn-iniciar-sesion-registrate">Registrate</button>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -106,6 +111,8 @@
             <p>Si tenes problemas con el juego comunicate con la linea 6969 de ayuda al ludopata</p>
         </div>
     </footer>
+    
     <script type="text/javascript" src="js/inicio-sesion.js"></script>
+    <script type="text/javascript" src="js/loadIs.js"></script>
 </body>
 </html>

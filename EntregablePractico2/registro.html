@@ -34,36 +34,36 @@
                 </div>
                 <div class="datosPersonales">
                     <div class="nombre">
-                    <label for="fname">Nombre<span>*</span></label>
-                    <input type="text" id="fname" name="fname" required>
-                    <p id="ctrlNombre"></p>
+                     <label for="fname">Nombre<span>*</span></label>
+                     <input type="text" id="fname" name="fname" required>
+                     <p id="ctrlNombre">Inserte su nombre</p>
                     </div>
                     <div class="apellido">
-                    <label for="lname">Apellido<span>*</span></label>
-                    <input type="text" id="lname" name="lname" required>
-                    <p id="ctrlApellido"></p>
+                     <label for="lname">Apellido<span>*</span></label>
+                     <input type="text" id="lname" name="lname" required>
+                     <p id="ctrlApellido">Inserte su apellido</p>
                     </div>
                     <div class="apodo">
-                    <label for="apodo" class="etiqueta-apodo">Apodo</label>
-                    <input type="text" id="apodo" name="apodo" required>
+                     <label for="apodo" class="etiqueta-apodo">Apodo</label>
+                     <input type="text" id="apodo" name="apodo" required>
                     </div>
                     <div class="edad">
-                    <label for="edad">Edad<span>*</span></label>
-                    <input type="number" id="edad" name="edad" required>
-                    <p id="ctrlEdad"></p>
+                     <label for="edad">Edad<span>*</span></label>
+                     <input type="number" id="edad" name="edad" required>
+                     <p id="ctrlEdad">Ser mayor de 5 a&ntilde;os</p>
                     </div>
                     <div class="email">
-                    <label for="email" class="etiqueta-mail">E-mail<span>*</span></label>
-                    <input type="email" id="email" name="email" required>
-                    <p id="ctrlEmail"></p>
+                     <label for="email" class="etiqueta-mail">E-mail<span>*</span></label>
+                     <input type="email" id="email" name="email" required>
+                     <p id="ctrlEmail">Inserte un correo valido</p>
                     </div> 
                     <div class="clave1">
-                        <label for="pwd">Contrase&ntilde;a<span>*</span></label>
+                      <label for="pwd">Contrase&ntilde;a<span>*</span></label>
                       <div class="ocultarMostrarPsw">
                          <input type="password" id="pwd1" name="pwd" required>
                          <button type="button" id="btn-psw"><img src="assets/imagen-ojo.png" alt="ocultarPsw"></button>
                       </div>  
-                        <p id="ctrlPsw"></p>
+                      <p id="ctrlPsw">Debe contener 8 caracteres y una mayuscula</p>
                     </div>
                     <div class="clave2">
                         <label for="pwd">Repetir Contrase&ntilde;a<span>*</span></label>
@@ -71,7 +71,7 @@
                             <input type="password" id="pwd2" name="pwd" required>
                             <button type="button" id="btn-psw2"><img src="assets/imagen-ojo.png" alt="ocultarPsw"></button>
                         </div>    
-                        <p id="ctrlPsw1"></p>
+                        <p id="ctrlPsw1">La clave debe coincidir con la anterior</p>
                     </div>
                 </div>
                 <div class="captcha">
@@ -84,12 +84,21 @@
                 <div class="submit">
                     <button class="buttonCrear" type="submit">Crear Cuenta</button>
                 </div>
+                <div id="loading-container" class="loading-oculto">
+                    <div id="loading"></div>
+                    <div id="loading-progress">0%</div>
+                </div>
                 <div class="logAgain">
                     <p>¿Tienes una cuenta de ManyGames?</p>
                     <a href="inicio-sesion.html">Iniciar Sesion</a>
                 </div>
 
             </form>
+            <div id="loading-container" class="loading-oculto">
+                <div id="loading"></div>
+                <div id="loading-progress">0%</div>
+            </div>
+         
         </div>    
     </main>
     <footer>
@@ -159,6 +168,6 @@
             <p>Si tenes problemas con el juego comunicate con la linea 6969 de ayuda al ludopata</p>
         </div>
     </footer>
-    <script type="text/javascript" src="js/registro.js"></script>
+    <script type="text/javascript" src="js/loading.js"></script>
 </body>
 </html>
