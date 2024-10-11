@@ -96,7 +96,7 @@
             <div class="contenedor-principal-4-en-linea">
                 <div class="contenedor-titulo-btn-volver">
                     <h2>Home -> Multijugador -> Rom&aacute;n</h2>
-                    <button onclick="" class="btn-volver">Volver</button>
+                    <button id="btn-volver" class="btn-volver">Volver</button>
                 </div>
                
                 <div class="contenedor-juego-4-en-linea">
@@ -131,7 +131,6 @@
                         </div>
                     </div>
                 </div>
-                <!--ACA ARRANCAN LAS INSTRUCCIONES -->
                 <div class="contenedor-instrucciones-4-en-linea">
                     <div class="contenedor-instrucciones-4-en-linea-izq">
                         <div>
@@ -156,16 +155,10 @@
                             <div class="contenedor-img-instrucciones">
                                 <img id="imagen-paso" class="imagen-pasos" src="" alt="" />
                                 <div class="contenedor-btn-pasos-4-en-linea">
-                                    <button id="izq" class="btn-izq-instrucciones">
-                                        <div class="icono-btn-izq-instrucciones"></div>
-                                    </button>
-                                    <div id="circulo1" class="circulo-paso1 con-relleno"></div>
-                                    <div id="circulo2" class="circulo-paso2 sin-relleno"></div>
-                                    <div id="circulo3" class="circulo-paso3 sin-relleno"></div>
-                                    <div id="circulo3" class="circulo-paso4 sin-relleno"></div>
-                                    <button id="der" class="btn-der-instrucciones">
-                                        <div class="icono-btn-der-instrucciones"></div>
-                                    </button>
+                                    <button id="paso1" class="btn-instrucciones">Paso 1</button>
+                                    <button id="paso2" class="btn-instrucciones">Paso 2</button>
+                                    <button id="paso3" class="btn-instrucciones">Paso 3</button>
+                                    <button id="ajustes" class="btn-instrucciones">Ajustes</button>
                                 </div>
                             </div>
                         </div>
@@ -175,7 +168,10 @@
                     <h2 class="titulo-videos">Juegos que pueden gustarte</h2>
                     <div class="contenedor-videos">
                         <div>
-                            <img src="assets/imagenes/img-contra-video.jpeg" class="img-videos" alt="video jeugo contra">
+                            <div class="contenedor-imagen-video">
+                                <img src="assets/imagenes/img-contra-video.jpeg" class="img-videos" alt="video juego contra">
+                                <button class="btn-video"><div class="icono-play-video"></div></button>
+                            </div>
                             <div class="contenedor-titulo-tiempo">
                                 <h3 class="titulo-video">Contra Showfield battle</h3>
                                 <p class="p-tiempo">00:46</p>
@@ -183,7 +179,10 @@
                             <p class="p-descripcion-video-juego">Juego clasico</p>
                         </div>
                         <div>
+                            <div class="contenedor-imagen-video">
                             <img src="assets/imagenes/img-tonytons-video.jpeg" class="img-videos" alt="video juego tiny tons">
+                            <button class="btn-video"><div class="icono-play-video"></div></button>
+                            </div>
                             <div class="contenedor-titulo-tiempo">
                                 <h3 class="titulo-video">Tiny Toon Adventures</h3>
                                 <p class="p-tiempo">00:50</p>
@@ -191,7 +190,10 @@
                             <p class="p-descripcion-video-juego">Juego de anime y aventura</p>
                         </div>
                         <div>
+                            <div class="contenedor-imagen-video">
                             <img src="assets/imagenes/img-dragonball-video.jpeg" class="img-videos" alt="video juego Dragon ball">
+                            <button class="btn-video"><div class="icono-play-video"></div></button>
+                            </div>
                             <div class="contenedor-titulo-tiempo">
                                 <h3 class="titulo-video">Dragon Ball Z</h3>
                                 <p class="p-tiempo">00:50</p>
@@ -200,6 +202,35 @@
                         </div>
                     </div>
                 </div>
+                <div class="contenedor-principal-comentarios">
+                        <div class="contenedor-input-comentarios">
+                                <img src="assets/user-removebg.png" class="avatar-usuario-comentario" alt="avatar del usuario">
+                                <input type="text" class="input-comentarios">
+                        </div>
+                        <div class="contenedor-btn-comentarios">
+                            <button class="btn-enviar-comentarios">Enviar</button>
+                        </div>
+                        <div class="contenedor-principal-comentario">
+                            <img src="assets/avatar-comentario-1.jpeg" class="avatar-comentario" alt="avatar del usuario que comento">
+                            <div class="contenedor-comentario">
+                            <h3 class="nombre-comentario">Edgar</h3>
+                            <p class="p-comentario">El juego me parecio muy simple, no hay forma de ganarle a Roman. El club es de los socios</p>
+                            </div> 
+                            <p class="p-fecha-comentario">20-09-2024</p>
+                        </div>    
+                        <div class="contenedor-principal-comentario">
+                            <img src="assets/avatar-comentario-2.jpeg" class="avatar-comentario" alt="avatar del usuario que comento">
+                            <div class="contenedor-comentario">
+                                <h3 class="nombre-comentario">Johnny</h3>
+                                <p class="p-comentario">El juego es muy entretenido, podrian hacer un torneo del juego</p>
+                            </div>
+                            <p class="p-fecha-comentario">14-09-2024</p>  
+                        </div>
+                </div>
+                <div class="contenedor-btn-ver-mas-comentarios">
+                    <button class="btn-ver-mas-comentarios">VER MAS COMENTARIOS</button>
+                </div>
+            </div>
         </main>
         <!-- BARRA LATERAL -->
         <aside>

@@ -929,12 +929,14 @@ button#btn-psw2 {
 .contenedor-botones-inicio-sesion {
     display: flex;
     flex-direction: column;
-    padding: 25px;
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-top:45px;
     width: 350px;
 }
 
 .contenedor-principal-inicio-sesion {
-    margin-top: 200px;
+    margin-top: 80px;
     margin-bottom: 105px;
     display: flex;
     justify-content: center;
@@ -1011,7 +1013,7 @@ button#btn-psw2 {
 }
 
 .contenedor-inicio-sesion-cuenta {
-    margin-top: 45px;
+    margin-top: 70px;
 }
 
 .contenedor-inputs-inicio-sesion {
@@ -1060,6 +1062,10 @@ button#btn-psw2 {
     margin-bottom: 10px;
 }
 
+.p-obligatorio-contrasena {
+    height: 20px;
+}
+
 /* Arranca la pagina del juego */
 
 /*Arranca ventana del juego */
@@ -1099,6 +1105,14 @@ button#btn-psw2 {
     color: var(--neutro300);
     -webkit-transition: 0.25s;
     transition: 0.25s;
+}
+
+.btn-volver:hover{
+    background-color: var(--secundario600-sombra);
+    color: var(--primario800-sombra);
+    transform: scale(1.10);
+    cursor: pointer;
+    border-radius: 24px;
 }
 
 .btn-jugar-4-en-linea:hover,
@@ -1154,7 +1168,7 @@ button#btn-psw2 {
     font-family: var(--letraGeneral);
     color: var(--neutro300);
     text-shadow: -1px -1px 0 var(--neutro700),
-        /* Sombras por posicion */
+        
         1px -1px 0 var(--neutro700),
         -1px 1px 0 var(--neutro700),
         1px 1px 0 var(--neutro700),
@@ -1216,7 +1230,6 @@ button#btn-psw2 {
     display: flex;
     border: 2px solid var(--secundario300-luz);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-    /* Sombra con desplazamiento y transparencia */
 }
 
 .contenedor-instrucciones-4-en-linea-izq,
@@ -1234,58 +1247,36 @@ button#btn-psw2 {
     width: 40%;
 }
 
-/*
-.contenedor-img-instrucciones{
-
-}
-*/
 .contenedor-btn-pasos-4-en-linea {
+    margin-top: -5px;
     width: 380px;
-    background-color: var(--secundario500);
+    height: 25px;
+    background-color: var(--secundario600-sombra);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.btn-izq-instrucciones,
-.btn-der-instrucciones {
-    background-color: transparent;
-    border: transparent;
+.btn-instrucciones {
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 70px;
+    height: 20px;
+    font-family: var(--letraGeneral, --letraBody);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.7px;
+    border-radius: 24px;
+    border: 2px solid;
+    background-color: var(--neutro600);
+    color: var(--neutro300);
 }
 
-.icono-btn-izq-instrucciones,
-.icono-btn-der-instrucciones {
-    width: 0;
-    height: 0;
-    border-left: 17px solid var(--neutro500);
-    border-top: 8.5px solid transparent;
-    border-bottom: 8.5px solid transparent;
-    margin-left: 10px;
-
-}
-
-.icono-btn-izq-instrucciones {
-    transform: rotate(180deg);
-}
-
-.circulo-paso1,
-.circulo-paso2,
-.circulo-paso3,
-.circulo-paso4 {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin: 5px;
-    border: 1px solid var(--neutro500);
-}
-
-.con-relleno {
-    background-color: var(--neutro500);
-    border: 1px solid var(--neutro500);
-}
-
-.sin-relleno {
-    background-color: transparent;
+.btn-instrucciones:hover{
+    background-color: var(--secundario600-sombra);
+    color: var(--primario800-sombra);
+    transform: scale(1.10);
+    cursor: pointer;
+    border-radius: 24px;
 }
 
 .titulos-instrucciones {
@@ -1317,7 +1308,8 @@ button#btn-psw2 {
 /*Arranca los videos */
 
 .contenedor-principal-videos {
-    height: 500px;
+    margin-top: 40px;
+    height: 350px;
     border-radius: 5px;
 }
 
@@ -1333,9 +1325,45 @@ button#btn-psw2 {
     align-items: center;
 }
 
-.img-videos {
+.contenedor-imagen-video{
     width:  323px;
     height: 181px;
+    position: relative;
+    display: inline-block;
+
+}
+
+.img-videos {
+    width:  100%;
+    height: auto;
+}
+
+.btn-video{
+    position: absolute;
+    top: 50%; /* Colocar el botón al centro verticalmente */
+    left: 50%; /* Colocar el botón al centro horizontalmente */
+    transform: translate(-50%, -50%); /* Centra el botón perfectamente */
+    background-color: var(--neutro500); /* Fondo semitransparente */
+    border: none;
+    cursor: pointer;
+    padding: 28px;
+    border-radius: 100%; /* Hace que el botón sea redondo */
+}
+.icono-play-video{
+    width: 0; 
+    height: 0; 
+    border-left: 35px solid white; /* Crea el triángulo del icono play */
+    border-top: 21px solid transparent;
+    border-bottom: 21px solid transparent;
+    margin-left: 13%;
+    
+}
+
+.btn-video:hover{
+    background-color: var(--secundario600-sombra);
+    cursor: pointer;
+    border-radius: 100%;
+    border: 3px solid var(--primario800-sombra);
 }
 
 .titulo-video {
@@ -1360,3 +1388,132 @@ button#btn-psw2 {
     font-size: 14px;
     color: var(--neutro500);
 }
+
+/*Termina los videos*/
+
+/*Arrancan los comentarios*/
+
+.contenedor-principal-comentarios {
+    margin-top: 40px;
+    height: 450px;
+    border-radius: 5px;
+    background-color: var(--primario800-sombra);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-input-comentarios{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avatar-usuario-comentario, .avatar-comentario{
+    width: 70px;
+    height: 70px;
+    border-radius: 24px;
+    border: 2px solid;
+    color: var(--neutro700);
+    padding: 4px;
+    background-color: #D9D9D9;
+}
+
+.input-comentarios {
+    margin-left: 5px;
+    width: 800px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.contenedor-btn-comentarios {
+    display: flex;
+    margin-top: -47px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 886.41px;
+}
+
+.btn-enviar-comentarios {
+    width: 221px;
+    height: 45px;
+    font-family: var(--letraGeneral, --letraBody);
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 0.7px;
+    border-radius: 24px;
+    border: 2px solid;
+    background-color: var(--secundario700-sombra);
+    color: var(--neutro300);
+}
+
+.btn-enviar-comentarios:hover{
+    background-color: var(--secundario600-sombra);
+    color: var(--primario800-sombra);
+    transform: scale(1.10);
+    cursor: pointer;
+    border-radius: 24px;
+}
+
+.contenedor-input-comentarios{
+    margin: 20px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-principal-comentario{
+    display: flex;
+    justify-content: center;
+    width: 886.41px;
+    margin-top: 25px;
+    background-color:#D9D9D9;
+    border-radius: 20px;
+    height: 90px;
+
+}
+
+.contenedor-comentario{
+    width: 600px;
+}
+
+.avatar-comentario{
+    margin-right: 5px;
+    margin-top: 4.52px;
+}
+
+
+
+.nombre-comentario , .p-comentario, .p-fecha-comentario{
+    color: var(--neutro500);
+    font-size: 12px;
+}
+
+.contenedor-btn-ver-mas-comentarios {
+    display: flex;
+    margin-top: -47px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 945px;
+}
+
+.btn-ver-mas-comentarios{
+    background-color: transparent;
+    border: none;
+    color:var(--primario200-luz);
+    font-size: 12px;
+    font-family: var(--letraGeneral);
+    letter-spacing: 0.40px;
+}
+
+
+.btn-ver-mas-comentarios:hover{
+    background-color: var(--secundario600-sombra);
+    color: var(--primario800-sombra);
+    transform: scale(1.10);
+    cursor: pointer;
+    border-radius: 24px;
+}
+
