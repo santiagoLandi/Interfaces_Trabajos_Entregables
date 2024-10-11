@@ -1,5 +1,5 @@
 window.onload = function() {
-    const loadingDiv = document.getElementById('loading');
+    const loadingDiv = document.getElementById('loading-home');
     const loadingPercentage = document.getElementById('loading-percentage');
     let percentage = 0;
 

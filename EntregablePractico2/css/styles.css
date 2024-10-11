@@ -26,7 +26,7 @@
 }
 
 /* Estilos para la pantalla de loading */
-#loading {
+#loading-home {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -261,20 +261,14 @@ body {
 .contenido-popup p img {
     margin-right: 5%;
 }
-.contenido-popup p:hover{
-    background-color: var(--primario700-sombra);
-    transform: scale(1.10);
-    cursor: pointer;
 
+.contenido-popup-perfil p:hover{
+    background-color: var(--primario700-sombra);
+    cursor: pointer;
 }
+
 #popup-compras p {
     text-align: left;
-}
-
-.contenido-popup p {
-    padding-top: 15px;
-    display: flex;
-    align-items: center;
 }
 
 .btn-pagar-compras {
@@ -959,7 +953,6 @@ input#edad {
 }
 
 .buttonCrear:before {
-    /*agregado para hover*/
     content: "Crear Cuenta";
     position: absolute;
     width: 100%;
@@ -976,7 +969,6 @@ input#edad {
 }
 
 .buttonCrear:after {
-    /*agregado para hover*/
     content: "Crear Cuenta";
     position: absolute;
     width: 100%;
@@ -993,13 +985,11 @@ input#edad {
 }
 
 .buttonCrear:hover:after {
-    /*agregado para hover*/
     right: 0;
     animation: infinite-spinning 10s 0.5s infinite;
 }
 
 .buttonCrear:hover:before {
-    /*agregado para hover*/
     left: 0;
     animation: infinite-spinning 10s 0.5s infinite;
 }
