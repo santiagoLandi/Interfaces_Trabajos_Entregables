@@ -31,7 +31,6 @@
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0.9);
-    /* Fondo blanco con transparencia */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +52,6 @@
     font-size: 18px;
     font-weight: bold;
     color: #333;
-    /* Color del texto de porcentaje */
 }
 
 @keyframes spin {
@@ -243,12 +241,12 @@ body {
     align-items: baseline;
 }
 
-.contenido-popup div {
+.contenido-popup div ,.contenido-popup-perfil div{
     display: flex;
     justify-content: space-between;
 }
 
-.contenido-popup {
+.contenido-popup , .contenido-popup-perfil {
     text-align: left;
     margin-bottom: 25px;
     line-height: 15px;
@@ -257,8 +255,14 @@ body {
     margin-right: auto;
     justify-content: space-between;
 }
+.contenido-popup-perfil a{
+    text-decoration: none;
+    color: var(--neutro300);
+    font-family: var(--letraGeneral);
+}
 
-.contenido-popup p img {
+.contenido-popup-perfil p img{
+    margin-bottom: -2.5%;
     margin-right: 5%;
 }
 
@@ -775,9 +779,9 @@ footer .footer-redes img {
         display: flex;
         flex-direction: column;
     }
-
+    /* Asegura que el texto no se muestre al abrir */
     aside.open ul span {
-        display: none; /* Asegura que el texto no se muestre al abrir */
+        display: none; 
     }
 }
 
@@ -1272,7 +1276,7 @@ ass #loading-progress {
     color: var(--neutro300);
 }
 
-/* ARRANCA INICIO SESION CUENTA */
+/* Arranca inicio sesion cuenta */
 
 .form-inicio-sesion-cuenta {
     width: 400px;
@@ -1524,8 +1528,6 @@ button#btn-psw3 {
     margin-left: 10px;
 }
 
-/*termina ventana del juego */
-
 /*Arranca ventana de instrucciones */
 
 .contenedor-instrucciones-4-en-linea {
@@ -1696,7 +1698,6 @@ button#btn-psw3 {
     color: var(--neutro500);
 }
 
-/*Termina los videos*/
 
 /*Arrancan los comentarios*/
 
@@ -1793,8 +1794,6 @@ button#btn-psw3 {
     margin-right: 5px;
     margin-top: 4.52px;
 }
-
-
 
 .nombre-comentario,
 .p-comentario,

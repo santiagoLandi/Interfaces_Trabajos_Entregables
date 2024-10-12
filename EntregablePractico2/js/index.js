@@ -3,6 +3,7 @@
 const botonesComprar = document.querySelectorAll('.botonComprar');
 let comprado = 'COMPRADO';
 let jugar = 'JUGAR';
+let btn4EnLinea = document.querySelector("#btn-jugar-4-en-linea");
 
 botonesComprar.forEach(function (botonComprar) {
     botonComprar.addEventListener("click", function () {
@@ -24,3 +25,8 @@ botonesComprar.forEach(function (botonComprar) {
         }
     });
 });
+
+
+btn4EnLinea.addEventListener('click',function(){
+    window.location.href = "juego-4-en-linea.html";});
+

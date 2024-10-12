@@ -2,6 +2,7 @@
 let indice = 0;
 let galeria = ["assets/imagenes/paso1-instrucciones.jpeg", "assets/imagenes/paso2-instrucciones.jpeg", "assets/imagenes/paso3-instrucciones.jpeg", "assets/imagenes/paso4-instrucciones.jpeg"];
 
+let btnVolver = document.querySelector("#btn-volver");
 
 
 let btnPaso1 = document.querySelector("#paso1");
@@ -10,7 +11,6 @@ let btnPaso3 = document.querySelector("#paso3");
 let btnAjustes = document.querySelector("#ajustes");
 
 window.addEventListener("load", mostrarImagen);
-
 
 
 
@@ -42,3 +42,7 @@ btnAjustes.addEventListener('click', function () {
     mostrarImagen();
 });
 
+
+btnVolver.addEventListener('click',function(){
+    window.location.href = "index.html";
+})
