@@ -1,6 +1,6 @@
 "use strict";
 let indice = 0;
-let galeria = ["assets/imagenes/paso1-instrucciones.jpeg", "assets/imagenes/paso2-instrucciones.jpeg", "assets/imagenes/paso3-instrucciones.jpeg", "assets/imagenes/paso4-instrucciones.jpeg"];
+let galeria = ["assets/instrucciones-juego/paso1-instrucciones.jpeg", "assets/instrucciones-juego/paso2-instrucciones.jpeg", "assets/instrucciones-juego/paso3-instrucciones.jpeg", "assets/instrucciones-juego/paso4-instrucciones.jpeg"];
 
 let btnVolver = document.querySelector("#btn-volver");
 
