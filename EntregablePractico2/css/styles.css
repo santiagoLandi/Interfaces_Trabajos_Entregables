@@ -1105,6 +1105,10 @@ label span,
     height: 12px;
 }
 
+.error-input{
+    border: 2px solid var(--acento500);
+}
+
 input#pwd1 {
     width: 82%;
     border-radius: 10px 0 0 10px;
@@ -1125,9 +1129,9 @@ button#btn-psw2 {
     border-radius: 0 10px 10px 0;
     border-left: none;
     align-items: center;
-    border-bottom: 1.600px solid #7a7575;
-    border-top: 1.600px solid #090606;
-    border-right: 1.600px solid #7a7575;
+    border-bottom: 2px solid #7a7575;
+    border-top: 2px solid #090606;
+    border-right: 2px solid #7a7575;
 }
 
 #loading-container {

@@ -8,34 +8,41 @@ const form=document.getElementById("form");
 
 form.addEventListener("submit",e=>{
     e.preventDefault();
-       
-    document.getElementById("ctrlNombre").textContent = "";
-    document.getElementById("ctrlApellido").textContent = "";
-    document.getElementById("ctrlEdad").textContent = "";
-    document.getElementById("ctrlEmail").textContent = "";
-    document.getElementById("ctrlPsw").textContent = "";
-    document.getElementById("ctrlPsw1").textContent = "";
+    
+    //Remueve las clases que se habian colocado en los inputs con error
+    edad.classList.remove("error-input");
+    correo.classList.remove("error-input");
+    clave.classList.remove("error-input");
+    clave2.classList.remove("error-input");
    
     let esValido = true;
     let patronCorreo = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
    
     if(edad.value < 5){
+        //Agrega la clase error al input
+        edad.classList.add("error-input");
         esValido=false;
     }
     if(!patronCorreo.test(correo.value)){
+        //Agrega la clase error al input
+        correo.classList.add("error-input");
         esValido=false;
     }
     
     let patron = /^(?=.*[A-Z])(?=.*\d?).{8,}$/;
 
     if(!patron.test(clave.value)){
+        //Agrega la clase error al input
+        clave.classList.add("error-input");
         esValido=false;
     }else if(clave.value!=clave2.value){
+        //Agrega la clase error al input
+        clave2.classList.add("error-input");
         esValido=false;
     }
     
     if(esValido){
-        validacionCorreo()
+        validacionCorreo();
     }
 
 })
