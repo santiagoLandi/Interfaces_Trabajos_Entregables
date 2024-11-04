@@ -66,6 +66,7 @@ function iniciarJuego() {
     sectionJuegoOpciones.style.display = "flex";
   });
 
+  //Boton para salir del juego
   let btnSalir = document.getElementById("btn-salir");
   btnSalir.addEventListener("click", function () {
     sectionJuego.style.display = "";
@@ -212,7 +213,8 @@ function iniciarJuego() {
       }
     }
   }
-  //Boton salir del juego
+
+  //Boton salir del juego en ejecucion
   let btnGameOut = document.querySelector("#btn-game-out");
   btnGameOut.addEventListener("click", function (event) {
     contentCanvas.style.display = "none";
@@ -222,22 +224,26 @@ function iniciarJuego() {
     sectionJuegoOpciones.style.display = "";
     initVariables();
   });
+
   //Boton reiniciar juego. Reinicia la partida
   let btnReiniciar = document.getElementById("btn-reiniciar");
   btnReiniciar.addEventListener("click", function (event) {
     initVariables();
   });
-  //Eventos del mouse sobre el canvas
-  canvas.addEventListener("mousedown", function (event) {
+
+  //Eventos del mouse al seleccionar una ficha
+  canvas.addEventListener("mousedown", seleccionarFicha);
+
+  function seleccionarFicha(event) {
     if (!finJuego) {
       let mousePos = getMousePos(event);
       if (turno_jugador_1) {
         for (let i = 0; i < arregloFichasJugador1.length; i++) {
           let x = mousePos.x;
           let y = mousePos.y;
-          let dx = Math.abs(x - arregloFichasJugador1[i].getPosCanvasX()); //valor absoluto de la diferencia entre dos números.distancia entre dos puntos sin preocuparte por la dirección (izquierda o derecha en este caso).
+          let dx = Math.abs(x - arregloFichasJugador1[i].getPosCanvasX()); //valor absoluto de la diferencia entre dos números.
           let dy = Math.abs(y - arregloFichasJugador1[i].getPosCanvasY());
-          let distancia = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2)); //distancia euclidiana entre dos puntos en un espacio bidimensional.conecta dos puntos en un plano.
+          let distancia = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2)); //distancia euclidiana entre dos puntos en un espacio bidimensional. conecta dos puntos en un plano.
           if (
             distancia <= arregloFichasJugador1[i].getRadio() &&
             arregloFichasJugador1[i].estaLibre()
@@ -266,10 +272,12 @@ function iniciarJuego() {
         ficha_j2_seleccionada.setClickeada(true);
       }
     }
-  });
+  }
 
   //Movimiento del mouse con el click apretado
-  canvas.addEventListener("mousemove", function (event) {
+  canvas.addEventListener("mousemove", moverFicha);
+
+  function moverFicha(event) {
     let mousePos = getMousePos(event);
 
     // Verificar el turno y mover la ficha seleccionada según el jugador
@@ -297,7 +305,7 @@ function iniciarJuego() {
     if (columna >= 0 && columna <= columnas) {
       dibujarIndicadorColumna(columna);
     }
-  });
+  }
 
   function dibujarIndicadorColumna(columna) {
     const anchoColumna = 60; // Ancho de cada columna en el tablero
@@ -307,19 +315,21 @@ function iniciarJuego() {
 
     // Dibuja un triángulo apuntando hacia abajo como indicador
     ctx.beginPath();
-    ctx.moveTo(posX, posY); // Punto superior
-    ctx.lineTo(posX - 10, posY - 20); // Izquierda
-    ctx.lineTo(posX + 10, posY - 20); // Derecha
+    ctx.moveTo(posX, posY);
+    ctx.lineTo(posX - 10, posY - 20);
+    ctx.lineTo(posX + 10, posY - 20);
     ctx.closePath();
 
     // Color del triángulo
-    ctx.fillStyle = "#FF4F17";
+    ctx.fillStyle = "#A48EFF";
     ctx.fill();
   }
 
-  // Click del mouse levanta----larga la ficha----primero controlo donde--valido POS
-  canvas.addEventListener("mouseup", function (event) {
-    let anchoColumnaInvisible = 60; // Ajusta el ancho de la columna invisible según tus necesidades
+  // Click del mouse levanta --> larga la ficha / primero controlo donde --> valido POS
+  canvas.addEventListener("mouseup", soltarFicha);
+
+  function soltarFicha(event) {
+    let anchoColumnaInvisible = 60;
     let altoColumnaInvisible = 120;
     let columnasInvisibles = [];
     let posicionYInvisible = inicioTableroY - altoColumnaInvisible;
@@ -343,7 +353,7 @@ function iniciarJuego() {
           mousePos.y >= columnaInvisible.y &&
           mousePos.y <= columnaInvisible.y + altoColumnaInvisible
         )
-          //Si se suelta la ficha en un box
+          //Si se suelta la ficha en un box valido
           for (let fil = filas; fil >= 0 && !boxSeleccionado; fil--) {
             if (!matriz_box[col][fil].isOcupado()) {
               matriz_box[col][fil].setOcupado(true);
@@ -392,7 +402,7 @@ function iniciarJuego() {
             // animacion de caida
             colocarFichaConEfecto(ficha, posNueva.x, posNueva.y);
 
-            //Valida si hya un ganador
+            //Valida si hay un ganador
             setTimeout(() => {
               validarJugada(jugador, posX, posY);
 
@@ -409,7 +419,7 @@ function iniciarJuego() {
                 turnoCanvas1.innerHTML = "Turno " + jugador2;
                 turnoCanvas1.style.display = "flex";
               }
-            }, 1500);
+            }, 1500); // tiempo para que cambie de jugador y valide la jugada
           } else {
             //Vuelve al origen
             if (
@@ -447,7 +457,7 @@ function iniciarJuego() {
               // animacion de caida
               colocarFichaConEfecto(ficha, posNueva.x, posNueva.y);
 
-              //Valida si hya un ganador
+              //Valida si hay un ganador
               setTimeout(() => {
                 validarJugada(jugador, posX, posY);
 
@@ -466,7 +476,7 @@ function iniciarJuego() {
                   turnoCanvas1.innerHTML = "Turno " + jugador1;
                   turnoCanvas1.style.display = "none";
                 }
-              }, 1500);
+              }, 1500); // tiempo para que cambie de jugador y valide la jugada
             } else {
               //Vuelve al origen
               if (
@@ -485,7 +495,7 @@ function iniciarJuego() {
     }
     boxSeleccionado = null;
     canvasActualizar();
-  });
+  }
 
   function colocarFichaConEfecto(ficha, posFinalX, posFinalY) {
     ficha.posCanvasX = posFinalX;
@@ -494,7 +504,7 @@ function iniciarJuego() {
 
     function animarCaida() {
       if (posY < posFinalY) {
-        posY += 4; // para la velocidad de la caída
+        posY += 5; // para la velocidad de la caída
         ficha.posCanvasY = posY; // posición de Y en la ficha
         canvasActualizar();
         requestAnimationFrame(animarCaida); // Repite la animación
@@ -507,148 +517,92 @@ function iniciarJuego() {
     animarCaida();
   }
 
-  //Luego de insertar una ficha valida si hay un ganador.
   function validarJugada(jugador, cInicial, fInicial) {
-    let contador = 0;
+    let contador;
     let fichasGanadoras = [];
-    //Valido por columnad desde una posicion inicial hacia la izq y luego hacia la derecha
-    for (let col = cInicial; col >= 0 && !finJuego; col--) {
-      if (matriz_box[col][fInicial].getJugador() === jugador) {
-        fichasGanadoras.push(matriz_box[col][fInicial].getFicha());
-        contador++;
-        if (contador == tipoTablero) {
-          for (let i = 0; i < fichasGanadoras.length; i++) {
-            fichasGanadoras[i].setGanadora(true);
-          }
 
-          finalizarJuego(jugador);
-        }
-      } else {
-        break;
-      }
-    }
-    for (let col = cInicial + 1; col <= columnas && !finJuego; col++) {
+    // Validación horizontal
+    contador = 0;
+    fichasGanadoras = [];
+    for (let col = 0; col <= columnas; col++) {
       if (matriz_box[col][fInicial].getJugador() === jugador) {
+        contador++;
         fichasGanadoras.push(matriz_box[col][fInicial].getFicha());
-        contador++;
-        if (contador == tipoTablero) {
-          for (let i = 0; i < fichasGanadoras.length; i++) {
-            fichasGanadoras[i].setGanadora(true);
-          }
+      } else {
+        contador = 0;
+        fichasGanadoras = [];
+      }
 
-          finalizarJuego(jugador);
-        }
-      } else {
-        break;
+      if (contador === tipoTablero) {
+        fichasGanadoras.forEach((ficha) => ficha.setGanadora(true));
+        return finalizarJuego(jugador);
       }
     }
-    //Valido por filas hacia abajo y luego hacia arriba
+
+    // Validación vertical
     contador = 0;
     fichasGanadoras = [];
-    for (let fil = fInicial; fil >= 0 && !finJuego; fil--) {
+    for (let fil = fInicial; fil <= filas; fil++) {
       if (matriz_box[cInicial][fil].getJugador() === jugador) {
+        contador++;
         fichasGanadoras.push(matriz_box[cInicial][fil].getFicha());
-        contador++;
-        if (contador == tipoTablero) {
-          for (let i = 0; i < fichasGanadoras.length; i++) {
-            fichasGanadoras[i].setGanadora(true);
-          }
-          finalizarJuego(jugador);
-        }
       } else {
         break;
       }
-    }
-    for (let fil = fInicial + 1; fil <= filas && !finJuego; fil++) {
-      if (matriz_box[cInicial][fil].getJugador() === jugador) {
-        fichasGanadoras.push(matriz_box[cInicial][fil].getFicha());
-        contador++;
-        if (contador == tipoTablero) {
-          for (let i = 0; i < fichasGanadoras.length; i++) {
-            fichasGanadoras[i].setGanadora(true);
-          }
-          finalizarJuego(jugador);
-        }
-      } else {
-        break;
+
+      if (contador === tipoTablero) {
+        fichasGanadoras.forEach((ficha) => ficha.setGanadora(true));
+        return finalizarJuego(jugador);
       }
     }
-    //Valido diagonal 1
-    fichasGanadoras = [];
-    contador = 0;
-    let cDiagonal = cInicial;
-    let fDiagonal = fInicial;
-    while (cDiagonal <= columnas && fDiagonal >= 0 && !finJuego) {
-      if (matriz_box[cDiagonal][fDiagonal].getJugador() === jugador) {
-        fichasGanadoras.push(matriz_box[cDiagonal][fDiagonal].getFicha());
-        contador++;
-        if (contador == tipoTablero) {
-          for (let i = 0; i < fichasGanadoras.length; i++) {
-            fichasGanadoras[i].setGanadora(true);
-          }
-          finalizarJuego(jugador);
+
+    // Validación diagonal
+    const direcciones = [
+      { dx: 1, dy: -1 }, // Diagonal 1: abajo-derecha y arriba-izquierda
+      { dx: 1, dy: 1 }, // Diagonal 2: abajo-izquierda y arriba-derecha
+    ];
+
+    for (const { dx, dy } of direcciones) {
+      contador = 1;
+      fichasGanadoras = [matriz_box[cInicial][fInicial].getFicha()]; // Comienza con la ficha inicial
+
+      // Expande hacia una dirección (positiva)
+      for (let paso = 1; paso < tipoTablero; paso++) {
+        let x1 = cInicial + dx * paso;
+        let y1 = fInicial + dy * paso;
+        if (
+          x1 <= columnas &&
+          y1 >= 0 &&
+          y1 <= filas &&
+          matriz_box[x1][y1].getJugador() === jugador
+        ) {
+          contador++;
+          fichasGanadoras.push(matriz_box[x1][y1].getFicha());
+        } else {
+          break;
         }
-        cDiagonal++;
-        fDiagonal--;
-      } else {
-        break;
       }
-    }
-    cDiagonal = cInicial - 1;
-    fDiagonal = fInicial + 1;
-    while (cDiagonal >= 0 && fDiagonal <= filas && !finJuego) {
-      if (matriz_box[cDiagonal][fDiagonal].getJugador() === jugador) {
-        fichasGanadoras.push(matriz_box[cDiagonal][fDiagonal].getFicha());
-        contador++;
-        if (contador == tipoTablero) {
-          for (let i = 0; i < fichasGanadoras.length; i++) {
-            fichasGanadoras[i].setGanadora(true);
-          }
-          finalizarJuego(jugador);
+
+      // Expande en la otra dirección (negativa)
+      for (let paso = 1; paso < tipoTablero; paso++) {
+        let x2 = cInicial - dx * paso;
+        let y2 = fInicial - dy * paso;
+        if (
+          x2 >= 0 &&
+          y2 >= 0 &&
+          y2 <= filas &&
+          matriz_box[x2][y2].getJugador() === jugador
+        ) {
+          contador++;
+          fichasGanadoras.push(matriz_box[x2][y2].getFicha());
+        } else {
+          break;
         }
-        cDiagonal--;
-        fDiagonal++;
-      } else {
-        break;
       }
-    }
-    //Valido diagonal 2
-    contador = 0;
-    fichasGanadoras = [];
-    cDiagonal = cInicial;
-    fDiagonal = fInicial;
-    while (cDiagonal >= 0 && fDiagonal >= 0 && !finJuego) {
-      if (matriz_box[cDiagonal][fDiagonal].getJugador() === jugador) {
-        fichasGanadoras.push(matriz_box[cDiagonal][fDiagonal].getFicha());
-        contador++;
-        if (contador == tipoTablero) {
-          for (let i = 0; i < fichasGanadoras.length; i++) {
-            fichasGanadoras[i].setGanadora(true);
-          }
-          finalizarJuego(jugador);
-        }
-        cDiagonal--;
-        fDiagonal--;
-      } else {
-        break;
-      }
-    }
-    cDiagonal = cInicial + 1;
-    fDiagonal = fInicial + 1;
-    while (cDiagonal <= columnas && fDiagonal <= filas && !finJuego) {
-      if (matriz_box[cDiagonal][fDiagonal].getJugador() === jugador) {
-        fichasGanadoras.push(matriz_box[cDiagonal][fDiagonal].getFicha());
-        contador++;
-        if (contador == tipoTablero) {
-          for (let i = 0; i < fichasGanadoras.length; i++) {
-            fichasGanadoras[i].setGanadora(true);
-          }
-          finalizarJuego(jugador);
-        }
-        cDiagonal++;
-        fDiagonal++;
-      } else {
-        break;
+
+      if (contador == tipoTablero) {
+        fichasGanadoras.forEach((ficha) => ficha.setGanadora(true));
+        return finalizarJuego(jugador);
       }
     }
   }
