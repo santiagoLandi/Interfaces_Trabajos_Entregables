@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos Online</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Fuentes e íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="loading-home">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">
+            <span id="loading-percentage">0%</span>
+        </div>
+    </div>
+    <!-- Header -->
+    <header>
+        <div class="main-header">
+            <div class="header-left">
+                <div class="hamburger-menu" id="burguer">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="logo">
+                    <img src="assets/header/logo.png" alt="Logo" class="logo-img">
+                </div>
+            </div>
+            <div class="header-center">
+                <div class="search-bar">
+                    <input type="text" placeholder="¿A qué jugamos hoy?">
+                    <button type="submit"><img src="assets/header/lupa.png" alt="Buscar"></button>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="shopping-cart" id="pop-bolsa">
+                    <img src="assets/header/cart-claro.png" alt="Carrito">
+                </div>
+                <div id="popup-compras" class="">
+                    <div class="cerrar-popup">
+                        <button id="btn-cerrar-popup-compras" class="btn-cerrar-popup">X</button>
+                    </div>
+                    <div class="encabezado-popup">
+                        <img src="assets/header/cart-claro.png" alt="Carrito">
+                        <h2>Mis Compras</h2>
+                    </div>
+                    <div class="contenido-popup">
+                        <div class="juego-precio">
+                            <p>Jurassic Park</p>
+                            <p>$15</p>
+                        </div>
+                        <p>--------------------</p>
+                        <div class="total-compras">
+                            <p>Total</p>
+                            <p>$25</p>
+                        </div>
+                        <div>
+                            <button class="btn-pagar-compras">PAGAR</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-info" id="usuario">
+                    <span>Pipo19</span>
+                    <img src="assets/menu-usuario/user.png" alt="User Image" class="user-img">
+                </div>
+                <div id="popup-login" class="">
+                    <div class="cerrar-popup">
+                        <button id="btn-cerrar-popup-login" class="btn-cerrar-popup">X</button>
+                    </div>
+                    <div class="encabezado-popup">
+                        <img src="assets/menu-usuario/user.png" alt="user image">
+                        <h3>Pipo19</h3>
+                        <span>juan_tandil@gmail.com</span>
+                    </div>
+                    <div class="contenido-popup-perfil">
+                        <p><img src="assets/menu-usuario/Mi perfil.png" alt="Mi perfil">Mi perfil</p>
+                        <p><img src="assets/menu-usuario/Editar perfil.png" alt="Editar perfil">Editar perfil</p>
+                        <p><img src="assets/menu-usuario/Notificaciones.png" alt="Notificaciones">Preferencias de notificación</p>
+                        <p><img src="assets/menu-usuario/privacidad.png" alt="Privacidad">Preferencias de privacidad</p>
+                        <p><img src="assets/menu-usuario/configurar.png" alt="Configuración">Configuración de cuenta</p>
+                        <p><img src="assets/menu-usuario/Cerrar sesion.png" alt="Cerrar sesion"><a href="inicio-sesion.html">Cerrar sesión</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+   
+    <div class="main-container">
+        <main>
+            <!-- Primera fila: Top juegos gratis de esta semana -->
+            <section class="carousel-section">
+                <h2>Top juegos gratis de esta semana</h2>
+                <div class="carousel-container">
+                    <img class="left-arrow" src="assets/carrusel/flecha-izq.png" alt="flecha-izq">
+                    <div class="carousel-track">
+                        <div class="card">
+                            <img src="assets/juegos/1- Minecraft.jpg" alt="minecraft">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Minecraft</h3>
+                                    <div class="puntuacion">
+                                        <p>4.5</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Aventura</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="boton-cards">JUGAR</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/juegos/2- Tiny Toon.jpg" alt="tinytoon">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>TinyToon</h3>
+                                    <div class="puntuacion">
+                                        <p>4.8</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Aventura</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="boton-cards">JUGAR</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/juegos/3- Cuatro en linea.png" alt="4 en linea">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>4 En Linea</h3>
+                                    <div class="puntuacion">
+                                        <p>4.5</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Multijugador</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button id="btn-jugar-4-en-linea" class="boton-cards">JUGAR</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/juegos/4- Pokemon.webp" alt="pokemon">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Pokémon</h3>
+                                    <div class="puntuacion">
+                                        <p>4.5</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Rol</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="boton-cards">JUGAR</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/juegos/5- Pac-Man.webp" alt="pac-man">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Pac-Man</h3>
+                                    <div class="puntuacion">
+                                        <p>4.5</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Arcade</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="boton-cards">JUGAR</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/juegos/mortal-kombat.png" alt="mortal-kombat">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Mortal Kombat</h3>
+                                    <div class="puntuacion">
+                                        <p>4.8</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Combate</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="boton-cards">JUGAR</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/juegos/fifa-98.png" alt="fifa-98">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>FIFA 98</h3>
+                                    <div class="puntuacion">
+                                        <p>4.1</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Futbol</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="boton-cards">JUGAR</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/juegos/metal-slug.png" alt="metal-slug">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Metal Slug XX</h3>
+                                    <div class="puntuacion">
+                                        <p>3.8</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Acción</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="boton-cards">JUGAR</button>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="right-arrow" src="assets/carrusel/flecha-der.png" alt="flecha-der">
+                </div>
+            </section>
+            <!-- Segunda fila: Compra y disfruta juegos exclusivos -->
+            <section class="carousel-section">
+                <h2>Compra y disfruta juegos exclusivos</h2>
+                <div class="cards-container">
+                    <div class="carousel-cards">
+                        <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
+                            <img src="assets/juegos/6- Sonic.png" alt="sonic">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Sonic</h3>
+                                    <div class="puntuacion">
+                                        <p>4.2</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Arcade</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="botonComprar">$2.99<img src="assets/card/cart-comprar.png"
+                                        alt="carrito"></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
+                            <img src="assets/juegos/7- Jurassic Park.jpg" alt="jurassic park">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Jurassic Park</h3>
+                                    <div class="puntuacion">
+                                        <p>3.85</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Aventura</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="botonComprar">$3.99<img src="assets/card/cart-comprar.png"
+                                        alt="carrito"></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
+                            <img src="assets/juegos/8-poker.png" alt="poker">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Poker</h3>
+                                    <div class="puntuacion">
+                                        <p>4.2</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Mesa</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="botonComprar">$4.99<img src="assets/card/cart-comprar.png"
+                                        alt="carrito"></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
+                            <img src="assets/juegos/9- Fifa street.jpg" alt="fifa street">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>FIFA Street</h3>
+                                    <div class="puntuacion">
+                                        <p>4.2</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Fútbol</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="botonComprar">$8.99<img src="assets/card/cart-comprar.png"
+                                        alt="carrito"></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
+                            <img src="assets/juegos/10- Dragon Ball Z.webp" alt="dragon ball">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Dragon Ball Z</h3>
+                                    <div class="puntuacion">
+                                        <p>4.2</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Acción</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="botonComprar">$8.99<img src="assets/card/cart-comprar.png"
+                                        alt="carrito"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Tercera fila: Juegos recomendados para vos -->
+            <section class="carousel-section">
+                <h2>Juegos recomendados para vos</h2>
+                <div class="cards-container">
+                    <div class="carousel-cards">
+                        <div class="card">
+                            <img src="assets/juegos/11-uno.png" alt="uno">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Uno!</h3>
+                                    <div class="puntuacion">
+                                        <p>4.5</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Multijugador</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="boton-cards">JUGAR</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
+                            <img src="assets/juegos/12- Black Jack.jfif" alt="black jack">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Black Jack</h3>
+                                    <div class="puntuacion">
+                                        <p>4.2</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Mesa</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="botonComprar">$8.99<img src="assets/card/cart-comprar.png"
+                                        alt="carrito"></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/juegos/13- Truco.webp" alt="truco">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Truco</h3>
+                                    <div class="puntuacion">
+                                        <p>4.5</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Multijugador</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="boton-cards">JUGAR</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
+                            <img src="assets/juegos/14- Spades.webp" alt="spades">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Spades</h3>
+                                    <div class="puntuacion">
+                                        <p>4.4</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Mesa</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="botonComprar">$3.99<img src="assets/card/cart-comprar.png"
+                                        alt="carrito"></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
+                            <img src="assets/juegos/15-solitario.png" alt="solitario">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Solitario</h3>
+                                    <div class="puntuacion">
+                                        <p>4.6</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Mesa</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="botonComprar">$8.99<img src="assets/card/cart-comprar.png"
+                                        alt="carrito"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Cuarta fila: Juegos de velocidad -->
+            <section class="carousel-section">
+                <h2>Juegos de velocidad</h2>
+                <div class="cards-container">
+                    <div class="carousel-cards">
+                        <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
+                            <img src="assets/juegos/16- Formula 1.webp" alt="formula 1">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Formula 1</h3>
+                                    <div class="puntuacion">
+                                        <p>4.6</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Autos</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="botonComprar">$18.99<img src="assets/card/cart-comprar.png"
+                                        alt="carrito"></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/juegos/17- Nitro Circus.webp" alt="nitro circus">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Nitro Circus</h3>
+                                    <div class="puntuacion">
+                                        <p>4.5</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Motos</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="boton-cards">JUGAR</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="ribbon" style="display: none;">Comprado</div>
+                            <img src="assets/juegos/18- Moto GP.jpeg" alt="moto gp">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Moto GP</h3>
+                                    <div class="puntuacion">
+                                        <p>4.8</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Motos</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="botonComprar">$15.99<img src="assets/card/cart-comprar.png"
+                                        alt="carrito"></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/juegos/19- Monster Truck.webp" alt="monster truck">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Monster Truck</h3>
+                                    <div class="puntuacion">
+                                        <p>3.9</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Autos</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="boton-cards">JUGAR</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/juegos/20- Rally 2.0.webp" alt="rally">
+                            <div class="texto-cards">
+                                <div class="nombre-y-puntuacion-cards">
+                                    <h3>Rally 2.0</h3>
+                                    <div class="puntuacion">
+                                        <p>4.0</p>
+                                        <img src="assets/card/round-star.png" alt="estrella">
+                                    </div>
+                                </div>
+                                <p class="categoria-card">Multijugador</p>
+                            </div>
+                            <div class="container-boton-card">
+                                <button class="boton-cards">JUGAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <!-- Barra lateral -->
+        <aside>
+            <ul>
+                <li>
+                    <img src="assets/iconos-barra-lateral/home.png" alt="Home">
+                    <span class="categorias"><a href="index.html">Home</a></span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/billar.png" alt="Billar">
+                    <span class="categorias">Billar</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/logica.png" alt="Logica">
+                    <span class="categorias">Logica</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/baseball.png" alt="Baseball">
+                    <span class="categorias">Baseball</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/conduccion.png" alt="Conduccion">
+                    <span class="categorias">Conduccion</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/pelea.png" alt="Pelea">
+                    <span class="categorias">Pelea</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/motociclismo.png" alt="Motociclismo">
+                    <span class="categorias">Motociclismo</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/bowling.png" alt="Bowling">
+                    <span class="categorias">Bowling</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/ping-pong.png" alt="Ping Pong">
+                    <span class="categorias">Ping Pong</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/disparos.png" alt="Disparos">
+                    <span class="categorias">Disparos</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/puzzle.png" alt="Puzzle">
+                    <span class="categorias">Puzzle</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/accion.png" alt="Accion">
+                    <span class="categorias">Accion</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/carrera.png" alt="Autos">
+                    <span class="categorias">Autos</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/olimpicos.png" alt="Olimpicos">
+                    <span class="categorias">Olimpicos</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/multiplayer.png" alt="Multiplayer">
+                    <span class="categorias">Multiplayer</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/cartas.png" alt="Cartas">
+                    <span class="categorias">Cartas</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/medieval.png" alt="Medieval">
+                    <span class="categorias">Medieval</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/ciclismo.png" alt="Ciclismo">
+                    <span class="categorias">Ciclismo</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/basket.png" alt="Basket">
+                    <span class="categorias">Basket</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/escape.png" alt="Escape">
+                    <span class="categorias">Escape</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/terror.png" alt="Terror">
+                    <span class="categorias">Terror</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/tenis.png" alt="Tenis">
+                    <span class="categorias">Tenis</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/enduro.png" alt="Motocross">
+                    <span class="categorias">Motocross</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/aventuraa.png" alt="Aventura">
+                    <span class="categorias">Aventura</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/legos.png" alt="Lego's">
+                    <span class="categorias">Lego's</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/pintura.png" alt="Pintura">
+                    <span class="categorias">Pintura</span>
+                </li>
+                <li>
+                    <img src="assets/iconos-barra-lateral/guerra.png" alt="Guerra">
+                    <span class="categorias">Guerra</span>
+                </li>
+            </ul>
+        </aside>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div>
+            <div class="footer-arriba">
+                <div class="fotter-links">
+                    <h3>Mapa del sitio</h3>
+                    <ul>
+                        <li><a href="#">Pagina principal</a></li>
+                        <li><a href="#">Mi cuenta</a></li>
+                        <li><a href="#">Mi carrito</a></li>
+                        <li><a href="#">Iniciar sesion</a></li>
+                    </ul>
+                </div>
+                <div class="fotter-links">
+                    <h3>Recomendaciones</h3>
+                    <ul>
+                        <li><a href="#">Nuestros recomendados</a></li>
+                        <li><a href="#">Mejores de la semana</a></li>
+                        <li><a href="#">Mas jugados</a></li>
+                        <li><a href="#">Ofertas del mes</a></li>
+                    </ul>
+                </div>
+                <div class="fotter-links">
+                    <h3>Novedades</h3>
+                    <ul>
+                        <li><a href="#">Eventos Especiales</a></li>
+                        <li><a href="#">Proximos Lanzamientos</a></li>
+                        <li><a href="#">Juegos en preventa</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-abajo">
+                <div class="fotter-links">
+                    <h3>Sobre nosotros</h3>
+                    <ul>
+                        <li><a href="#">Quienes somos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Mapa del sitio</a></li>
+                    </ul>
+                </div>
+                <div class="fotter-links">
+                    <h3>Ayuda</h3>
+                    <ul>
+                        <li><a href="#">Terminos y condiciones</a></li>
+                        <li><a href="#">Politicas de privacidad</a></li>
+                        <li><a href="#">Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="fotter-links">
+                    <h3>Seguinos</h3>
+                    <div class="footer-iconos">
+                        <div class="footer-redes">
+                            <img src="assets/footer/LogoFacebook.png" alt="Logo faceboook">
+                            <img src="assets/footer/LogoInstragram.png" alt="Logo instagram">
+                            <img src="assets/footer/LogoTwitter.png" alt="Logo twitter">
+                        </div>
+                        <img src="assets/header/logo.png" class="logo-footer" alt="Logo pagina">
+                    </div>
+                    <ul>
+                        <li><a href="#"></a>Copyright © 2024 Many Games.</li>
+                        <li><a href="#"></a>Todos los derechos reservados.</li>
+                    </ul>
+                </div>
+            </div>
+            <p>Si tenes problemas con el juego comunicate con la linea 6969 de ayuda al ludopata</p>
+        </div>
+    </footer>
+
+    <!-- Scripts JS -->
+
+    <script type="text/javascript" src="js/menu-hamburguesa.js"></script>
+    <script type="text/javascript" src="js/pop-up.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/carrusel.js"></script>
+    <script src="js/loading-home.js"></script>
+</body>
+
+</html>
