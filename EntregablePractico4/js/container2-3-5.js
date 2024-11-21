@@ -27,7 +27,7 @@ window.onscroll = function () {
   }
 
   /** container 5 */
-  /* ubicaciones de inicio y fin de cada imagen con su descripcion */
+  /* ubicaciones de inicio y fin de la pos en 'y' de cada imagen con su descripcion */
   const sections = [
     { img: "#img-0", text: "#text-0", start: 3600, end: 3940 },
     { img: "#img-1", text: "#text-1", start: 3950, end: 4295 },

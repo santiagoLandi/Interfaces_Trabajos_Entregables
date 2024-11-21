@@ -1,5 +1,6 @@
 body {
-  margin-top: 0px;
+  margin: 0px;
+  font-family: "Lato";
 }
 
 .container-pagina {
@@ -21,6 +22,25 @@ body {
   right: 0;
   bottom: 0;
 }
+/* Contenedor de la barra */
+.progress-bar-container {
+  width: 80%;
+  height: 20px;
+  background-color: #ddd; /* Fondo de la barra */
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px auto;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Barra de progreso */
+.progress-bar {
+  height: 100%;
+  width: 0%; /* Inicia vacía */
+  background-color: #02187e; /* Color de la barra */
+  transition: width 0.3s ease-in-out;
+  border-radius: 10px;
+}
 
 #loader {
   background: url(https://raw.githubusercontent.com/IgnacioMurgolo/TPE-Interfaces-Grupo22/main/EntregablePractico4/img/personaje4-480x270-Sheet.png);
@@ -41,7 +61,8 @@ body {
 #loading-text {
   color: #02187e;
   font-size: 40px;
-  font-family: "Lato";
+  font-family: "Sour Gummy", "Lato";
+  font-weight: 600;
   margin-left: 10px;
   text-align: center;
 }
@@ -51,9 +72,9 @@ body {
 
 .container-header {
   width: 1280px;
-  height: 103px;
+  height: 100px;
   margin: 0 auto;
-  background-size: 1280px 100px; /* Define el tamaño específico en píxeles (ancho x alto) */
+  background-size: 1280px 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,28 +107,25 @@ body {
   height: 80px;
   top: 15px;
   left: 565px;
-  transform: none; /* Quita el translate para colocarlo en el header */
+  transform: none;
 }
 
 .menu-hamburguesa {
   margin-left: 96px;
 }
 
-/* inicia el boton comprar*/
+/*  inicia el boton comprar  */
 
 .btn-comprar {
-  width: 200px;
-  height: 50px;
+  width: 222px;
+  height: 66px;
   margin-right: 86px;
-  font-family: "Lato";
   font-size: 20px;
   letter-spacing: calc(20px * 0.11);
-  font-weight: bold;
-  text-shadow: 0.5px 0.5px 0 white, -0.5px 0.5px 0 white, 0.5px -0.5px 0 white,
-    -0.5px -0.5px 0 white;
+  font-weight: 900;
   color: white;
   background-color: #83c252;
-  border: 6px solid white;
+  border: 8px solid white;
   border-radius: 111px;
   box-shadow: 4px 5px #02187e;
   cursor: pointer;
@@ -446,13 +464,12 @@ body {
 .menu-hamburguesa {
   display: flex;
   flex-direction: column;
-  margin-top: 21px;
 }
 
 .linea-hamburguesa {
-  background-color: #ffe901;
+  background-color: #f39e46;
   border-radius: 7px;
-  border: #2981ff 4px solid;
+  border: #ffffff 4px solid;
   width: 34px;
   height: 4px;
   box-shadow: 4px 5px 0 #02187e;
@@ -506,7 +523,6 @@ body {
 }
 .container-header .items-menu.open h3 {
   font-size: 30px;
-  font-family: "Lato";
   background: white;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -532,7 +548,6 @@ body {
 }
 .container-header .items-menu.open li {
   color: #e8e8e8;
-  font-family: "Lato";
   font-size: 20px;
   font-weight: lighter;
 }
@@ -550,20 +565,15 @@ body {
 
 .container-dos {
   position: relative;
-  width: 1280px;
   height: 894px;
   margin: 0 auto;
   background-image: url("../img/container-dos/container-dos.png");
   background-size: contain;
-  background-size: 100% 100%;
-  background-size: 50%;
-  background-size: 1280px 894px;
   z-index: 2;
 }
 
 .subtitulo {
   color: #1b428f;
-  font-family: "Lato";
   font-size: 47px;
   font-weight: 550;
   margin-top: 0px;
@@ -575,7 +585,6 @@ body {
 
 .p-container2 {
   color: #1b428f;
-  font-family: "Lato";
   font-size: 20px;
   width: 704px;
   margin-left: 100px;
@@ -618,7 +627,7 @@ body {
   width: 485px;
   height: 1259px;
   position: absolute;
-  top: -87px;
+  top: -92px;
   right: 0px;
 }
 
@@ -652,7 +661,6 @@ body {
   margin: 0 auto;
   justify-content: space-around;
   font-size: 20px;
-  font-family: "Lato";
   font-weight: 400;
 }
 
@@ -707,39 +715,27 @@ body {
 
 .container-cuatro h2 {
   font-size: 61.14px;
-  font-family: "Lato";
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
-
   color: white;
   width: 950px;
-
   position: absolute;
   top: 175px;
   left: 165px;
 }
 
-.container-cuatro h2 span {
-  font-style: italic;
-}
-
 /*inicia el boton descargar*/
 .container-cuatro .btn-descargar {
-  width: 540px;
-  height: 66px;
+  width: 560px;
+  height: 76px;
   margin-top: 40px;
-
   border-radius: 111px;
   border: 8px solid white;
   background-color: #83c252;
-
-  font-family: "Lato";
   font-size: 31.14px;
-  font-weight: 800;
+  font-weight:600;
   color: white;
-
   box-shadow: 4px 5px #02187e;
-
   cursor: pointer;
   overflow: hidden;
   transition: left 0.5s ease-in-out;
@@ -754,14 +750,14 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  left: -500px;
+  left: -550px;
   top: 0;
   background: linear-gradient(45deg, #36c176, transparent);
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-weight: 800;
+  font-weight:600;
   transition: left 0.5s ease-in-out;
 }
 
@@ -770,14 +766,14 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  right: -500px;
+  right: -550px;
   top: 0;
   background: linear-gradient(45deg, transparent, #36c176);
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-weight: 800;
+  font-weight: 600;
   transition: right 0.5s ease-in-out;
 }
 
@@ -790,6 +786,7 @@ body {
   left: 0;
   animation: infinite-spinning 10s 0.5s infinite;
 }
+
 .container-cuatro .btn-descargar:hover {
   transform: scale(1.1);
   border-color: #80ff72;
@@ -829,7 +826,6 @@ body {
 .container-cinco h2 {
   margin-top: 150px;
   margin-bottom: 0px;
-  font-family: "Lato";
   font-size: 60px;
 }
 
@@ -962,7 +958,6 @@ body {
 }
 
 .subcontainer-cinco-der h3 {
-  font-family: "Lato";
   font-size: 40px;
   font-weight: normal;
   width: 467px;
@@ -970,7 +965,6 @@ body {
 }
 
 .subcontainer-cinco-der p {
-  font-family: "Lato";
   font-size: 20px;
   width: 467px;
   margin: 0;
@@ -990,14 +984,11 @@ body {
 }
 
 .container-seis .titulo-seis {
-  font-family: "Lato";
   font-size: 60px;
-  font-weight: 100;
+  font-weight: 500;
   color: white;
-
   width: 802px;
   margin: 0;
-
   position: absolute;
   top: 309px;
   left: 100px;
@@ -1077,7 +1068,6 @@ body {
 }
 
 .container-siete h2 {
-  font-family: "Lato";
   font-size: 60px;
   font-weight: 550;
   color: #9d2121;
@@ -1091,7 +1081,6 @@ body {
 }
 
 .container-siete p {
-  font-family: "Lato";
   font-size: 20px;
   font-weight: 400;
   text-align: left;
@@ -1316,7 +1305,6 @@ body {
 }
 
 .container-nueve .subcontainer-nueve h2 {
-  font-family: "Lato";
   font-size: 60px;
   font-weight: 550;
   position: absolute;
@@ -1360,7 +1348,6 @@ body {
   background-color: #ececec;
   border: 9px solid white;
   font-size: 20px;
-  font-family: "Lato";
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
   box-shadow: 4px 5px #02187e;
@@ -1368,7 +1355,6 @@ body {
 
 .subcontainer-diez input::placeholder {
   color: rgb(0, 0, 0, 0.39);
-  font-family: "Lato";
   font-size: 20px;
 }
 
@@ -1422,7 +1408,6 @@ body {
 .formulario h2 {
   margin-bottom: 20px;
   margin-top: 0px;
-  font-family: "Lato";
   font-size: 35px;
   font-weight: 550;
 }
@@ -1431,7 +1416,6 @@ body {
   width: 275px;
   margin-bottom: 10px;
   font-size: 20px;
-  font-family: "Lato";
 }
 
 .cont-input label {
@@ -1445,7 +1429,6 @@ body {
   background-color: #ececec;
   border: 5px solid white;
   font-size: 20px;
-  font-family: "Lato";
   border-radius: 50px;
   box-shadow: 4px 5px #02187e;
 }
@@ -1455,7 +1438,6 @@ body {
   height: 50px;
   margin-top: 20px;
 
-  font-family: "Lato";
   font-size: 20px;
   letter-spacing: calc(20px * 0.11);
   font-weight: 900;
@@ -1531,7 +1513,6 @@ body {
   width: 218px;
   height: 100px;
 
-  font-family: "Lato";
   font-size: 20px;
   letter-spacing: calc(20px * 0.11);
   font-weight: bold;
@@ -1614,7 +1595,6 @@ body {
 
 .container-p-diez {
   font-size: 20px;
-  font-family: "Lato";
   width: 578px;
   height: 95px;
   position: absolute;
@@ -1647,7 +1627,7 @@ body {
   left: -387px;
   bottom: 570px;
   animation: moverNube1 40s linear infinite;
-  z-index: 5; 
+  z-index: 5;
 }
 
 @keyframes moverNube1 {
@@ -1668,7 +1648,7 @@ body {
   position: absolute;
   right: -45px;
   bottom: 929px;
-  z-index: 3; 
+  z-index: 3;
   animation: moverNube2 45s linear infinite;
 }
 
@@ -1778,7 +1758,6 @@ body {
   height: 361px;
   margin-top: 0px;
   font-size: 20px;
-  font-family: "Lato";
   letter-spacing: 0.5px;
   color: white;
 }
@@ -1812,7 +1791,7 @@ body {
   }
   to {
     background-position: -2400px;
-  } 
+  }
 }
 
 .sprite-sheet-personaje-5 {
@@ -1820,9 +1799,9 @@ body {
   bottom: 10px;
   right: 5px;
   background-image: url("../img/container-doce/Personaje5-spritesheet-Sheet480x270.png");
-  width: 480px; 
-  height: 270px; 
-  animation: play5 1.6s steps(40) infinite; 
+  width: 480px;
+  height: 270px;
+  animation: play5 1.6s steps(40) infinite;
 }
 
 @keyframes play5 {
@@ -1839,9 +1818,9 @@ body {
   bottom: 10px;
   right: -140px;
   background-image: url("../img/container-doce/Personaje8-spritesheet-Sheet480x270.png");
-  width: 480px; 
-  height: 270px; 
-  animation: play8 1.6s steps(40) infinite; 
+  width: 480px;
+  height: 270px;
+  animation: play8 1.6s steps(40) infinite;
 }
 
 @keyframes play8 {
