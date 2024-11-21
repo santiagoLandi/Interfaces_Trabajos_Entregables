@@ -1,441 +1,435 @@
-body{
-    margin-top: 0px;
+body {
+  margin-top: 0px;
 }
-.container-pagina{
-    width: 1280px;
-    margin: 0 auto;
- 
+.container-pagina {
+  width: 1280px;
+  margin: 0 auto;
+  display: none;
 }
 
 /*----------------------INICIO LOADING-----------------------------------*/
 #loader-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: rgb(168, 235, 236, 86%); 
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: rgb(168, 235, 236, 86%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#loader {
+  background: url(/EntregablePractico4/img/personaje4-480x270-Sheet.png);
+  background-size: auto 100%;
+  width: 480px;
+  height: 270px;
+  animation: playSpritesheet 1.5s steps(40) infinite;
+}
+
+@keyframes playSpritesheet {
+  from {
+    background-position: 0;
   }
-  #loader {
-    background: url(/EntregablePractico4/img/personaje4-480x270-Sheet.png); 
-    background-size: auto 100%;
-    width: 480px;
-    height: 270px;
-    animation: playSpritesheet 1.5s steps(40) infinite; 
+  to {
+    background-position: -19200px;
   }
-  
-  @keyframes playSpritesheet {
-    from { background-position: 0; }
-    to { background-position: -19200px; } 
-  }
-  #loading-text {
-    color: #02187E; 
-    font-size: 40px;
-    font-family: 'Lato';
-    margin-left: 10px;
-    text-align: center;
-  }
+}
+#loading-text {
+  color: #02187e;
+  font-size: 40px;
+  font-family: "Lato";
+  margin-left: 10px;
+  text-align: center;
+}
 /*----------------------FIN LOADING--------------------------------------*/
 
 /*----------------------INICIO CONTAINER 1-------------------------------*/
 
-.container-header{
-    width: 1280px;
-    height: 103px;
-    margin: 0 auto;
-    background-color: transparent;
-    background-size: contain; /* La imagen se ajusta para que toda sea visible sin recortarse */
-    background-size: 100% 100%; /* La imagen se estira para ocupar todo el fondo */
-    background-size: 50%; /* Define el tamaño en porcentaje (ancho) */
-    background-size: 1280px 100px; /* Define el tamaño específico en píxeles (ancho x alto) */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0; /* Se fija en la parte superior */
-    z-index: 10; 
-    transition: background-color 0.3s ease;
+.container-header {
+  width: 1280px;
+  height: 103px;
+  margin: 0 auto;
+  background-size: 1280px 100px; /* Define el tamaño específico en píxeles (ancho x alto) */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: background-color 0.3s ease;
 }
 
 .container-header.scrolled {
-    background-color: #00D1D5; /* Color sólido cuando se hace scroll */
+  background-color: #00d1d5; /* Color sólido cuando se hace scroll */
 }
 
 .logo {
-    width: 560px; /* Tamaño del logo */
-    height: 320px;
-    background-image: url('../img/Logo-pagina.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute; /* Para centrar en el viewport */
-    top: 150%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    transition: all 0.5s ease; /* Suaviza el cambio de tamaño y posición */
+  width: 560px;
+  height: 320px;
+  background-image: url("../img/Logo-pagina.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute; /* Para centrar en el viewport */
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
 }
 
 .logo-small {
-    width: 150px; /* Tamaño reducido del logo */
-    height: 80px;
-    top: 15px;  /* Posición dentro del header */
-    left: 565px;
-    transform: none; /* Quita el translate para colocarlo en el header */
+  width: 150px;
+  height: 80px;
+  top: 15px;
+  left: 565px;
+  transform: none; /* Quita el translate para colocarlo en el header */
 }
 
-.menu-hamburguesa{
-    margin-left: 96px;
+.menu-hamburguesa {
+  margin-left: 96px;
 }
 
 /* inicia el boton comprar*/
 
-.btn-comprar{
-    width: 200px;
-    height: 50px;
-    margin-right: 86px;
-    font-family: 'Lato';
-    font-size: 20px;
-    letter-spacing: calc(20px * 0.11);
-    font-weight: bold;
-    text-shadow: 0.5px 0.5px 0 white, -0.5px 0.5px 0 white, 0.5px -0.5px 0 white, -0.5px -0.5px 0 white;
-    color: white;
-    background-color: #83C252;
-    border: 6px solid white;
-    border-radius: 111px;
-    box-shadow: 4px 5px #02187E;
-
-    cursor: pointer;
-    overflow: hidden;
-    transition: left 0.5s ease-in-out;
-    position: relative;
+.btn-comprar {
+  width: 200px;
+  height: 50px;
+  margin-right: 86px;
+  font-family: "Lato";
+  font-size: 20px;
+  letter-spacing: calc(20px * 0.11);
+  font-weight: bold;
+  text-shadow: 0.5px 0.5px 0 white, -0.5px 0.5px 0 white, 0.5px -0.5px 0 white,
+    -0.5px -0.5px 0 white;
+  color: white;
+  background-color: #83c252;
+  border: 6px solid white;
+  border-radius: 111px;
+  box-shadow: 4px 5px #02187e;
+  cursor: pointer;
+  overflow: hidden;
+  transition: left 0.5s ease-in-out;
+  position: relative;
 }
 
 .btn-comprar:before {
-    content: "COMPRAR";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: -200px;
-    top: 0;
-    background: linear-gradient(45deg, #36C176, transparent);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-    text-shadow: 0.5px 0.5px 0 white, -0.5px 0.5px 0 white, 0.5px -0.5px 0 white, -0.5px -0.5px 0 white;
-    transition: left 0.5s ease-in-out;
+  content: "COMPRAR";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -200px;
+  top: 0;
+  background: linear-gradient(45deg, #36c176, transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0.5px 0.5px 0 white, -0.5px 0.5px 0 white, 0.5px -0.5px 0 white,
+    -0.5px -0.5px 0 white;
+  transition: left 0.5s ease-in-out;
 }
 
 .btn-comprar:after {
-    content: "COMPRAR";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    right: -200px;
-    top: 0;
-    background: linear-gradient(45deg, transparent, #36C176);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-    text-shadow: 0.5px 0.5px 0 white, -0.5px 0.5px 0 white, 0.5px -0.5px 0 white, -0.5px -0.5px 0 white;
-    transition: right 0.5s ease-in-out;
+  content: "COMPRAR";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: -200px;
+  top: 0;
+  background: linear-gradient(45deg, transparent, #36c176);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0.5px 0.5px 0 white, -0.5px 0.5px 0 white, 0.5px -0.5px 0 white,
+    -0.5px -0.5px 0 white;
+  transition: right 0.5s ease-in-out;
 }
 
 .btn-comprar:hover:after {
-    right: 0;
-    animation: infinite-spinning 10s 0.5s infinite;
+  right: 0;
+  animation: infinite-spinning 10s 0.5s infinite;
 }
 
 .btn-comprar:hover:before {
-    left: 0;
-    animation: infinite-spinning 10s 0.5s infinite;
-} 
-.btn-comprar:hover{
-    transform: scale(1.10);
-    border-color: #80FF72;
-    box-shadow: 0 0 15px 5px #80FF72;
-} 
+  left: 0;
+  animation: infinite-spinning 10s 0.5s infinite;
+}
+.btn-comprar:hover {
+  transform: scale(1.1);
+  border-color: #80ff72;
+  box-shadow: 0 0 15px 5px #80ff72;
+}
 
 .btn-comprar:active {
-    background-color: #83C252;;
-    box-shadow: 4px 5px #02187E;
-    transform: translateY(4px);
+  background-color: #83c252;
+  box-shadow: 4px 5px #02187e;
+  transform: translateY(4px);
 }
 
 /* termina el boton comprar*/
 
-.container-1{
-    width: 1280px;
-    height: 959px;
-    margin-top: -100px;
-    position: relative;
-    overflow: hidden; 
+.container-1 {
+  width: 1280px;
+  height: 959px;
+  margin-top: -100px;
+  position: relative;
+  overflow: hidden;
 }
 
-.layer{
-    width: 100%;
-    height: 100%;
-    position: relative;
+.layer {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .layer1 {
-    background-image: url('../img/container-uno/container-uno.png'); /* Ajusta la ruta */
-    background-size: cover; /* Cubre toda la capa */
-    background-position: center;
-    position: absolute; /* Asegura que se alinee bien dentro del viewport */
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transform: translateZ(0px);
+  background-image: url("../img/container-uno/container-uno.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: translateZ(0px);
 }
 
 .layer2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    transform: translateZ(50px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transform: translateZ(50px);
 }
 
 .image {
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .image-pasto4 {
-    background-image: url('../img/container-uno/pasto-4.png');
-    width: 191.19px;
-    height: 63.28px;
-    top: 610px;/*le saque 20px del original para que cuadre*/
-    left: 1028.46px;
+  background-image: url("../img/container-uno/pasto-4.png");
+  width: 191.19px;
+  height: 63.28px;
+  top: 610px;
+  left: 1028.46px;
 }
 
 .image-arbol3 {
-    background-image: url('../img/container-uno/arbol-3.png');
-    width: 278.03px;
-    height: 430.85px;
-    top: 258.38px;/*le saque 20px del original para que cuadre*/
-    left: 1080.97px;
+  background-image: url("../img/container-uno/arbol-3.png");
+  width: 278.03px;
+  height: 430.85px;
+  top: 258.38px;
+  left: 1080.97px;
 }
 
-.image-personaje3{
-    background-image: url('../img/container-uno/personaje-3.png');
-    width: 174px;
-    height: 384px;
-   /* top: 360px;/*le subi 20px del original para que cuadre*/
-    bottom: 209px;
-    left: 694px;
-    /* transform: rotate(-8.74deg);  */
-    /* transform-origin: center;  */
+.image-personaje3 {
+  background-image: url("../img/container-uno/personaje-3.png");
+  width: 174px;
+  height: 384px;
+  bottom: 209px;
+  left: 694px;
 }
 
 .layer3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-    transform: translateZ(100px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  transform: translateZ(100px);
 }
 
-.image-pasto3{
-    background-image: url('../img/container-uno/pasto-3.png');
-    width: 244.37px;
-    height: 107.71px;
-    top: 662.1px;
-    left: 1080.97px;
-
+.image-pasto3 {
+  background-image: url("../img/container-uno/pasto-3.png");
+  width: 244.37px;
+  height: 107.71px;
+  top: 662.1px;
+  left: 1080.97px;
 }
 
-.image-personaje2{
-    background-image: url('../img/container-uno/personaje-2.png');
-    width: 197px;
-    height: 270px;
-    bottom: 282px;
-    left: 545px;
+.image-personaje2 {
+  background-image: url("../img/container-uno/personaje-2.png");
+  width: 197px;
+  height: 270px;
+  bottom: 282px;
+  left: 545px;
 }
 
 .layer4 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 4;
-    transform: translateZ(150px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  transform: translateZ(150px);
 }
 
-
-.image-personaje1{
-    background-image: url('../img/container-uno/personaje-1.png');
-    width: 240.4px;
-    height: 314.48px;
-    top: 493px;
-    left: 370px;
-    transform: rotate(-6.51deg);
-    transform-origin: center;
+.image-personaje1 {
+  background-image: url("../img/container-uno/personaje-1.png");
+  width: 240.4px;
+  height: 314.48px;
+  top: 493px;
+  left: 370px;
+  transform: rotate(-6.51deg);
+  transform-origin: center;
 }
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-250px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .image-personaje1,
 .image-personaje2,
 .image-personaje3 {
-    animation: fadeIn 1s ease-out;
+  animation: fadeIn 1s ease-out;
 }
 
-.image-arbol2{
-    background-image: url('../img/container-uno/arbol-2.png');
-    width: 434.21px;
-    height: 672.52px;
-    top: 107.04px;
-    left: 881.21px;
+.image-arbol2 {
+  background-image: url("../img/container-uno/arbol-2.png");
+  width: 434.21px;
+  height: 672.52px;
+  top: 107.04px;
+  left: 881.21px;
 }
 
-.image-piedra4{
-    background-image: url('../img/container-uno/piedra-4.png');
-    width: 66.55px;
-    height: 56.55px;
-    top: 737.5px;
-    left: 1035.38px;
+.image-piedra4 {
+  background-image: url("../img/container-uno/piedra-4.png");
+  width: 66.55px;
+  height: 56.55px;
+  top: 737.5px;
+  left: 1035.38px;
 }
 
-.image-piedra3{
-    background-image: url('../img/container-uno/piedra-3.png');
-    width: 74.05px;
-    height: 113.77px;
-    top: 737.82px;
-    left: 1072.4px;
+.image-piedra3 {
+  background-image: url("../img/container-uno/piedra-3.png");
+  width: 74.05px;
+  height: 113.77px;
+  top: 737.82px;
+  left: 1072.4px;
 }
 
-.image-piedra2{
-    background-image: url('../img/container-uno/piedra-2.png');
-    
-    width: 59.24px;
-    height: 35.01px;
-    top: 766.97px;
-    left: 1052.78px;
-    bottom: 137.33px;
+.image-piedra2 {
+  background-image: url("../img/container-uno/piedra-2.png");
+  width: 59.24px;
+  height: 35.01px;
+  top: 766.97px;
+  left: 1052.78px;
+  bottom: 137.33px;
 }
-
 
 .layer5 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-    transform: translateZ(200px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  transform: translateZ(200px);
 }
 
-.image-pasto1{
-    background-image: url('../img/container-uno/pasto-1.png');
-    background-position: center;
-    width: 249.76px;
-    height: 114.44px;
-    left: 161px;
-    bottom: 128px;
+.image-pasto1 {
+  background-image: url("../img/container-uno/pasto-1.png");
+  background-position: center;
+  width: 249.76px;
+  height: 114.44px;
+  left: 161px;
+  bottom: 128px;
 }
 
-.image-arbol1{
-    background-image: url('../img/container-uno/arbol-1.png');
-    background-position: center;
-    width: 560.1px;
-    height: 867.75px;
-    right: 871px;
-    bottom: 92.23px;
+.image-arbol1 {
+  background-image: url("../img/container-uno/arbol-1.png");
+  background-position: center;
+  width: 560.1px;
+  height: 867.75px;
+  right: 871px;
+  bottom: 92.23px;
 }
 
-
-
-.image-piedra1{
-    background-image: url('../img/container-uno/piedra-1.png');
-    background-position: center;
-    width: 145.41px;
-    height: 78.09px;
-    left: 129px;
-    bottom: 87.52px;
+.image-piedra1 {
+  background-image: url("../img/container-uno/piedra-1.png");
+  background-position: center;
+  width: 145.41px;
+  height: 78.09px;
+  left: 129px;
+  bottom: 87.52px;
 }
 
 @keyframes loadLayer5 {
-    from {
-        opacity: 0;
-        transform: translateX(-250px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .image-pasto1,
 .image-piedra1,
 .image-arbol1 {
-    animation: loadLayer5 1s ease-out;
+  animation: loadLayer5 1s ease-out;
 }
 
 .layer6 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 6;
-    transform: translateZ(250px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  transform: translateZ(250px);
 }
 
-.image-pasto2{
-    background-image: url('../img/container-uno/pasto-2.png');
-    background-position: center;
-    width: 155.51px;
-    height: 102.33px;
-    left: 197.25px;
-    bottom: 35.03px;
+.image-pasto2 {
+  background-image: url("../img/container-uno/pasto-2.png");
+  background-position: center;
+  width: 155.51px;
+  height: 102.33px;
+  left: 197.25px;
+  bottom: 35.03px;
 }
 @keyframes loadLayer6 {
-    from {
-        opacity: 0;
-        transform: translateX(-250px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.image-pasto2{
-    animation: loadLayer5 1s ease-out;
+.image-pasto2 {
+  animation: loadLayer5 1s ease-out;
 }
 
 @keyframes loadFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(250px); /* Mueve los elementos desde más a la derecha */
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0); /* Posición final */
-    }
+  from {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .image-arbol2,
@@ -445,142 +439,139 @@ body{
 .image-arbol3,
 .image-pasto3,
 .image-pasto4 {
-    animation: loadFromRight 1s ease-out;
+  animation: loadFromRight 1s ease-out;
 }
 
-.menu-hamburguesa{
-    display: flex;
-    flex-direction: column;
-    margin-top: 21px;
+.menu-hamburguesa {
+  display: flex;
+  flex-direction: column;
+  margin-top: 21px;
 }
-.linea-hamburguesa{
-    background-color: #ffe901;
-    border-radius: 7px;
-    border: #2981ff 4px solid;
-    width: 34px;
-    height: 4px;
-    box-shadow: 4px 5px 0 #02187e;
-    margin-top: -1px;
+
+.linea-hamburguesa {
+  background-color: #ffe901;
+  border-radius: 7px;
+  border: #2981ff 4px solid;
+  width: 34px;
+  height: 4px;
+  box-shadow: 4px 5px 0 #02187e;
+  margin-top: -1px;
 }
-  /*-------------menu en cruz-------------*/
-  .menu-hamburguesa {
+
+/*-------------menu en cruz-------------*/
+.menu-hamburguesa {
+  #linea1 {
+    transform-origin: top left;
+  }
+  #linea2 {
+    opacity: 1;
+  }
+  #linea3 {
+    transform-origin: bottom left;
+  }
+  &.active {
     #linea1 {
-        transform-origin: top left;
+      transform: translate(0px, -2px) rotate(45deg);
+      transition: transform 1s ease;
     }
     #linea2 {
-        opacity: 1;
+      opacity: 0;
+      width: 0;
     }
     #linea3 {
-        transform-origin: bottom left;
-    }
-    &.active {
-        #linea1 {
-            transform: translate(0px, -2px) rotate(45deg);
-            transition: transform 1s ease;
-        }
-        #linea2 {
-            opacity: 0;
-            width: 0;
-        }
-        #linea3 {
-            transform: translate(-3px, 5px) rotate(-45deg);
-            transition: transform 1s ease;
-        } 
+      transform: translate(-3px, 5px) rotate(-45deg);
+      transition: transform 1s ease;
     }
   }
-  /*----------------menu desplegable------------------------------------*/
-  .items-menu{
-    overflow: hidden;
-    height: 0;
-    width: 0;
-    opacity: 0;
-    margin-top: 10px; 
-    z-index: 4;
-  }
-  .container-header .items-menu.open {
-    height: 500px;
-    width: 250px; 
-    position: fixed;
-    background-color: #00D1D5 ;
-    border-radius: 7px;
-    /* padding: 20px 10px; */
-    opacity: 1;
-    margin-left: -100px;
-    cursor: pointer;
-  }
-  .container-header .items-menu.open h3 {
-    font-size: 30px;
-    font-family: 'Lato';
-    background: white; 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    transform: translateX(50px);
-    transition: transform 1s ease-out;
-    text-align: center;
-    margin-right: 110px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .container-header .items-menu.open ul {
-    /* border-bottom: 3px solid #83C252; */
-    transform: translateX(30px);
-    transition: transform 2s ease-out;
-    color: white;
-    list-style: none;
-    opacity: 1;
-    text-align: center;
-    margin-right: 110px;
-  }
-  .container-header .items-menu ul {
-   opacity: 0;
-  }
-  .container-header .items-menu.open li {
-    color: #e8e8e8;
-    font-family: 'Lato';
-    font-size: 20px;
-    font-weight: lighter;
-   
-  
-  }
-  .container-header .items-menu.open li:hover {
-    background: linear-gradient(180deg, #921ae8 50%, #e5dfcc 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    cursor: pointer;
-  }
+}
+/*----------------menu desplegable------------------------------------*/
+.items-menu {
+  overflow: hidden;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  margin-top: 10px;
+  z-index: 4;
+}
+.container-header .items-menu.open {
+  height: 500px;
+  width: 250px;
+  position: fixed;
+  background-color: #00d1d5;
+  border-radius: 7px;
+  opacity: 1;
+  margin-left: -100px;
+  cursor: pointer;
+}
+.container-header .items-menu.open h3 {
+  font-size: 30px;
+  font-family: "Lato";
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: translateX(50px);
+  transition: transform 1s ease-out;
+  text-align: center;
+  margin-right: 110px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.container-header .items-menu.open ul {
+  transform: translateX(30px);
+  transition: transform 2s ease-out;
+  color: white;
+  list-style: none;
+  opacity: 1;
+  text-align: center;
+  margin-right: 110px;
+}
+.container-header .items-menu ul {
+  opacity: 0;
+}
+.container-header .items-menu.open li {
+  color: #e8e8e8;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: lighter;
+}
+.container-header .items-menu.open li:hover {
+  background: linear-gradient(180deg, #921ae8 50%, #e5dfcc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  cursor: pointer;
+}
 
 /*----------------------FIN CONTAINER 1 y MENU DESPLEGABLE-------------------------------*/
-
 
 /*----------------------INICIO CONTAINER 2-------------------------------*/
 
 .container-dos {
-    position: relative;
-    width: 1280px;
-    height: 894px;
-    margin: 0 auto;
-    background-image: url("../img/container-dos/container-dos.png");
-    background-size: contain; /* La imagen se ajusta para que toda sea visible sin recortarse */
-    background-size: 100% 100%; /* La imagen se estira para ocupar todo el fondo */
-    background-size: 50%; /* Define el tamaño en porcentaje (ancho) */
-    background-size: 1280px 894px; /* Define el tamaño específico en píxeles (ancho x alto) */
-    z-index: 2;
+  position: relative;
+  width: 1280px;
+  height: 894px;
+  margin: 0 auto;
+  background-image: url("../img/container-dos/container-dos.png");
+  background-size: contain;
+  background-size: 100% 100%;
+  background-size: 50%;
+  background-size: 1280px 894px;
+  z-index: 2;
 }
-  
+
 .subtitulo {
-    color: #1b428f;
-    font-family: "Lato";
-    font-size: 47px;
-    font-weight: 550;
-    margin-top: 0px;
-    margin-left: 100px;
-    margin-bottom: 0px;
-    padding-top: 30px;
-    width: 508px;
+  color: #1b428f;
+  font-family: "Lato";
+  font-size: 47px;
+  font-weight: 550;
+  margin-top: 0px;
+  margin-left: 100px;
+  margin-bottom: 0px;
+  padding-top: 30px;
+  width: 508px;
 }
-  
+
 .p-container2 {
   color: #1b428f;
   font-family: "Lato";
@@ -589,45 +580,45 @@ body{
   margin-left: 100px;
   margin-top: 22px;
 }
-  
+
 .container-galeria-imagenes {
-    width: 580px;
-    left: 236px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+  width: 580px;
+  left: 236px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .galeria {
-    z-index: 1;
+  z-index: 1;
 }
-  
+
 #slideshow-image {
-    margin-left: 15px;
-    width: 547px;
-    height: 287px;
-    border-radius: 77px;
-    position: absolute;
-    transition: opacity 0.5s ease;
+  margin-left: 15px;
+  width: 547px;
+  height: 287px;
+  border-radius: 77px;
+  position: absolute;
+  transition: opacity 0.5s ease;
 }
 
 .personaje-4 {
-    width: 601.64px; 
-    height: 589px; 
-    position: absolute;
-    top: 544px; 
-    left: 48px;
+  width: 601.64px;
+  height: 589px;
+  position: absolute;
+  top: 544px;
+  left: 48px;
 
-    z-index: 1;
+  z-index: 1;
 }
 
 .personaje-5 {
-    width: 485px; 
-    height: 1259px; 
-    position: absolute;
-    top: -87px;
-    right: 0px;
+  width: 485px;
+  height: 1259px;
+  position: absolute;
+  top: -87px;
+  right: 0px;
 }
 
 #titulo,
@@ -635,53 +626,49 @@ body{
 #galeria,
 #personaje4,
 #personaje5 {
-    transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
 }
 /*----------------------FIN CONTAINER 2-------------------------------*/
 
-
 /*----------------------INICIO CONTAINER 3-------------------------------*/
-  
+
 .container-tres {
-    position: relative;
-    width: 1280px;
-    height: 1343px;
-    margin-top: -372px;
-    background-image: url("../img/container-tres/rectangle-2.png");
-    background-size: 1280px 1334px; /* Define el tamaño específico en píxeles (ancho x alto)*/
+  position: relative;
+  width: 1280px;
+  height: 1343px;
+  margin-top: -372px;
+  background-image: url("../img/container-tres/rectangle-2.png");
+  background-size: 1280px 1334px;
 }
 
 .container-img-juegos {
-    position: absolute;
-    height: 685px;
-    top: 610px;
-    left: 100px;
-    display: flex;
-    width: 1080px;
-    margin: 0 auto;
-    justify-content: space-around;
-
-    font-size: 20px;
-    font-family: 'Lato';
-    font-weight: 400;
+  position: absolute;
+  height: 685px;
+  top: 610px;
+  left: 100px;
+  display: flex;
+  width: 1080px;
+  margin: 0 auto;
+  justify-content: space-around;
+  font-size: 20px;
+  font-family: "Lato";
+  font-weight: 400;
 }
 
 .imagen-texto {
-    position: relative;
-    width: 314.96px;
-    top: 702px;
-    opacity: 0;
-    transition: opacity 1s, transform 2s;
+  position: relative;
+  width: 314.96px;
+  top: 702px;
 }
-  
+
 .container-imagen-texto {
-    position: absolute;
+  position: absolute;
 }
-  
+
 .imagen-texto.visible {
-    opacity: 1;
+  opacity: 1;
 }
-  
+
 .trio-imagen {
   width: 332.96px;
   height: 302.69px;
@@ -691,204 +678,199 @@ body{
   align-items: center;
   justify-content: center;
 }
-  
+
 .trio-imagen img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Asegura que la imagen cubra todo el espacio manteniendo el aspecto */
-  border-radius: 41px; /* Bordes redondeados */
+  border-radius: 41px;
 }
-
 /*----------------------FIN CONTAINER 3-------------------------------*/
 
 /*----------------------INICIO CONTAINER 4-------------------------------*/
 .container-cuatro {
-    width: 1280px;
-    height: 1157px;
-    margin: 0 auto;
-    background-image: url('../img/container-cuatro/container-cuatro.png');
-    background-size: contain; /* La imagen se ajusta para que toda sea visible sin recortarse */
-    background-size: 100% 100%; /* La imagen se estira para ocupar todo el fondo */
-  
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-
+  width: 1280px;
+  height: 1157px;
+  margin: 0 auto;
+  background-image: url("../img/container-cuatro/container-cuatro.png");
+  background-size: contain; /* La imagen se ajusta para que toda sea visible sin recortarse */
+  background-size: 100% 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.container-cuatro #parallax-cuatro{
-    margin-top: 420px;
+.container-cuatro #parallax-cuatro {
+  margin-top: 420px;
 }
 
-.container-cuatro h2{
-    font-size: 61.14px;
-    font-family: 'Lato';
-    font-weight: 600;
-    text-align: center;
+.container-cuatro h2 {
+  font-size: 61.14px;
+  font-family: "Lato";
+  font-weight: 600;
+  text-align: center;
 
-    color: white;
-    width: 950px; 
-    
-    position: absolute;
-    top:175px;
-    left:165px;
+  color: white;
+  width: 950px;
 
+  position: absolute;
+  top: 175px;
+  left: 165px;
 }
 
-.container-cuatro h2 span{
-    font-style: italic;
+.container-cuatro h2 span {
+  font-style: italic;
 }
 
 /*inicia el boton descargar*/
 .container-cuatro .btn-descargar {
-    width: 540px;
-    height: 66px;
-    margin-top: 40px;
+  width: 540px;
+  height: 66px;
+  margin-top: 40px;
 
-    border-radius: 111px;
-    border: 8px solid white;
-    background-color: #83C252;
+  border-radius: 111px;
+  border: 8px solid white;
+  background-color: #83c252;
 
-    font-family: 'Lato';
-    font-size: 31.14px;
-    font-weight: 800;
-    color: white;
+  font-family: "Lato";
+  font-size: 31.14px;
+  font-weight: 800;
+  color: white;
 
-    box-shadow: 4px 5px #02187E;
+  box-shadow: 4px 5px #02187e;
 
-    cursor: pointer;
-    overflow: hidden;
-    transition: left 0.5s ease-in-out;
-    position: relative;
-    top: 390px;
-    left: 370px;
-    z-index: 999;
+  cursor: pointer;
+  overflow: hidden;
+  transition: left 0.5s ease-in-out;
+  position: relative;
+  top: 390px;
+  left: 370px;
+  z-index: 999;
 }
 
 .container-cuatro .btn-descargar:before {
-    content: "¡Descarga NumberBlocks hoy!";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: -500px;
-    top: 0;
-    background: linear-gradient(45deg, #36C176, transparent);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: 800;
-    transition: left 0.5s ease-in-out;
+  content: "¡Descarga NumberBlocks hoy!";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -500px;
+  top: 0;
+  background: linear-gradient(45deg, #36c176, transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 800;
+  transition: left 0.5s ease-in-out;
 }
 
 .container-cuatro .btn-descargar:after {
-    content: "¡Descarga NumberBlocks hoy!";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    right: -500px;
-    top: 0;
-    background: linear-gradient(45deg, transparent, #36C176);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: 800;
-    transition: right 0.5s ease-in-out;
+  content: "¡Descarga NumberBlocks hoy!";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: -500px;
+  top: 0;
+  background: linear-gradient(45deg, transparent, #36c176);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 800;
+  transition: right 0.5s ease-in-out;
 }
 
 .container-cuatro .btn-descargar:hover:after {
-    right: 0;
-    animation: infinite-spinning 10s 0.5s infinite;
+  right: 0;
+  animation: infinite-spinning 10s 0.5s infinite;
 }
 
 .container-cuatro .btn-descargar:hover:before {
-    left: 0;
-    animation: infinite-spinning 10s 0.5s infinite;
+  left: 0;
+  animation: infinite-spinning 10s 0.5s infinite;
 }
-.container-cuatro .btn-descargar:hover{
-    transform: scale(1.10);
-    border-color: #80FF72;  
-    box-shadow: 0 0 15px 5px #80FF72;
-    cursor: pointer;
+.container-cuatro .btn-descargar:hover {
+  transform: scale(1.1);
+  border-color: #80ff72;
+  box-shadow: 0 0 15px 5px #80ff72;
+  cursor: pointer;
 }
 
 .container-cuatro .btn-descargar:active {
-    background-color: #83C252;;
-    box-shadow: 4px 5px #02187E;
-    transform: translateY(4px);
+  background-color: #83c252;
+  box-shadow: 4px 5px #02187e;
+  transform: translateY(4px);
 }
 /*termina el boton descargar*/
 
-#parallax-cuatro{
-    width: 1280px;
-    height: 745px;
-  
-    position: absolute;
-    
-    background-image: url("../img/container-cuatro/personajes.png");
-    background-repeat: no-repeat;
-    background-size: 1300px 800px; /* Tamaño específico del fondo en píxeles */
-    z-index: 2;
-    
+#parallax-cuatro {
+  width: 1280px;
+  height: 745px;
+
+  position: absolute;
+
+  background-image: url("../img/container-cuatro/personajes.png");
+  background-repeat: no-repeat;
+  background-size: 1300px 800px; /* Tamaño específico del fondo en píxeles */
+  z-index: 2;
 }
 /*----------------------FIN CONTAINER 4-------------------------------*/
 
 /*----------------------INICIO CONTAINER 5-------------------------------*/
 
 .container-cinco {
-    width: 1080px;
-    height: auto;
-    margin: 0 auto;
-    background-color: white;
+  width: 1080px;
+  height: auto;
+  margin: 0 auto;
+  background-color: white;
 }
 
 .container-cinco h2 {
-    margin-top: 150px;
-    margin-bottom: 0px;
-    font-family: "Lato";
-    font-size: 60px;
+  margin-top: 150px;
+  margin-bottom: 0px;
+  font-family: "Lato";
+  font-size: 60px;
 }
 
 .subcontainer-cinco {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
-    gap: 20px; /* Espacio entre las columnas */
-    align-items: start;
-    grid-template-areas: "izquierda derecha";
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+  grid-template-areas: "izquierda derecha";
 }
 /*  izq */
 .subcontainer-cinco-izq {
-    grid-area: izquierda;
-    width: 530px;
-    height: 4190px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
+  grid-area: izquierda;
+  width: 530px;
+  height: 4190px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
 }
 
 .imagenes-izq {
-    top: 25%;
-    width: 100%;
-    height: 510px;
-    position: sticky;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  top: 25%;
+  width: 100%;
+  height: 510px;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .img {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    opacity: 0;
-    transform: scale(1);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .img-visible {
-    opacity: 1;
-    transform: scale(1.2);
+  opacity: 1;
+  transform: scale(1.2);
 }
 
 #img-0,
@@ -902,13 +884,13 @@ body{
 #img-8,
 #img-9,
 #img-10 {
-  background-size: contain; 
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #img-0 {
-    background-image: url(../img/container-cinco/img-0.png);
+  background-image: url(../img/container-cinco/img-0.png);
 }
 
 #img-1 {
@@ -953,1058 +935,921 @@ body{
 
 /*  der */
 .subcontainer-cinco-der {
-    grid-area: derecha;
-    height: 4290px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    gap: 60px;
+  grid-area: derecha;
+  height: 4290px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 60px;
 }
 
 .text {
-    width: 100%;
-    height: 305px;
-    display: flex;
-    flex-direction: column;
-    position: sticky;
-    opacity: 0;
-    transition: all 0.3s ease-in;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 305px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-visible {
-    top: 150px;
-    opacity: 1;
+  top: 150px;
+  opacity: 1;
 }
 
 .subcontainer-cinco-der h3 {
-    font-family: "Lato";
-    font-size: 40px;
-    font-weight: normal;
-    width: 467px;
-    margin: 40px 0px 20px 0px;
+  font-family: "Lato";
+  font-size: 40px;
+  font-weight: normal;
+  width: 467px;
+  margin: 40px 0px 20px 0px;
 }
 
 .subcontainer-cinco-der p {
-    font-family: "Lato";
-    font-size: 20px;
-    width: 467px;
-    margin: 0;
+  font-family: "Lato";
+  font-size: 20px;
+  width: 467px;
+  margin: 0;
 }
-
 /*----------------------FIN CONTAINER 5-------------------------------*/
-
 
 /*----------------------INICIO CONTAINER 6-------------------------------*/
 .container-seis {
-    width: 1280px;
-    height: 1443.83px;
-    margin: 0 auto;
-    background-image: url('../img/container-seis/container-seis.png');
-    background-position: center;
-    background-size: 1280px 1443px; /* Define el tamaño específico en píxeles (ancho x alto) */
-    position: relative;
-    overflow: hidden;
+  width: 1280px;
+  height: 1443.83px;
+  margin: 0 auto;
+  background-image: url("../img/container-seis/container-seis.png");
+  background-position: center;
+  background-size: 1280px 1443px;
+  position: relative;
+  overflow: hidden;
 }
 
-.container-seis .titulo-seis{
-    font-family: 'Lato';
-    font-size: 60px;
-    font-weight: 100;
-    color: white;
+.container-seis .titulo-seis {
+  font-family: "Lato";
+  font-size: 60px;
+  font-weight: 100;
+  color: white;
 
-    width: 802px;
-    margin: 0;
+  width: 802px;
+  margin: 0;
 
-    position: absolute;
-    top: 309px;
-    left: 100px;
-
+  position: absolute;
+  top: 309px;
+  left: 100px;
 }
 
 .seis-personaje-3 {
-    width: 638px;
-    height: 989px;
-
-    position: absolute;
-
-    top: 352px;
-    right: -639px;
-    
-    transition: right 1.2s ease,opacity 1.2s ease; 
-
+  width: 638px;
+  height: 989px;
+  position: absolute;
+  top: 352px;
+  right: -639px;
+  transition: right 1.2s ease, opacity 1.2s ease;
 }
 
 .container-principal-video {
-    position: absolute;
-    top: 546px;
-    left: -806px;  
-
-    width: 804px; 
-    height: 452px;
-
-    overflow: hidden;
-    transition: left 1s ease,opacity 1s ease; 
+  position: absolute;
+  top: 546px;
+  width: 804px;
+  height: 452px;
+  overflow: hidden;
+  transition: left 1s ease, opacity 1s ease;
 }
 
 .container-video {
-    position: relative;
-
-    width: 100%;
-    height: 100%;
-
-    box-shadow: inset 0 0 0 42px white; 
-    border-radius: 40px; 
-    overflow: hidden
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 42px white;
+  border-radius: 40px;
+  overflow: hidden;
 }
 
 .video {
-    position: absolute;
-    width: 747px;
-    height: 394px;
-    top: 29px;
-    left: 29px;
-
-    border-radius: 44px;
-    border: none; 
+  position: absolute;
+  width: 747px;
+  height: 394px;
+  top: 29px;
+  left: 29px;
+  border-radius: 44px;
+  border: none;
 }
 
-.imagen-video{
-    position: relative;
-    width: 747px;
-    height: 394px;
-    top: 29px;
-    left: 29px;
-
-    visibility: visible;
-    
+.imagen-video {
+  position: relative;
+  width: 747px;
+  height: 394px;
+  top: 29px;
+  left: 29px;
+  visibility: visible;
 }
 
-.btn-video{
-    width: 101px;
-    height: 101px;
-    background-color: transparent;
-    border: transparent;
-
-    position: absolute;
-    left: 352px;
-    top:  175px;
-    z-index: 1;
-
-    visibility: visible;
+.btn-video {
+  width: 101px;
+  height: 101px;
+  background-color: transparent;
+  border: transparent;
+  position: absolute;
+  left: 352px;
+  top: 175px;
+  z-index: 1;
+  visibility: visible;
 }
 
-.btn-video:hover{
-    transform: scale(1.3);
+.btn-video:hover {
+  transform: scale(1.3);
 }
-
-
 /*----------------------FIN CONTAINER 6-------------------------------*/
 
 /*----------------------INICIO CONTAINER 7-------------------------------*/
 
 .container-siete {
-    width: 1280px;
-    height: 1046px;
-    margin-top: -1px;
-    background-color: white;
-
-    position: relative;
-
+  width: 1280px;
+  height: 1046px;
+  margin-top: -1px;
+  background-color: white;
+  position: relative;
 }
 
 .container-siete h2 {
-    font-family: 'Lato';
-    font-size: 60px;
-    font-weight: 550;
-    color: #9D2121;
-
-    width: 746px;
-    margin-bottom: 23px;
-    margin-top: 0px; 
-
-    position: absolute;
-    top:220px;
-    left: 100px;
-
-    z-index: 2;
+  font-family: "Lato";
+  font-size: 60px;
+  font-weight: 550;
+  color: #9d2121;
+  width: 746px;
+  margin-bottom: 23px;
+  margin-top: 0px;
+  position: absolute;
+  top: 220px;
+  left: 100px;
+  z-index: 2;
 }
 
 .container-siete p {
-    font-family: 'Lato';
-    font-size: 20px;
-    font-weight: 400;
-    text-align: left;
-
-    width: 467px;
-    height: 190px;
-    position: absolute;
-
-    top: 591px;
-    left: 100px;
-    
-    z-index: 2;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  width: 467px;
+  height: 190px;
+  position: absolute;
+  top: 591px;
+  left: 100px;
+  z-index: 2;
 }
 
 #reveal {
-    width: 667px;
-    height: 973px;
-
-    position: absolute;
-    top: 7px;
-    right: 8px;
-
-    z-index: 0;
-
+  width: 667px;
+  height: 973px;
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  z-index: 0;
 }
-
 /*----------------------FIN CONTAINER 7-------------------------------*/
 
 /*----------------------INICIO CONTAINER 8-------------------------------*/
 
 .container-ocho {
-    width: 1280px;
-    height: 729px;
-    margin: 0 auto;
-
-    background-image: url('../img/container-ocho/container-ocho.png');
-    background-position: center;
-    background-size: cover;
+  width: 1280px;
+  height: 729px;
+  margin: 0 auto;
+  background-image: url("../img/container-ocho/container-ocho.png");
+  background-position: center;
+  background-size: cover;
 }
 
 .container-ocho-superior {
-    width: 1280px;
-    height: 389px;
-    position: relative;  
+  width: 1280px;
+  height: 389px;
+  position: relative;
 }
 
 .container-ocho-inferior {
-    width: 1280px;
-    height: 340px;
-    position: relative;
-   
-    z-index: 1;
+  width: 1280px;
+  height: 340px;
+  position: relative;
 }
 
 .personaje-1-color {
-    width: 251px;
-    height: 374px; 
-
-    position: absolute;
-    left:0px;
-    top:0px;
-
-    transition: transform 0.4s ease, box-shadow 0.4s ease, left 0.4s ease, top 0.4s ease;
-} 
-
-.personaje-1-color img{
-    width: 100%;
-    height: 100%;
+  width: 251px;
+  height: 374px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, left 0.4s ease,
+    top 0.4s ease;
 }
 
 .personaje-1-color:hover {
-    transform: scale(1.05);
-    border: 1px solid red;
-    box-shadow: 0 0 60px red;
-    left: 6.4px;
-    top: 9.5px;
-    
+  transform: scale(1.05);
+  border: 1px solid red;
+  box-shadow: 0 0 60px red;
+  left: 6.4px;
+  top: 9.5px;
 }
 
-.personaje-2-color{
-    width: 234px;
-    height: 374px;
-
-    position: absolute;
-    left: 280px;
-    top:0px;
-
-    transition: transform 0.4s ease, box-shadow 0.4s ease, top 0.4s ease;
-} 
-
-.personaje-2-color img{
-    width: 100%;
-    height: 100%;
+.personaje-2-color {
+  width: 234px;
+  height: 374px;
+  position: absolute;
+  left: 280px;
+  top: 0px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, top 0.4s ease;
 }
 
 .personaje-2-color:hover {
-    transform: scale(1.05);
-    border: 1px solid rgb(255, 157, 0);
-    box-shadow: 0 0 60px rgb(255, 157, 0);;
-    top: 9.5px;
-
+  transform: scale(1.05);
+  border: 1px solid rgb(255, 157, 0);
+  box-shadow: 0 0 60px rgb(255, 157, 0);
+  top: 9.5px;
 }
 
 .personaje-3-color {
-    width: 237px;
-    height: 374px;
-
-    position: absolute;
-    left: 544px;
-    top:0px;
-
-    transition: transform 0.4s ease, box-shadow 0.4s ease, top 0.4s ease;
-}
-
-.personaje-3-color img{
-    width: 100%;
-    height: 100%;
+  width: 237px;
+  height: 374px;
+  position: absolute;
+  left: 544px;
+  top: 0px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, top 0.4s ease;
 }
 
 .personaje-3-color:hover {
-    transform: scale(1.05); 
-    border: 1px solid rgb(234, 255, 0);
-    box-shadow: 0 0 60px rgb(234, 255, 0);
-    top: 9.5px;
-
+  transform: scale(1.05);
+  border: 1px solid rgb(234, 255, 0);
+  box-shadow: 0 0 60px rgb(234, 255, 0);
+  top: 9.5px;
 }
 
 .personaje-4-color {
-    width: 225px;
-    height: 374px;
-
-    position: absolute;
-    left: 811px;
-    top:0px;
-
-    transition: transform 0.4s ease, box-shadow 0.4s ease, top 0.4s ease;
-}
-
-.personaje-4-color img{
-    width: 100%;
-    height: 100%;
+  width: 225px;
+  height: 374px;
+  position: absolute;
+  left: 811px;
+  top: 0px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, top 0.4s ease;
 }
 
 .personaje-4-color:hover {
-    transform: scale(1.05);
-    border: 1px solid rgb(38, 255, 0);
-    box-shadow: 0 0 60px rgb(38, 255, 0);
-    top: 9.5px;
-
+  transform: scale(1.05);
+  border: 1px solid rgb(38, 255, 0);
+  box-shadow: 0 0 60px rgb(38, 255, 0);
+  top: 9.5px;
 }
 
 .personaje-5-color {
-    width: 213px;
-    height: 374px;
-
-    position: absolute;
-    right: 0px;
-    top:0px;
-
-    transition: transform 0.4s ease, box-shadow 0.4s ease, right 0.4s ease, top 0.4s ease;
-}
-
-.personaje-5-color img{
-    width: 100%;
-    height: 100%;
+  width: 213px;
+  height: 374px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, right 0.4s ease,
+    top 0.4s ease;
 }
 
 .personaje-5-color:hover {
-    transform: scale(1.05); 
-    border: 1px solid rgb(0, 255, 229);
-    box-shadow: 0 0 60px rgb(0, 255, 229);
-    top: 9.5px;
-    right: 5px;
-
+  transform: scale(1.05);
+  border: 1px solid rgb(0, 255, 229);
+  box-shadow: 0 0 60px rgb(0, 255, 229);
+  top: 9.5px;
+  right: 5px;
 }
 
 .personaje-6-color {
-    width: 249px;
-    height: 325px;
-
-    position: absolute;
-    left: 0px;
-    bottom:0px;
-    
-    transition: transform 0.4s ease, box-shadow 0.4s ease, left 0.4s ease, bottom 0.4s ease;
-}
-
-.personaje-6-color img{
-    width: 100%;
-    height: 100%;
+  width: 249px;
+  height: 325px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, left 0.4s ease,
+    bottom 0.4s ease;
 }
 
 .personaje-6-color:hover {
-    transform:scale(1.05); 
-    border: 1px solid rgb(157, 0, 255); 
-    box-shadow: 0 0 60px rgb(157, 0, 255);
-    left: 6.5px;
-    bottom: 8.2px;
-
+  transform: scale(1.05);
+  border: 1px solid rgb(157, 0, 255);
+  box-shadow: 0 0 60px rgb(157, 0, 255);
+  left: 6.5px;
+  bottom: 8.2px;
 }
 
-.personaje-7-color{
-    width: 234px;
-    height: 325px;
-
-    position: absolute;
-    left: 280px;
-    bottom:0;
-
-    transition: transform 0.4s ease, box-shadow 0.4s ease, bottom 0.4s ease;
-} 
-
-.personaje-7-color img{
-    width: 100%;
-    height: 100%;
+.personaje-7-color {
+  width: 234px;
+  height: 325px;
+  position: absolute;
+  left: 280px;
+  bottom: 0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, bottom 0.4s ease;
 }
 
 .personaje-7-color:hover {
-    transform: scale(1.05); 
-    border: 1px solid rgb(0, 213, 255);
-    box-shadow: 0 0 60px rgb(0, 213, 255);
-    bottom: 8.2px;
-
+  transform: scale(1.05);
+  border: 1px solid rgb(0, 213, 255);
+  box-shadow: 0 0 60px rgb(0, 213, 255);
+  bottom: 8.2px;
 }
 
 .personaje-8-color {
-    width: 237px;
-    height: 325px;
-
-    position: absolute;
-    left: 545px;
-    bottom:0px;
-
-    transition: transform 0.4s ease, box-shadow 0.4s ease, bottom 0.4s ease;
-}
-
-.personaje-8-color img{
-    width: 100%;
-    height: 100%;
+  width: 237px;
+  height: 325px;
+  position: absolute;
+  left: 545px;
+  bottom: 0px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, bottom 0.4s ease;
 }
 
 .personaje-8-color:hover {
-    transform: scale(1.05); 
-    border: 1px solid rgb(255, 0, 204);
-    box-shadow: 0 0 60px rgb(255, 0, 204);
-    bottom: 8.2px;
-
+  transform: scale(1.05);
+  border: 1px solid rgb(255, 0, 204);
+  box-shadow: 0 0 60px rgb(255, 0, 204);
+  bottom: 8.2px;
 }
 
 .personaje-9-color {
-    width: 224px;
-    height: 324px;
-
-    position: absolute;
-    left: 812px;
-    bottom:0px;
-
-    transition: transform 0.4s ease, box-shadow 0.4s ease, bottom 0.4s ease;
-}
-
-.personaje-9-color img{
-    width: 100%;
-    height: 100%;
+  width: 224px;
+  height: 324px;
+  position: absolute;
+  left: 812px;
+  bottom: 0px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, bottom 0.4s ease;
 }
 
 .personaje-9-color:hover {
-    transform: scale(1.05); 
-    border: 1px solid rgba(100, 100, 100);
-    box-shadow: 0 0 60px rgba(100, 100, 100);
-    bottom: 8.2px;
-
+  transform: scale(1.05);
+  border: 1px solid rgba(100, 100, 100);
+  box-shadow: 0 0 60px rgba(100, 100, 100);
+  bottom: 8.2px;
 }
 
 .personaje-10-color {
-    width: 213px;
-    height: 324px;
-
-    position: absolute;
-    right: 0px;
-    bottom:0px;
-
-    transition: transform 0.4s ease, box-shadow 0.4s ease, right 0.4s ease, bottom 0.4s ease;
-}
-
-.personaje-10-color img{
-    width: 100%;
-    height: 100%;
+  width: 213px;
+  height: 324px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, right 0.4s ease,
+    bottom 0.4s ease;
 }
 
 .personaje-10-color:hover {
-    transform: scale(1.05); 
-    border: 1px solid rgb(253, 252, 254);
-    box-shadow: 0 0 60px rgb(253, 252, 254);
-    bottom: 7px;
-    right: 5px;
-
+  transform: scale(1.05);
+  border: 1px solid rgb(253, 252, 254);
+  box-shadow: 0 0 60px rgb(253, 252, 254);
+  bottom: 7px;
+  right: 5px;
 }
-
 /*----------------------FIN CONTAINER 8-------------------------------*/
-
 
 /*----------------------INICIO CONTAINER 9-------------------------------*/
 
 .container-nueve {
-    width: 1280;
-    height: 272px;
-    margin: 0 auto;
-    background-color: white;
-    position: relative;
+  width: 1280;
+  height: 272px;
+  margin: 0 auto;
+  background-color: white;
+  position: relative;
 }
 
 .container-nueve .subcontainer-nueve h2 {
-    font-family: 'Lato';
-    font-size: 60px;
-    font-weight: 550;
-
-    position: absolute;
-    bottom: -85px;
-    left: 100px;
-    z-index: 1;
-
-    width: 816px;
-    margin: 0px;
-    color: black;
+  font-family: "Lato";
+  font-size: 60px;
+  font-weight: 550;
+  position: absolute;
+  bottom: -85px;
+  left: 100px;
+  z-index: 1;
+  width: 816px;
+  margin: 0px;
+  color: black;
 }
-
 /*----------------------FIN CONTAINER 9-------------------------------*/
 
 /*----------------------INICIO CONTAINER 10-------------------------------*/
 
 .container-diez {
-    width: 1280px;
-    height: 1296px;
-    overflow: hidden;
-    margin: 0 auto;
-    background-image: url('../img/container-diez/container-diez.png');
-    background-position: center;
-    background-size: 1280px 1296px; /* Define el tamaño específico en píxeles (ancho x alto) */
+  height: 1296px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-image: url("../img/container-diez/container-diez.png");
+  background-position: center;
+  background-size: 1280px 1296px; /* Define el tamaño específico en píxeles (ancho x alto) */
 
-    position: relative;
+  position: relative;
 }
 
 .subcontainer-diez {
-    display: flex;
-    align-items: center;
-
-    width: 785px;
-    height: 100px;
-
-    position: absolute;
-    top: 123px;
-    left: 100px;
-
-    z-index: 6;
+  display: flex;
+  align-items: center;
+  width: 785px;
+  height: 100px;
+  position: absolute;
+  top: 123px;
+  left: 100px;
+  z-index: 6;
 }
 
-.subcontainer-diez input{
-    width: 554px;
-    height: 80.01px;
-    padding-left: 53px;
-    background-color: #ECECEC;
-    border: 9px solid white;
-    font-size: 20px;
-    font-family: 'Lato';
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    box-shadow: 4px 5px #02187E;
-
+.subcontainer-diez input {
+  width: 554px;
+  height: 80.01px;
+  padding-left: 53px;
+  background-color: #ececec;
+  border: 9px solid white;
+  font-size: 20px;
+  font-family: "Lato";
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  box-shadow: 4px 5px #02187e;
 }
 
-.subcontainer-diez input::placeholder{
-    color: rgb(0, 0, 0, 0.39);
-    font-family: 'Lato';
-    font-size: 20px;
+.subcontainer-diez input::placeholder {
+  color: rgb(0, 0, 0, 0.39);
+  font-family: "Lato";
+  font-size: 20px;
 }
-
 
 #id_del_popover::backdrop {
-    background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0, 0.5);
 }
 
 #id_del_popover {
-    border: 7px solid #1B5F99;
-    border-radius: 29px;
-
-    width: 426.67px;
-    height: 432px;
-
-    background-image: url(../img/container-diez/container-diez.png);
-    background-position: center;
-    background-size: cover;
+  border: 7px solid #1b5f99;
+  border-radius: 29px;
+  width: 426.67px;
+  height: 432px;
+  background-image: url(../img/container-diez/container-diez.png);
+  background-position: center;
+  background-size: cover;
 }
 
-
-.cont-btn-cerrar{
-    display: flex;
-    justify-content: end;
-    margin-top: 10px;
-    margin-right: 10px;
+.cont-btn-cerrar {
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 .btn-cerrar {
-    color: #F39E46;
-    font-size: 20px;
-    font-weight: 900;
-    background-color: white;
-    border: 1px solid #02187E;
-    border-radius: 5px;
-    box-shadow: 2px 2px #02187E;
+  color: #f39e46;
+  font-size: 20px;
+  font-weight: 900;
+  background-color: white;
+  border: 1px solid #02187e;
+  border-radius: 5px;
+  box-shadow: 2px 2px #02187e;
 }
 
 .btn-cerrar:hover {
-    transform: scale(1.10);
-    border-color: #02187E; 
-    box-shadow: 0 0 5px 1.70px #02187E;
-    cursor: pointer;
+  transform: scale(1.1);
+  border-color: #02187e;
+  box-shadow: 0 0 5px 1.7px #02187e;
+  cursor: pointer;
 }
 
 .formulario {
-    height: 385px;
-    margin-top: -23px;
+  height: 385px;
+  margin-top: -23px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}   
 .formulario h2 {
-    margin-bottom: 20px;
-    margin-top: 0px;
-    font-family: 'Lato';
-    font-size: 35px;
-    font-weight: 550;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  font-family: "Lato";
+  font-size: 35px;
+  font-weight: 550;
 }
 
 .cont-input {
-    width: 275px;
-    margin-bottom: 10px;
-
-    font-size: 20px;
-    font-family: 'Lato';
+  width: 275px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: "Lato";
 }
 
 .cont-input label {
-    margin-bottom: 5px;
-    margin-left: 8px;
+  margin-bottom: 5px;
+  margin-left: 8px;
 }
 
 .cont-input input {
-    width: 235px;
-    padding-left: 20px;
-
-    background-color: #ECECEC;
-    border: 5px solid white;
-    font-size: 20px;
-    font-family: 'Lato';
-    border-radius: 50px;
-    box-shadow: 4px 5px #02187E;
+  width: 235px;
+  padding-left: 20px;
+  background-color: #ececec;
+  border: 5px solid white;
+  font-size: 20px;
+  font-family: "Lato";
+  border-radius: 50px;
+  box-shadow: 4px 5px #02187e;
 }
 
-.btn-registrarse{
-    width: 200px;
-    height: 50px;
-    margin-top: 20px;
+.btn-registrarse {
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
 
-    font-family: 'Lato';
-    font-size: 20px;
-    letter-spacing: calc(20px * 0.11);
-    font-weight: 900;
-    color: white;
-    
-    background-color: #83C252;
-    border: 6px solid white;
-    border-radius: 111px;
-    box-shadow: 4px 5px #02187E;
+  font-family: "Lato";
+  font-size: 20px;
+  letter-spacing: calc(20px * 0.11);
+  font-weight: 900;
+  color: white;
 
-    cursor: pointer;
-    overflow: hidden;
-    transition: left 0.5s ease-in-out;
-    position: relative;
+  background-color: #83c252;
+  border: 6px solid white;
+  border-radius: 111px;
+  box-shadow: 4px 5px #02187e;
+
+  cursor: pointer;
+  overflow: hidden;
+  transition: left 0.5s ease-in-out;
+  position: relative;
 }
 
 .btn-registrarse:before {
-    content: "Registrarse";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: -200px;
-    top: 0;
-    background: linear-gradient(45deg, #36C176, transparent);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: 900;
-  
-    transition: left 0.5s ease-in-out;
+  content: "Registrarse";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -200px;
+  top: 0;
+  background: linear-gradient(45deg, #36c176, transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 900;
+  transition: left 0.5s ease-in-out;
 }
 
 .btn-registrarse:after {
-    content: "Registrarse";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    right: -200px;
-    top: 0;
-    background: linear-gradient(45deg, transparent, #36C176);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: 900;
-   
-    transition: right 0.5s ease-in-out;
+  content: "Registrarse";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: -200px;
+  top: 0;
+  background: linear-gradient(45deg, transparent, #36c176);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 900;
+  transition: right 0.5s ease-in-out;
 }
 
 .btn-registrarse:hover:after {
-    right: 0;
-    animation: infinite-spinning 10s 0.5s infinite;
+  right: 0;
+  animation: infinite-spinning 10s 0.5s infinite;
 }
 
 .btn-registrarse:hover:before {
-    left: 0;
-    animation: infinite-spinning 10s 0.5s infinite;
-} 
-.btn-registrarse:hover{
-    transform: scale(1.10);
-    border-color: #80FF72;
-    box-shadow: 0 0 15px 5px #80FF72;
-} 
+  left: 0;
+  animation: infinite-spinning 10s 0.5s infinite;
+}
+
+.btn-registrarse:hover {
+  transform: scale(1.1);
+  border-color: #80ff72;
+  box-shadow: 0 0 15px 5px #80ff72;
+}
 
 .btn-registrarse:active {
-    background-color: #83C252;;
-    box-shadow: 4px 5px #02187E;
-    transform: translateY(4px);
+  background-color: #83c252;
+  box-shadow: 4px 5px #02187e;
+  transform: translateY(4px);
 }
 
 /*Inicia boton suscribirse*/
-.subcontainer-diez button{
-    width: 218px;
-    height: 100px;
+.subcontainer-diez button {
+  width: 218px;
+  height: 100px;
 
-    font-family: 'Lato';
-    font-size: 20px;
-    letter-spacing: calc(20px * 0.11);
-    font-weight: bold;
-    text-shadow: 0.5px 0.5px 0 white, -0.5px 0.5px 0 white, 0.5px -0.5px 0 white, -0.5px -0.5px 0 white;
-    color: white;
+  font-family: "Lato";
+  font-size: 20px;
+  letter-spacing: calc(20px * 0.11);
+  font-weight: bold;
+  text-shadow: 0.5px 0.5px 0 white, -0.5px 0.5px 0 white, 0.5px -0.5px 0 white,
+    -0.5px -0.5px 0 white;
+  color: white;
 
-    border: 9px solid white;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    box-shadow: 4px 5px #02187E;
-    margin-left: -5px;
+  border: 9px solid white;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 4px 5px #02187e;
+  margin-left: -5px;
 
-    background-color: #83C252;
+  background-color: #83c252;
 
-    cursor: pointer;
-    overflow: hidden;
-    transition: left 0.5s ease-in-out;
-    position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: left 0.5s ease-in-out;
+  position: relative;
 }
 
 .subcontainer-diez button:before {
-    content: "SUSCRIBIRSE";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: -200px;
-    top: 0;
-    background: linear-gradient(45deg, #36C176, transparent);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-    text-shadow: 0.5px 0.5px 0 white, -0.5px 0.5px 0 white, 0.5px -0.5px 0 white, -0.5px -0.5px 0 white;
-    transition: left 0.5s ease-in-out;
+  content: "SUSCRIBIRSE";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -200px;
+  top: 0;
+  background: linear-gradient(45deg, #36c176, transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0.5px 0.5px 0 white, -0.5px 0.5px 0 white, 0.5px -0.5px 0 white,
+    -0.5px -0.5px 0 white;
+  transition: left 0.5s ease-in-out;
 }
 
 .subcontainer-diez button:after {
-    content: "SUSCRIBIRSE";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    right: -200px;
-    top: 0;
-    background: linear-gradient(45deg, transparent, #36C176);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-    text-shadow: 0.5px 0.5px 0 white, -0.5px 0.5px 0 white, 0.5px -0.5px 0 white, -0.5px -0.5px 0 white;
-    transition: right 0.5s ease-in-out;
+  content: "SUSCRIBIRSE";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: -200px;
+  top: 0;
+  background: linear-gradient(45deg, transparent, #36c176);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0.5px 0.5px 0 white, -0.5px 0.5px 0 white, 0.5px -0.5px 0 white,
+    -0.5px -0.5px 0 white;
+  transition: right 0.5s ease-in-out;
 }
 
 .subcontainer-diez button:hover:after {
-    right: 0;
-    animation: infinite-spinning 10s 0.5s infinite;
+  right: 0;
+  animation: infinite-spinning 10s 0.5s infinite;
 }
 
 .subcontainer-diez button:hover:before {
-    left: 0;
-    animation: infinite-spinning 10s 0.5s infinite;
-} 
-.subcontainer-diez button:hover{
-    transform: scale(1.10);
-    border-color: #80FF72;
-    box-shadow: 0 0 15px 5px #80FF72;
-} 
+  left: 0;
+  animation: infinite-spinning 10s 0.5s infinite;
+}
+
+.subcontainer-diez button:hover {
+  transform: scale(1.1);
+  border-color: #80ff72;
+  box-shadow: 0 0 15px 5px #80ff72;
+}
 
 .subcontainer-diez button:active {
-    background-color: #83C252;;
-    box-shadow: 4px 5px #02187E;
-    transform: translateY(4px);
+  background-color: #83c252;
+  box-shadow: 4px 5px #02187e;
+  transform: translateY(4px);
 }
 /*Termina boton suscribirse*/
 
 .container-p-diez {
-    font-size: 20px;
-    font-family: 'Lato';
-    width: 578px;
-    height: 95px;
-
-    position: absolute;
-    left: 100px;
-    top: 250px;
-
-    margin-bottom: 11px;
-
-    z-index: 6;
+  font-size: 20px;
+  font-family: "Lato";
+  width: 578px;
+  height: 95px;
+  position: absolute;
+  left: 100px;
+  top: 250px;
+  margin-bottom: 11px;
+  z-index: 6;
 }
 
-.container-p-diez span{
-    text-decoration: underline;
+.container-p-diez span {
+  text-decoration: underline;
 }
 
 .teen {
-    width: 231px;
-    height: 145px;
-
-    position: absolute;
-    bottom: 776px;
-    left: 100px;
-
-    z-index: 6;
+  width: 231px;
+  height: 145px;
+  position: absolute;
+  bottom: 776px;
+  left: 100px;
+  z-index: 6;
 }
 
 .nube-1 {
-    width: 387px;
-    height: 181px;
-
-    background-image: url('../img/container-diez/nube-1.png');
-    background-position: center;
-    background-size: cover;
-
-    position: absolute;
-    left: -387px;
-    bottom: 570px;
-
-    animation: moverNube1 40s linear infinite;
-
-    z-index: 5; /*agregue esto */
-
+  width: 387px;
+  height: 181px;
+  background-image: url("../img/container-diez/nube-1.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: -387px;
+  bottom: 570px;
+  animation: moverNube1 40s linear infinite;
+  z-index: 5; 
 }
 
 @keyframes moverNube1 {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(1680px); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(1680px);
+  }
 }
 
 .nube-2 {
-    width: 265px;
-    height: 124px;
-
-    background-image: url('../img/container-diez/nube-2.png');
-    background-position: center;
-    background-size: cover;
-
-    position: absolute;
-    right: -45px;
-    bottom: 929px;
-    z-index: 3; /*agregue esto*/
-
-    animation: moverNube2 45s linear infinite;
+  width: 265px;
+  height: 124px;
+  background-image: url("../img/container-diez/nube-2.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  right: -45px;
+  bottom: 929px;
+  z-index: 3; 
+  animation: moverNube2 45s linear infinite;
 }
 
 @keyframes moverNube2 {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-1350px); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1350px);
+  }
 }
 
 .nube-3 {
-    width: 387px;
-    height: 181px;
-
-    background-image: url('../img/container-diez/nube-3.png');
-    background-position: center;
-    background-size: cover;
-
-    position: absolute;
-    right: -457px;
-    bottom: 829px;
-    z-index: 1;
-
-    animation: moverNube3 55s linear infinite;
+  width: 387px;
+  height: 181px;
+  background-image: url("../img/container-diez/nube-3.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  right: -457px;
+  bottom: 829px;
+  z-index: 1;
+  animation: moverNube3 55s linear infinite;
 }
 
 @keyframes moverNube3 {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-1500px); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1500px);
+  }
 }
 
 .diez-personaje-2 {
-    width: 480px;
-    height: 480px;
-
-    background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTN3eW1iNW1kb25mZjdqM3Jjc3V5Z241ZWFjdTdmaGV0cTB3OHppbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/5ddqGqO8x5rrJ7v5tf/giphy.gif');
-    background-position: center;
-    background-size: cover;
-
-    position: absolute;
-    left: 65px;
-    bottom: 42px;
-
-    z-index: 6;
+  width: 480px;
+  height: 480px;
+  background-image: url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTN3eW1iNW1kb25mZjdqM3Jjc3V5Z241ZWFjdTdmaGV0cTB3OHppbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/5ddqGqO8x5rrJ7v5tf/giphy.gif");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: 65px;
+  bottom: 42px;
+  z-index: 6;
 }
 
 .diez-personaje-3 {
-    width: 509px;
-    height: 509px;
-
-    background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHJ2ajR2OWEwODAzYW44M3B4cmFtdmY1cHU5bDFtNmhnNzExajZhcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/HuocoB7MEUeLMifGFN/giphy.gif');
-    background-position: center;
-    background-size: cover;
-
-    position: absolute;
-    left: 407px;
-    bottom: 42px;
-
-    z-index: 6;
+  width: 509px;
+  height: 509px;
+  background-image: url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHJ2ajR2OWEwODAzYW44M3B4cmFtdmY1cHU5bDFtNmhnNzExajZhcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/HuocoB7MEUeLMifGFN/giphy.gif");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: 407px;
+  bottom: 42px;
+  z-index: 6;
 }
 
 .diez-personaje-1 {
-    width: 561px;
-    height: 997px;
-
-    background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNm55cGNmaDlmMGxtaW9ua2l3Ym11azl6YjRoNW5zMmlydDl5NDJ2ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/fuTByMqFxstXjmDSYm/giphy.gif');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    position: absolute;
-    right: -38px;
-    bottom: -40px;
-    z-index: 6;
+  width: 561px;
+  height: 997px;
+  background-image: url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNm55cGNmaDlmMGxtaW9ua2l3Ym11azl6YjRoNW5zMmlydDl5NDJ2ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/fuTByMqFxstXjmDSYm/giphy.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  right: -38px;
+  bottom: -40px;
+  z-index: 6;
 }
-
 /*----------------------FIN CONTAINER 10-------------------------------*/
-
 
 /*----------------------INICIO CONTAINER 11-------------------------------*/
 .container-once {
-    width: 1280px;
-    height: 80px;
-    margin: 0 auto;
-    background-color: #242424;
-
+  width: 1280px;
+  height: 80px;
+  margin: 0 auto;
+  background-color: #242424;
 }
 
 .container-once img {
-    width: 1080px;
-    height: 75px;
-    margin: 0 auto;
-    padding: 0 100px 0 100px;
+  width: 1080px;
+  height: 75px;
+  margin: 0 auto;
+  padding: 0 100px 0 100px;
 }
 /*----------------------FIN CONTAINER 11-------------------------------*/
 
 /*----------------------INICIO CONTAINER 12-------------------------------*/
 .container-doce {
-    width: 1280px;
-    height: 515px;
-    margin: 0 auto;
-    background-color: #5E5E5D;
-
-    position: relative;
-
+  width: 1280px;
+  height: 515px;
+  margin: 0 auto;
+  background-color: #5e5e5d;
+  position: relative;
 }
 
 .subcontainer-doce {
-    width: 820px;
-    height: 361px;
-
-    margin-left: 100px;
-    padding-top: 35px;
-
-    
+  width: 820px;
+  height: 361px;
+  margin-left: 100px;
+  padding-top: 35px;
 }
 
 .subcontainer-doce p {
-    width: 820px;
-    height: 361px;
-
-    margin-top: 0px;
-    font-size: 20px;
-    font-family: 'Lato';
-    letter-spacing: 0.5px;
-    color: white;
-
+  width: 820px;
+  height: 361px;
+  margin-top: 0px;
+  font-size: 20px;
+  font-family: "Lato";
+  letter-spacing: 0.5px;
+  color: white;
 }
 
 .redes {
-    width: 212px;
-    height: 41px;
-
-    position: absolute;
-    top: 431px;
-    left: 100px;
+  width: 212px;
+  height: 41px;
+  position: absolute;
+  top: 431px;
+  left: 100px;
 }
 
 .subcontainer-doce span {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .sprite-sheet-personaje-1 {
-    position: absolute;
-    bottom: 10px;
-    right: 285px;
-    width: 160px;
-    height: 160px;
-    background-image: url('../img/container-doce/personaje1-spritesheet-Sheet160x160.png'); 
-    background-size: auto 100%;
-    animation: play1 0.7s steps(15) infinite;
+  position: absolute;
+  bottom: 10px;
+  right: 285px;
+  width: 160px;
+  height: 160px;
+  background-image: url("../img/container-doce/personaje1-spritesheet-Sheet160x160.png");
+  background-size: auto 100%;
+  animation: play1 0.7s steps(15) infinite;
 }
 
 @keyframes play1 {
-    from { background-position: 0px; }
-    to { background-position: -2400px; } /* El valor negativo del ancho total del spritesheet */
+  from {
+    background-position: 0px;
   }
+  to {
+    background-position: -2400px;
+  } 
+}
 
+.sprite-sheet-personaje-5 {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  background-image: url("../img/container-doce/Personaje5-spritesheet-Sheet480x270.png");
+  width: 480px; 
+  height: 270px; 
+  animation: play5 1.6s steps(40) infinite; 
+}
 
-   .sprite-sheet-personaje-5 {
-    position: absolute;
-    bottom: 10px;
-    right: 5px;
-    background-image: url('../img/container-doce/Personaje5-spritesheet-Sheet480x270.png');
-    width: 480px; /* Ancho de un frame individual */
-    height: 270px; /* Alto de un frame individual */
-    animation: play5 1.6s steps(40) infinite; /* Ajusta la duración según el efecto deseado */
-    
+@keyframes play5 {
+  from {
+    background-position: 0px;
   }
-
-  @keyframes play5 {
-    from { background-position: 0px; }
-    to { background-position: -19200px; } 
+  to {
+    background-position: -19200px;
   }
+}
 
-  .sprite-sheet-personaje-8 {
-    position: absolute;
-    bottom: 10px;
-    right: -140px;
-    background-image: url('../img/container-doce/Personaje8-spritesheet-Sheet480x270.png');
-    width: 480px; /* Ancho de un frame individual */
-    height: 270px; /* Alto de un frame individual */
-    animation: play8 1.6s steps(40) infinite; /* Ajusta la duración según el efecto deseado */
-    
+.sprite-sheet-personaje-8 {
+  position: absolute;
+  bottom: 10px;
+  right: -140px;
+  background-image: url("../img/container-doce/Personaje8-spritesheet-Sheet480x270.png");
+  width: 480px; 
+  height: 270px; 
+  animation: play8 1.6s steps(40) infinite; 
+}
+
+@keyframes play8 {
+  from {
+    background-position: 0px;
   }
-
-  @keyframes play8 {
-    from { background-position: 0px; }
-    to { background-position: -19200px; } 
+  to {
+    background-position: -19200px;
   }
+}
 
-  /*----------------------FIN CONTAINER 12-------------------------------*/
+/*----------------------FIN CONTAINER 12-------------------------------*/

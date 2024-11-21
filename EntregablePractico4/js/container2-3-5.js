@@ -3,13 +3,13 @@
 window.onscroll = function () {
   let scrollY = window.scrollY;
 
-
   /* container 3 */
   const cards = document.querySelectorAll(".imagen-texto");
   const img1 = document.getElementById("card1");
   const img2 = document.getElementById("card2");
   const img3 = document.getElementById("card3");
 
+  /* funcion para que aparezcan cards desde abajo una a una */
   if (scrollY < '1450' || scrollY > '2550') {
     cards.forEach((card) => {
       card.style.transform = `translateY(600px)`;
@@ -27,6 +27,7 @@ window.onscroll = function () {
   }
 
   /** container 5 */
+  /* ubicaciones de inicio y fin de cada imagen con su descripcion */
   const sections = [
     { img: "#img-0", text: "#text-0", start: 3600, end: 3940 },
     { img: "#img-1", text: "#text-1", start: 3950, end: 4295 },
@@ -40,7 +41,7 @@ window.onscroll = function () {
     { img: "#img-9", text: "#text-9", start: 6820, end: 7230 },
     { img: "#img-10", text: "#text-10", start: 7232, end: 7498 },
   ];
-  
+  /** cambia visibilidad al scrollear de imagen y texto */
   function removeVisibleClasses() {
     document.querySelectorAll(".img").forEach((img) => {
       img.classList.remove("img-visible");
@@ -49,7 +50,7 @@ window.onscroll = function () {
       text.classList.remove("text-visible");
     });
   }
-
+  /** segun ubicacion del scroll llama a cambiar visibilidad */
   sections.forEach((section) => {
     if (scrollY >= section.start && scrollY <= section.end) {
       removeVisibleClasses();
@@ -59,11 +60,10 @@ window.onscroll = function () {
     }
   });
    
-  
 };
 
 /* container 2*/
-
+/** conjunto de imagenes que van cambiando */
 const galeriaImagenes = [
   "img/container-dos/galeria-img1.png",
   "img/container-dos/galeria-img2.png",
@@ -71,13 +71,12 @@ const galeriaImagenes = [
   "img/container-dos/galeria-img4.png",
 ];
 let currentImageIndex = 0;
-
+/* cambia de imagen cada 3 segundos */
 setInterval(() => {
   currentImageIndex = (currentImageIndex + 1) % galeriaImagenes.length;
   document.querySelector("#slideshow-image").src =
     galeriaImagenes[currentImageIndex];
 }, 3000);
-
 
 /*Movimiento personajes*/ 
 const parallaxElementos = [

@@ -8,7 +8,6 @@ const video = document.querySelector('.container-principal-video');
 const btn_play = document.querySelector("#play-video");
 const imagenVideo = document.querySelector("#imagen-video");
 
-
     window.addEventListener('scroll', () => {
         if (window.scrollY < '8300' || window.scrollY > '9300') {
             
@@ -24,22 +23,18 @@ const imagenVideo = document.querySelector("#imagen-video");
         }else {
         // Cambiar posiciones cuando el scroll sea mayor a 5020px y menor a 5900
         personaje.style.right = '-89px'; // Cambiar posición de right
-        video.style.left = '100px'; // Cambiar posición de left
+        video.style.left = '100px';     // Cambiar posición de left
         personaje.style.opacity = '1';
-        video.style.opacity = '1'; // Hacerlo invisible
+        video.style.opacity = '1';      // Hacerlo invisible
         }
         
     });
 
     btn_play.addEventListener("click", () => {
-        
-        
             imagenVideo.style.visibility = "hidden"; 
             btn_play.style.visibility = "hidden";
        
     });
-
-
 
 });
 
